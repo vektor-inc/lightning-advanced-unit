@@ -6,7 +6,7 @@
  * Author: Vektor,Inc.
  * Author URI: http://www.vektor-inc.co.jp
  * Description:
- * Text Domain: plugins-text-domain
+ * Text Domain: lightning-adv-unit
  * Domain Path: /languages
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,10 +18,12 @@ define( 'LIGHTNING_ADVANCED_TEXTDOMAIN', $data['textdomain'] );
 define( 'LIGHTNING_ADVANCED_BASENAME', plugin_basename( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_URL', plugin_dir_url( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_DIR', plugin_dir_path( __FILE__ ) );
+define( 'LIGHTNING_ADVANCED_SHORT_NAME', 'LTG' );
 
 // require_once( ltg_adv_DIR . 'class.lightning_adv-common.php' );
 
-// require_once( LIGHTNING_ADVANCED_DIR . 'plugins/navigation/navigation.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'plugins/navigation/navigation.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'plugins/widgets/widget-new-posts.php' );
 
 /*-------------------------------------------*/
 /*  Load lightning_adv js

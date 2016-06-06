@@ -8,7 +8,6 @@ jQuery(window).resize(function(){
 /*	メニューの開閉
 /*	<div id="menu" onclick="showHide('menu');" class="itemOpen">MENU</div>
 /*-------------------------------------------*/
-var menu_width = '360px';
 
 function run_slide_menu_control(){
 	jQuery('.menuBtn').prependTo('#bodyInner');
@@ -37,6 +36,8 @@ function slide_menu_open(menuPosition){
 	var wrap_width = jQuery('body').width();
 	jQuery('#bodyInner').css({"width":wrap_width});
 	jQuery('#wrap').css({"width":wrap_width});
+
+	var menu_width = wrap_width - 60 + 'px';
 
 	jQuery('#gMenu_outer').appendTo('#navSection');
 
@@ -71,6 +72,9 @@ function slide_menu_close(menuPosition){
 	var wrap_width = jQuery('body').width();
 	jQuery('#bodyInner').css({"width":wrap_width});
 	jQuery('#wrap').css({"width":wrap_width});
+
+	var menu_width = wrap_width - 60 + 'px';
+
 	jQuery('#wrap').stop().animate({ "margin-left":"0" },200);
 
 	if ( menuPosition == 'right' ) {
@@ -88,11 +92,13 @@ function menuClose_common(){
 	jQuery('#navSection').removeClass('navSection_open_right');
 	jQuery('#navSection').removeClass('navSection_open_left');
 	jQuery('#gMenu_outer').insertAfter('.navbar-header');
-	jQuery('#navSection').css({"right":""});
-	jQuery('#navSection').css({"left":""});
+	jQuery('#navSection').css({"right":"","left":""});
 }
 function run_menuResize(){
 	var wrap_width = jQuery('body').width();
 	jQuery('#bodyInner').css({"width":wrap_width});
-	jQuery('#wrap').css({"width":wrap_width});
+	jQuery('#wrap').css({"width":wrap_width,"margin-left":"","margin-right":""});
+	menuClose_common();
+	var headerHeight = jQuery('header.siteHeader').height;
+	jQuery('#top__fullcarousel').css({"margin-top":headerHeight});
 }
