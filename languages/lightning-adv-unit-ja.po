@@ -1,0 +1,1476 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-06-09 14:03+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
+"Language-Team: Vektor translate Team <info@vektor-inc.co.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_x;_e;_ex\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../plugins/widgets/widget-new-posts.php:12
+msgid "Content Area Posts Widget"
+msgstr "コンテンツエリア投稿リスト"
+
+#: ../plugins/widgets/widget-new-posts.php:17
+msgid "Displays a list of your most recent posts"
+msgstr "最新の投稿記事リストを表示します。"
+
+#: ../plugins/widgets/widget-new-posts.php:108
+msgid "Last updated"
+msgstr ""
+
+#: ../plugins/widgets/widget-new-posts.php:132
+#: ../plugins/widgets/widget-new-posts.php:156
+msgid "Read more"
+msgstr "詳しくはこちら"
+
+#: ../plugins/widgets/widget-new-posts.php:176
+msgid "<dl><dt>%s</dt><dd>%l</dd></dl>"
+msgstr ""
+
+#: ../plugins/widgets/widget-new-posts.php:196
+msgid "Tags"
+msgstr ""
+
+#: ../plugins/widgets/widget-new-posts.php:229
+msgid "Recent Posts"
+msgstr "最新記事"
+
+#: ../plugins/widgets/widget-new-posts.php:238
+msgid "Display Format"
+msgstr "表示形式"
+
+#: ../plugins/widgets/widget-new-posts.php:240
+#: ../plugins/widgets/widget-new-posts.php:242
+msgid "Thumbnail"
+msgstr "サムネイル画像"
+
+#: ../plugins/widgets/widget-new-posts.php:240
+#: ../plugins/widgets/widget-new-posts.php:242
+msgid "Date"
+msgstr "日付"
+
+#: ../plugins/widgets/widget-new-posts.php:240
+#: ../plugins/widgets/widget-new-posts.php:242
+msgid "Category"
+msgstr "カテゴリー"
+
+#: ../plugins/widgets/widget-new-posts.php:240
+#: ../plugins/widgets/widget-new-posts.php:242
+msgid "Title"
+msgstr "タイトル"
+
+#: ../plugins/widgets/widget-new-posts.php:240
+msgid "Excerpt"
+msgstr "抜粋"
+
+#: ../plugins/widgets/widget-new-posts.php:242
+msgid "Content"
+msgstr "本文"
+
+#: ../plugins/widgets/widget-new-posts.php:246
+msgid "Title:"
+msgstr "タイトル"
+
+#: ../plugins/widgets/widget-new-posts.php:251
+msgid "Display count"
+msgstr "表示する記事数"
+
+#: ../plugins/widgets/widget-new-posts.php:256
+msgid "Slug for the custom type you want to display"
+msgstr "表示したい記事タイプ"
+
+#: ../plugins/widgets/widget-new-posts.php:261
+msgid "taxonomy ID"
+msgstr "カテゴリー（タクソノミー）ID"
+
+#: ../plugins/widgets/widget-new-posts.php:263
+msgid "if you need filtering by term, add the term ID separate by \",\"."
+msgstr ""
+"特定のカテゴリーのみ表示したい場合は<br/>カンマ(,)区切りでカテゴリーIDを入力"
+"します。"
+
+#: ../plugins/widgets/widget-new-posts.php:265
+msgid "if empty this area, I will do not filtering."
+msgstr "空欄の場合はフィルタリングは行いません。"
+
+#~ msgid "Main setting"
+#~ msgstr "メイン設定"
+
+#~ msgid "Activated Packages is noting. please activate some package."
+#~ msgstr ""
+#~ "有効化されているパッケージがありません。何かの機能を有効化してください。"
+
+#~ msgid "Author: %s"
+#~ msgstr "著者: %s"
+
+#~ msgid "Y"
+#~ msgstr "年"
+
+#~ msgid "F Y"
+#~ msgstr "年月"
+
+#~ msgid "F j, Y"
+#~ msgstr "月日, 年"
+
+#~ msgid "Asides"
+#~ msgstr "サイド"
+
+#~ msgid "Galleries"
+#~ msgstr "ギャラリー"
+
+#~ msgid "Images"
+#~ msgstr "画像"
+
+#~ msgid "Videos"
+#~ msgstr "ビデオ"
+
+#~ msgid "Quotes"
+#~ msgstr "引用"
+
+#~ msgid "Links"
+#~ msgstr "リンク"
+
+#~ msgid "Statuses"
+#~ msgstr "ステータス"
+
+#~ msgid "Audio"
+#~ msgstr "オーディオ"
+
+#~ msgid "Chats"
+#~ msgstr "チャット"
+
+#~ msgid "Archives"
+#~ msgstr "アーカイブ"
+
+#~ msgid "About %s"
+#~ msgstr "%s について"
+
+#~ msgid "Article of %s."
+#~ msgstr "%s の記事"
+
+#~ msgid "Page of %s"
+#~ msgstr "%sページ目"
+
+#~ msgid "Print Bootstrap css and js"
+#~ msgstr "Bootstrap の CSS と js を出力"
+
+#~ msgid ""
+#~ "If your using theme has already including Bootstrap, you deactivate this "
+#~ "item."
+#~ msgstr ""
+#~ "Bootstrap の CSS と js を読み込むためのタグを html head 内へ出力します。使"
+#~ "用中のテーマやプラグインで Bootstrap を既に読み込んでいる場合はチェックを"
+#~ "外して下さい。"
+
+#~ msgid "Print link fontawesome"
+#~ msgstr "fontawesome link タグを出力"
+
+#~ msgid "Print fontawesome link tag to html head."
+#~ msgstr ""
+#~ "fontawesome を読み込むための link タグを html head 内へ出力します。使用中"
+#~ "のテーマやプラグインで fontawesome を既に読み込んでいる場合はチェックを外"
+#~ "して下さい。"
+
+#~ msgid "Favicon setting"
+#~ msgstr "ファビコン設定"
+
+#~ msgid "About favicon."
+#~ msgstr ""
+#~ "ブラウザでページを表示した際にタブやウィンドウのタイトルに表示されるアイコ"
+#~ "ン（ファビコン）を設定します。"
+
+#~ msgid "Rewrite the title tag"
+#~ msgstr "タイトルタグの書き換え"
+
+#~ msgid "Print is rewritten by its own rules to html head."
+#~ msgstr ""
+#~ "head title タグ内へ出力される内容を VK EX Unit のルールで出力します。 "
+#~ "( VK EX Unit 側で wp_title() をフィルターフックでカスタマイズ ) 使用中の"
+#~ "テーマやプラグインで title タグの内容を出力する場合はチェックを外して下さ"
+#~ "い。"
+
+#~ msgid "Setting"
+#~ msgstr "設定"
+
+#~ msgid "Print meta Keyword"
+#~ msgstr "メタキーワードを出力"
+
+#~ msgid "Print meta Keyword to html head."
+#~ msgstr "ヘッダーにメタキーワードを出力します。"
+
+#~ msgid "Print meta description"
+#~ msgstr "メタディスクリプションタグを出力"
+
+#~ msgid "Print meta description to html head."
+#~ msgstr ""
+#~ "投稿画面「抜粋」欄に入力されたテキストを meta description タグとして html "
+#~ "head 内へ出力します。使用中のテーマやプラグインで meta description タグを"
+#~ "出力している場合はチェックを外して下さい。"
+
+#~ msgid "Main setting page"
+#~ msgstr "メイン設定画面"
+
+#~ msgid "Print og tags to html head."
+#~ msgstr "OG タグを html head 内へ出力します。"
+
+#~ msgid "Print twitter card tags to html head."
+#~ msgstr "Twitter カードタグを html head 内へ出力します。"
+
+#~ msgid "Print social bookmark buttons."
+#~ msgstr "ソーシャルブックマークボタンを表示します。"
+
+#~ msgid "Facebook Page Plugin widget."
+#~ msgstr "Facebookページプラグインウィジェット"
+
+#~ msgid "Print Follow me box to content bottom."
+#~ msgstr "Follow me box を記事コンテンツ下のエリアへ表示します。"
+
+#~ msgid "* You can stop the function separately from the %s."
+#~ msgstr "%s から個別に機能を停止する事ができます。"
+
+#~ msgid "Social media cooperation"
+#~ msgstr "ソーシャルメディア連携"
+
+#~ msgid "Print Google Analytics tracking code."
+#~ msgstr ""
+#~ "Google アナリティクスのトラッキングコードを出力します。有効化した後「設"
+#~ "定」のリンクより設定画面へすすみ Google アナリティクス ID を入力して下さ"
+#~ "い。使用中のテーマやプラグインで Google アナリティクスのトラッキングコード"
+#~ "を埋め込む場合はチェックを外して下さい。"
+
+#~ msgid "You can use various widgets."
+#~ msgstr ""
+#~ "以下の機能を持ったウィジェットを追加します。各ウィジェットの設定は「外観」"
+#~ "→「ウィジェット」の設定画面より行って下さい。"
+
+#~ msgid ""
+#~ "VK_Recent Posts - display the link text and the date of the latest "
+#~ "article title."
+#~ msgstr "VK_最新記事 - 最新記事タイトルのリンクテキストと日付を表示します。"
+
+#~ msgid ""
+#~ "VK_Page content to widget - display the contents of the page to the "
+#~ "widgets."
+#~ msgstr ""
+#~ "VK_固定ページ本文 - 固定ページのコンテンツ部分をウィジェットに表示します。"
+
+#~ msgid "VK_Profile - display the profile entered in the widget."
+#~ msgstr ""
+#~ "VK_プロフィール - ウィジェットに入力されたプロフィールを表示します。"
+
+#~ msgid "VK_FB Page Plugin - display the Facebook Page Plugin."
+#~ msgstr "VK_FB Page Plugin - Facebook ページプラグインを表示します。"
+
+#~ msgid "VK_3PR area - display the 3PR area."
+#~ msgstr "VK_3PR エリア - 3PR エリアを表示します。"
+
+#~ msgid "categories/tags list"
+#~ msgstr "カテゴリー/タグ リスト"
+
+#~ msgid "Displays a categories, tags or format list."
+#~ msgstr "カテゴリ・タグまたは、フォーマットリストを表示します。"
+
+#~ msgid "archive list"
+#~ msgstr "アーカイブリスト"
+
+#~ msgid ""
+#~ "Displays a list of archives. You can choose the post type and also to "
+#~ "display archives by month or by year."
+#~ msgstr ""
+#~ "アーカイブの一覧を表示します。月ごともしくは年ごとでの表示。また、ポストタ"
+#~ "イプを選択できます。"
+
+#~ msgid "Widgets"
+#~ msgstr "ウィジェット"
+
+#~ msgid "CSS customize"
+#~ msgstr "CSSカスタマイズ"
+
+#~ msgid "You can set Customize CSS."
+#~ msgstr ""
+#~ "テーマデザインをカスタマイズする CSS を管理画面より追加できるようになりま"
+#~ "す。追加する CSS コードは「VK Ex Unit」→「CSS カスタマイズ」の画面にて入力"
+#~ "して下さい。"
+
+#~ msgid "Child page index"
+#~ msgstr "子ページの一覧表示"
+
+#~ msgid ""
+#~ "At the bottom of the specified page, it will display a list of the child "
+#~ "page."
+#~ msgstr ""
+#~ "指定した固定ページの下部へ、その固定ページの下層子ページの「ページタイト"
+#~ "ル / サムネイル / 抜粋文 / 該当ページへのリンク」をセットで一覧表示しま"
+#~ "す。"
+
+#~ msgid "Page list from ancestor"
+#~ msgstr "先祖階層からの子ページリスト表示"
+
+#~ msgid "Display Page list from ancestor at after content."
+#~ msgstr ""
+#~ "現在のページの先祖階層からの子ページリストをページ本文の下に表示します。"
+
+#~ msgid "Contact Section"
+#~ msgstr "お問い合わせ"
+
+#~ msgid "Display Contact Section at after content."
+#~ msgstr "お問い合わせ情報を本文の下に表示する"
+
+#~ msgid "Display HTML Site Map"
+#~ msgstr "HTMLサイトマップの表示"
+
+#~ msgid "It displays a HTML Site Map to the specified page."
+#~ msgstr "指定した固定ページにHTMLサイトマップを表示します。"
+
+#~ msgid "Display the CTA at the end of the post content."
+#~ msgstr "投稿内容の最後にCTAを表示します。"
+
+#~ msgid ""
+#~ "The CTA stands for \"Call to action\" and this is the area that prompts "
+#~ "the user behavior."
+#~ msgstr ""
+#~ "CTAは「Call To Action」の略で、ユーザーにとってもらいたい行動へ誘導するた"
+#~ "めの情報を表示します。"
+
+#~ msgid ""
+#~ "As an example, text message and a link button for induction to the free "
+#~ "sample download page."
+#~ msgstr ""
+#~ "例えば、無料サンプルのダウンロードページへの誘導のためのテキストやリンクボ"
+#~ "タンなどです。"
+
+#~ msgid "Call To Action"
+#~ msgstr "Call To Action"
+
+#~ msgid "Contents setting"
+#~ msgstr "CTA表示内容設定"
+
+#~ msgid "Insert ads"
+#~ msgstr "広告の挿入"
+
+#~ msgid "Insert ads to content."
+#~ msgstr "記事に広告を挿入します"
+
+#~ msgid "Related posts"
+#~ msgstr "関連記事を表示"
+
+#~ msgid "Print Related posts lists to post content bottom."
+#~ msgstr "関連記事を記事コンテンツ下のエリアへ表示します。"
+
+#~ msgid "Automatic Eye Catch insert"
+#~ msgstr "アイキャッチ画像自動挿入"
+
+#~ msgid "Display Eye Catch image at before content."
+#~ msgstr ""
+#~ "アイキャッチ画像を本文の最初に表示します。各記事毎に非表示にする事も出来ま"
+#~ "す。"
+
+#~ msgid "Disable ping back"
+#~ msgstr "ping backを停止"
+
+#~ msgid "Disable xmlrpc ping back."
+#~ msgstr "xmlrpcを停止"
+
+#~ msgid "Disable dashbord"
+#~ msgstr "ダッシュボードに最新情報を表示しない"
+
+#~ msgid "Enable setting"
+#~ msgstr "有効化設定"
+
+#~ msgid "Select all"
+#~ msgstr "全てを選択"
+
+#~ msgid "Function"
+#~ msgstr "有効化"
+
+#~ msgid "Description"
+#~ msgstr "説明"
+
+#~ msgid "Extension Setting"
+#~ msgstr "拡張設定"
+
+#~ msgid "Plugin setting options"
+#~ msgstr "プラグイン設定オプション"
+
+#~ msgid "Delete myOptions when deactivate me."
+#~ msgstr "プラグインを無効化する際にDBに保存したオプション項目を削除します。"
+
+#~ msgid "Automatic EyeCatch"
+#~ msgstr "アイキャッチ自動挿入"
+
+#~ msgid "Do not set eyecatch image automatic."
+#~ msgstr "アイキャッチ画像を自動挿入しない"
+
+#~ msgid "Display a child page index"
+#~ msgstr "子ページ一覧の表示"
+
+#~ msgid "Contact Information"
+#~ msgstr "お問い合わせ情報"
+
+#~ msgid "Please feel free to inquire."
+#~ msgstr "お気軽にお問い合わせください。"
+
+#~ msgid "Office hours 9:00 - 18:00 [ Weekdays except holidays ]"
+#~ msgstr "受付時間 9:00-18:00 [ 土・日・祝日除く ]"
+
+#~ msgid "Contact us"
+#~ msgstr "お問い合わせ"
+
+#~ msgid "Message"
+#~ msgstr "メッセージ"
+
+#~ msgid "ex) "
+#~ msgstr "例: "
+
+#~ msgid "Phone number"
+#~ msgstr "電話番号"
+
+#~ msgid "Office hours"
+#~ msgstr "営業時間"
+
+#~ msgid "Weekdays except holidays"
+#~ msgstr "土日・祝日除く"
+
+#~ msgid "The contact page URL"
+#~ msgstr "お問い合わせ先URL"
+
+#~ msgid "or"
+#~ msgstr "もしくは"
+
+#~ msgid "* If you fill in the blank, contact button does not appear."
+#~ msgstr "未入力の場合はお問い合わせボタンは表示されません。"
+
+#~ msgid "Contact button Text"
+#~ msgstr "お問い合わせボタンに表示するテキスト"
+
+#~ msgid "Contact Us from email."
+#~ msgstr "メールでのお問い合わせはこちら"
+
+#~ msgid "Contact button text( sub )"
+#~ msgstr "お問い合わせボタンに表示するテキスト2（オプション）"
+
+#~ msgid "Email contact form"
+#~ msgstr "お気軽にお問い合わせください。"
+
+#~ msgid "Contact button short text for side widget"
+#~ msgstr "お問い合わせボタンウィジェットに表示するテキスト"
+
+#~ msgid "This will used to \"Contact Button\" widget."
+#~ msgstr ""
+#~ "このテキストはお問い合わせボタンウィジェットで使用されます。サイドバーでの"
+#~ "利用を想定していますので少ない文字数で設定してください。"
+
+#~ msgid "Display Contact Section"
+#~ msgstr "お問い合わせ情報の表示"
+
+#~ msgid "Edit contact information"
+#~ msgstr "Contact情報を編集"
+
+#~ msgid "Contact Button"
+#~ msgstr "お問い合わせボタン"
+
+#~ msgid ""
+#~ "*It is necessary to set the \"%s\" -> \"Contact Information\" section in "
+#~ "\"Main setting\" page."
+#~ msgstr ""
+#~ "* 「%s」→ 「メイン設定」ページで『お問い合わせ情報』を設定する必要がありま"
+#~ "す。"
+
+#~ msgid ""
+#~ "<p>Powered by <a href=\"https://wordpress.org/\">WordPress</a> with <a "
+#~ "href=\"//lightning.vektor-inc.co.jp\" target=\"_blank\" title=\"Free "
+#~ "WordPress Theme Lightning\"> Lightning Theme</a> &amp; <a href=\"http://"
+#~ "ex-unit.vektor-inc.co.jp/\" target=\"_blank\">VK All in One Expansion "
+#~ "Unit</a> by <a href=\"http://www.vektor-inc.co.jp\" target=\"_blank"
+#~ "\">Vektor,Inc.</a> technology.</p>"
+#~ msgstr ""
+#~ "<p>Powered by <a href=\"https://ja.wordpress.org/\" target=\"_blank"
+#~ "\">WordPress</a> with <a href=\"//lightning.vektor-inc.co.jp/ja/\" target="
+#~ "\"_blank\" title=\"Free WordPress Theme Lightning\"> Lightning Theme</a> "
+#~ "&amp; <a href=\"http://ex-unit.vektor-inc.co.jp/ja/\" target=\"_blank"
+#~ "\">VK All in One Expansion Unit</a> by <a href=\"http://www.vektor-inc.co."
+#~ "jp\" target=\"_blank\">Vektor,Inc.</a> technology.</p>"
+
+#~ msgid "icon setting"
+#~ msgstr "アイコン設定"
+
+#~ msgid "Favicon Setting"
+#~ msgstr "ファビコン設定"
+
+#~ msgid "Choose icon"
+#~ msgstr "アイコンを選択"
+
+#~ msgid "Please upload your \".ico\" file"
+#~ msgstr "作成したicoファイルをアップロードしてください"
+
+#~ msgid "Insert ads to post."
+#~ msgstr "投稿に広告を挿入"
+
+#~ msgid "Insert ads to before content and more tag and after content."
+#~ msgstr "記事の直前 / moreタグの直後 / 記事の最後に広告を挿入できます。"
+
+#~ msgid "If you want to separate ads area, you fill two fields."
+#~ msgstr ""
+#~ "２つのフィールドに分けて挿入すると、横並び（col-md-6）に表示されます。"
+
+#~ msgid "insert the ad [ before content ]"
+#~ msgstr "広告を挿入 [ 記事の最初 ]"
+
+#~ msgid "insert the ad [ more tag ]"
+#~ msgstr "広告を挿入 [ moreタグ ]"
+
+#~ msgid "insert the ad [ after content ]"
+#~ msgstr "広告を挿入 [ 記事の最後 ]"
+
+#~ msgid "Meta Description"
+#~ msgstr "メタディスクリプション"
+
+#~ msgid ""
+#~ "What you have to complete the \"excerpt\" column of the edit screen of "
+#~ "each page will be reflected in the description of the meta tag."
+#~ msgstr ""
+#~ "各ページの編集画面の「抜粋」欄に記入した内容がmetaタグのディスクリプション"
+#~ "に反映されます"
+
+#~ msgid ""
+#~ "Description of meta tags in the search results screen of search sites "
+#~ "such as Google, will be Displayed, such as the bottom of the site title. "
+#~ "If the excerpt column is blank, is 240 characters than text beginning of "
+#~ "a sentence has become a specification that is applied as a description."
+#~ msgstr ""
+#~ "トップページのメタディスクリプションにはサイトのキャッチフレーズが適用され"
+#~ "ます。しかし、トップページに設定した固定ページに抜粋が記入されている場合は"
+#~ "その内容が反映されます。"
+
+#~ msgid ""
+#~ "The meta description of the top page is subject to the catchphrase of the "
+#~ "site. However, its contents will be reflected if the excerpt is entered "
+#~ "in fixed page that was set on the top page."
+#~ msgstr ""
+#~ "トップページのメタディスクリプションにはサイトのキャッチフレーズが適用され"
+#~ "ます。しかし、トップページに設定した固定ページに抜粋が記入されている場合は"
+#~ "その内容が反映されます。"
+
+#~ msgid ""
+#~ "If \"excerpt\" column is not found, Click \"Display Option\" of page top "
+#~ "at each article edit page, and check the expert column display."
+#~ msgstr ""
+#~ "抜粋欄が表示されていない場合は、編集画面の右上に「表示」というタブがありま"
+#~ "すので、そこをクリックすると「抜粋」欄を表示するチェックボックスが出てきま"
+#~ "すので、チェックして下さい。"
+
+#~ msgid "Meta Keywords"
+#~ msgstr "メタキーワード"
+
+#~ msgid "Meta Keyword"
+#~ msgstr "メタキーワード"
+
+#~ msgid "Common Keywords"
+#~ msgstr "共通キーワード設定"
+
+#~ msgid ""
+#~ "Keywords for meta tag. This words will set Meta Keyword with post "
+#~ "keywords. if you want multiple keywords, enter with separator of \",\"."
+#~ msgstr ""
+#~ "メタタグに入力するキーワードを入力します。ここでは全てのページで使用する共"
+#~ "通のキーワードを設定します。複数ある場合は「,」で区切ってください。"
+
+#~ msgid "This is not seriously, Because the SearchEngine does not care this."
+#~ msgstr ""
+#~ "あまり深く考える必要はありません。現状のサーチエンジンではそこまで重要な"
+#~ "ファクターとはなりません。"
+
+#~ msgid ""
+#~ "For each page individual keyword is enter at the edit screen of each "
+#~ "article. 10 keywords maximum, together with a each article keywords is "
+#~ "desirable."
+#~ msgstr ""
+#~ "個々のページのキーワードはそれぞれの投稿ページのキーワード入力欄から追加し"
+#~ "てください。それらと合わせて10個程度のキーワード数であることが望ましいで"
+#~ "す。"
+
+#~ msgid "\",\" separator at end of the last keyword is do not need."
+#~ msgstr "最後のキーワードの後ろに「,」は必要ありません。"
+
+#~ msgid "Example: WordPress,template,theme,free,GPL"
+#~ msgstr "【例】 WordPress,テンプレート,テーマ,無料,GPL"
+
+#~ msgid ""
+#~ "To distinguish between individual keywords, please enter a , delimiter "
+#~ "(optional)."
+#~ msgstr "キーワードを複数入力する場合は , ( カンマ )で区切って下さい。"
+
+#~ msgid "* keywords common to the entire site can be set from %s."
+#~ msgstr "サイト全体のキーワードは %s より設定することができます。"
+
+#~ msgid "Setting of insert items"
+#~ msgstr "挿入アイテムの設定"
+
+#~ msgid "Display a page list from ancestor"
+#~ msgstr "現在のページの先祖階層からの子ページリストを表示"
+
+#~ msgid "Search Results for : %s"
+#~ msgstr "検索結果 : %s"
+
+#~ msgid "Not found"
+#~ msgstr "見つかりません"
+
+#~ msgid "&lt;title&gt; tag of homepage"
+#~ msgstr "トップページの&lt;title&gt;タグ"
+
+#~ msgid "title of the site"
+#~ msgstr "サイトのタイトル"
+
+#~ msgid "Normally \"%1$s\" is placed in the title tags of all the pages."
+#~ msgstr "通常「%1$s」が全ページのタイトルタグに入ります。"
+
+#~ msgid ""
+#~ "For example, it appears in the form of <br />&lt;title&gt;page title | "
+#~ "%1$s&lt;/title&gt;<br /> if using a static page."
+#~ msgstr ""
+#~ "例えば固定ページであれば<br>&lt;title&gt;固定ページ名 | %1$s&lt;/title&gt;"
+#~ "<br>というような形式で出力されます。"
+
+#~ msgid ""
+#~ "However, it might have negative impact on search engine rankings if the "
+#~ "&lt;title&gt; is too long, <strong>therefore please include the most "
+#~ "popular keywords in a summarized manner, keeping the %s as short as "
+#~ "possible.</strong>"
+#~ msgstr ""
+#~ "しかし、&lt;title&gt;の文字数が長くなりすぎると検索エンジンからの評価が逆"
+#~ "に悪くなるので、%s は一番検索されたいキーワードを盛り込みつつなるべく短く"
+#~ "まとめる事が望ましいです。"
+
+#~ msgid "Tagline"
+#~ msgstr "キャッチフレーズ"
+
+#~ msgid ""
+#~ "In the top page will be output usually in the form of <br />&lt;title&gt;"
+#~ "%1$s | %2$s&lt;/title&gt;"
+#~ msgstr ""
+#~ "トップページでは<br>&lt;title&gt;%1$s | %2$s&lt;/title&gt;<br>というような"
+#~ "形式で出力されます。"
+
+#~ msgid ""
+#~ "However, it may be too long in the above format. If the input to the "
+#~ "input field of the following, its contents will be reflected."
+#~ msgstr ""
+#~ "しかし、上記の形式では長くなりすぎる事があります。その場合は下記の入力欄に"
+#~ "入力すれば、その内容が反映されます。"
+
+#~ msgid "Edit CTA"
+#~ msgstr "CTAの編集"
+
+#~ msgid "Add new CTA"
+#~ msgstr "CTAの新規作成"
+
+#~ msgid "New CTA"
+#~ msgstr "CTA 新規作成"
+
+#~ msgid "Call to Action setting"
+#~ msgstr "CTA設定"
+
+#~ msgid "Follow common setting"
+#~ msgstr "共通設定を使用"
+
+#~ msgid "Disable display"
+#~ msgstr "表示しない"
+
+#~ msgid "CTA common setting"
+#~ msgstr "CTA共通設定"
+
+#~ msgid "Show CTA index page"
+#~ msgstr "CTAの一覧を表示"
+
+#~ msgid "CTA image"
+#~ msgstr "CTA画像"
+
+#~ msgid "Add image"
+#~ msgstr "画像を追加"
+
+#~ msgid "Change image"
+#~ msgstr "画像を変更"
+
+#~ msgid "Remove image"
+#~ msgstr "画像を削除"
+
+#~ msgid "CTA image position"
+#~ msgstr "CTA画像の位置"
+
+#~ msgid "right"
+#~ msgstr "右寄せ"
+
+#~ msgid "center"
+#~ msgstr "中央"
+
+#~ msgid "left"
+#~ msgstr "左寄せ"
+
+#~ msgid "Button text"
+#~ msgstr "ボタンの表記文言"
+
+#~ msgid "Button link url"
+#~ msgstr "ボタンのリンク先URL"
+
+#~ msgid "Text message"
+#~ msgstr "テキストメッセージ"
+
+#~ msgid "CTA setting"
+#~ msgstr "CTA設定"
+
+#~ msgid "How to use"
+#~ msgstr "使い方"
+
+#~ msgid ""
+#~ "You register the contents on \"CTA\" that you want to display to bottom "
+#~ "of the content."
+#~ msgstr "まずは投稿タイプCTAで、本文の最後に表示させたい内容を登録します。"
+
+#~ msgid "Choose the CTA to be displayed from the following."
+#~ msgstr "下記のプルダウンで、投稿タイプ別に表示するCTAを選択して保存します。"
+
+#~ msgid ""
+#~ "If you want to switch the CTA to be displayed on each post, please set in "
+#~ "the details page of such posting."
+#~ msgstr ""
+#~ "投稿毎に表示するCTAを切り替えたい場合は、投稿などの詳細ページで設定してく"
+#~ "ださい。"
+
+#~ msgid "Show index page"
+#~ msgstr "一覧ページを表示する"
+
+#~ msgid "CSS Customize"
+#~ msgstr "CSSカスタマイズ"
+
+#~ msgid "You can add custom CSS here."
+#~ msgstr "デザインをカスタマイズする場合は下のテキストエリアにCSSを入力します"
+
+#~ msgid "Save CSS"
+#~ msgstr "CSSを保存する"
+
+#~ msgid "Your custom CSS was saved."
+#~ msgstr "CSSが保存されました"
+
+#~ msgid "Error occured. Please try again."
+#~ msgstr "何らかのエラー!! また試してみてください"
+
+#~ msgid "Google Analytics Settings"
+#~ msgstr "Google Analytics設定"
+
+#~ msgid ""
+#~ "Please fill in the Google Analytics ID from the Analytics embed code used "
+#~ "in the site."
+#~ msgstr "このサイトで使用する Google アナリティクスの ID を入力して下さい。"
+
+#~ msgid ""
+#~ "Please select the type of Analytics code . (If you are unsure you can "
+#~ "skip this.)"
+#~ msgstr ""
+#~ "アナリティクスコードの種類を選択して下さい。( 不明な場合この設定は省略でき"
+#~ "ます )"
+
+#~ msgid "To output the Universal Analytics code (default)"
+#~ msgstr "ユニバーサル アナリティクスのコードを出力します。( デフォルト )"
+
+#~ msgid "To output only normal code"
+#~ msgstr "ノーマルのコードのみを出力します。"
+
+#~ msgid "To output both types"
+#~ msgstr "両タイプのコードを出力します。"
+
+#~ msgid "3PR area"
+#~ msgstr "3PR エリア"
+
+#~ msgid "Displays a 3PR area"
+#~ msgstr "3PR エリアを表示します。"
+
+#~ msgid "3PR area1 title"
+#~ msgstr "3PR エリア1 タイトル"
+
+#~ msgid "3PR area2 title"
+#~ msgstr "3PR エリア2 タイトル"
+
+#~ msgid "3PR area3 title"
+#~ msgstr "3PR エリア3 タイトル"
+
+#~ msgid "3PR area1 setting"
+#~ msgstr "3PR エリア1 設定"
+
+#~ msgid "Select image for PC:"
+#~ msgstr "PC 用に表示される画像を選択（横 300px 程度推奨）"
+
+#~ msgid "Select image"
+#~ msgstr "画像を選択"
+
+#~ msgid "Clear image"
+#~ msgstr "画像クリア"
+
+#~ msgid "Select image for Mobile:"
+#~ msgstr ""
+#~ "スマホ用（ウィンドウサイズが 992px 以下の場合）に表示される画像を選択（橫 "
+#~ "690px 以上推奨。空欄も可）"
+
+#~ msgid "Summary Text:"
+#~ msgstr "概要となるテキスト"
+
+#~ msgid "Link URL:"
+#~ msgstr "リンク先ページのURL"
+
+#~ msgid "3PR area2 setting"
+#~ msgstr "3PR エリア2 設定"
+
+#~ msgid "3PR area3 setting"
+#~ msgstr "3PR エリア3 設定"
+
+#~ msgid "Monthly archives"
+#~ msgstr "月別アーカイブ"
+
+#~ msgid "Post type"
+#~ msgstr "ポストタイプ"
+
+#~ msgid "Monthly"
+#~ msgstr "月別"
+
+#~ msgid "Yearly"
+#~ msgstr "年別"
+
+#~ msgid "archive"
+#~ msgstr "アーカイブ"
+
+#~ msgid "Child Page List"
+#~ msgstr "子ページのリスト"
+
+#~ msgid "Display the child pages list from ancestor page."
+#~ msgstr "表示しているページの先祖階層からの子ページリストを表示します。"
+
+#~ msgid "page content to widget"
+#~ msgstr "固定ページ本文"
+
+#~ msgid "Displays a page contents to widget."
+#~ msgstr "選択したページの内容を表示します。"
+
+#~ msgid "Display page"
+#~ msgstr "ページを表示"
+
+#~ msgid "display title"
+#~ msgstr "タイトルを表示"
+
+#~ msgid "Edit"
+#~ msgstr "編集"
+
+#~ msgid "PR Blocks"
+#~ msgstr "PR Blocks"
+
+#~ msgid "Displays a circle image or icon font for pr blocks"
+#~ msgstr "丸抜きの画像やアイコンフォントをPRブロックに表示"
+
+#~ msgid "Service"
+#~ msgstr "サービス紹介"
+
+#~ msgid "Company"
+#~ msgstr "会社案内"
+
+#~ msgid "Recruit"
+#~ msgstr "採用情報"
+
+#~ msgid "Contact"
+#~ msgstr "Contact"
+
+#~ msgid "The choice of the number of columns:"
+#~ msgstr "列の数"
+
+#~ msgid "3column"
+#~ msgstr "3列"
+
+#~ msgid "4column"
+#~ msgstr "4列"
+
+#~ msgid ""
+#~ "If you change the number of columns, click to \"Save\" botton and exit "
+#~ "the edit page. When restart the edit page, the column input form is "
+#~ "increased or decreased."
+#~ msgstr ""
+#~ "列の数を変更する場合は「保存して公開」ボタンをクリックして編集画面を終了し"
+#~ "ます。それから編集画面を再度開くと列の入力フォームが増減します。"
+
+#~ msgid "PR Block"
+#~ msgstr "PRブロック"
+
+#~ msgid "Class name of the icon font you want to use:"
+#~ msgstr "使用したいアイコンフォントのクラス名:"
+
+#~ msgid "To choose your favorite icon, and enter the class."
+#~ msgstr "アイコンフォントを選んでそのクラス名を入力してください。"
+
+#~ msgid " ex:fa-file-text-o"
+#~ msgstr "例:fa-file-text-o"
+
+#~ msgid "Icon bg-color:"
+#~ msgstr "アイコン背景色:"
+
+#~ msgid "Select image:"
+#~ msgstr "画像を選択"
+
+#~ msgid "When you have an image. Image is displayed with priority"
+#~ msgstr "画像を設定するとアイコンフォントよりも画像が優先されます。"
+
+#~ msgid "Profile"
+#~ msgstr "プロフィール"
+
+#~ msgid "Displays a your profile"
+#~ msgstr ""
+#~ "ブログのサイドバーに運営者情報を表示したり、フッターに企業情報を表示しま"
+#~ "す。"
+
+#~ msgid "Profile Text"
+#~ msgstr "プロフィールテキスト"
+
+#~ msgid "Select Profile image:"
+#~ msgstr "プロフィール用画像を選択"
+
+#~ msgid "Cut out round the image."
+#~ msgstr "画像を丸く切り抜いて表示する"
+
+#~ msgid "Media size (Optional)"
+#~ msgstr "画像の大きさ( 任意 )"
+
+#~ msgid "Image align left"
+#~ msgstr "画像を左揃えにする"
+
+#~ msgid "Text float to image."
+#~ msgstr "テキストを画像に回りこませる"
+
+#~ msgid "Profile Text:"
+#~ msgstr "プロフィールテキスト"
+
+#~ msgid "Facebook URL:"
+#~ msgstr "Facebook リンク先ページのURL"
+
+#~ msgid "Twitter URL:"
+#~ msgstr "twitterリンク先ページのURL"
+
+#~ msgid "Email Address:"
+#~ msgstr "Email リンク先ページのURL"
+
+#~ msgid "Youtube URL:"
+#~ msgstr "Youtube リンク先ページのURL"
+
+#~ msgid "RSS URL:"
+#~ msgstr "RSS リンク先ページのURL"
+
+#~ msgid "instagram URL:"
+#~ msgstr "instagram リンク先ページのURL"
+
+#~ msgid "linkedin URL:"
+#~ msgstr "linkedin リンク先ページのURL"
+
+#~ msgid "Categories/Custom taxonomies list"
+#~ msgstr "カテゴリー/カスタム分類リスト"
+
+#~ msgid "Displays a categories and custom taxonomies list."
+#~ msgstr "カテゴリーやカスタム分類のリストを表示します。"
+
+#~ msgid "Label to display"
+#~ msgstr "表示するラベル"
+
+#~ msgid "Blog"
+#~ msgstr "ブログ"
+
+#~ msgid "Displays entries list from a RSS feed link."
+#~ msgstr "RSSフィードリンクからエントリーリストを表示します。"
+
+#~ msgid "RSS entries for top"
+#~ msgstr "トップのRSSエントリー"
+
+#~ msgid "Blog entries"
+#~ msgstr "ブログエントリー"
+
+#~ msgid "Heading title"
+#~ msgstr "見出しタイトル"
+
+#~ msgid "HTML Sitemap Settings"
+#~ msgstr "HTMLサイトマップ設定"
+
+#~ msgid "Exclude page Settings"
+#~ msgstr "除外ページ設定"
+
+#~ msgid "Input you want to exclude page id."
+#~ msgstr "HTMLサイトマップから除外したい固定ページのIDを入力してください。"
+
+#~ msgid ""
+#~ "* Please enter separated by \",\"(commas) if there is more than one page "
+#~ "ID that you want to exclude."
+#~ msgstr ""
+#~ "複数のページを除外する場合は , （コンマ）で区切って入力してください。"
+
+#~ msgid "HTML Sitemap"
+#~ msgstr "HTMLサイトマップ"
+
+#~ msgid "Display a HTML sitemap"
+#~ msgstr "HTMLサイトマップの表示"
+
+#~ msgid "Displays a Facebook Page Plugin"
+#~ msgstr "Facebook ページプラグインを表示します。"
+
+#~ msgid "Height"
+#~ msgstr "高さ"
+
+#~ msgid "Show Friend's Faces"
+#~ msgstr "アイコンを表示する"
+
+#~ msgid "Hide Cover Photo"
+#~ msgstr "カバー画像を表示しない"
+
+#~ msgid "Show Page Posts"
+#~ msgstr "タイムラインを表示"
+
+#~ msgid "Follow me"
+#~ msgstr "このサイトをフォローする"
+
+#~ msgid "Sns Title"
+#~ msgstr "OGPタイトル"
+
+#~ msgid "if filled this area then override title of OGP and Twitter Card"
+#~ msgstr ""
+#~ "このエリアにタイトルを入力すると、このページのOGP,ツイッターカードに出力さ"
+#~ "れるタイトルを上書きすることができます"
+
+#~ msgid "SNS"
+#~ msgstr "SNS"
+
+#~ msgid "SNS Settings"
+#~ msgstr "SNS設定"
+
+#~ msgid "facebook application ID"
+#~ msgstr "facebookアプリケーションID"
+
+#~ msgid "I will check and get the application ID"
+#~ msgstr "アプリケーションIDを確認・取得する "
+
+#~ msgid ""
+#~ "* If an application ID is not specified, neither a Like button nor the "
+#~ "comment field displays and operates correctly."
+#~ msgstr ""
+#~ "※アプリケーションIDを入力しないとボタンやコメント欄が表示・正しく動作しま"
+#~ "せん。"
+
+#~ msgid ""
+#~ "Please search for terms as [get Facebook application ID] If you do not "
+#~ "know much about how to get application ID for Facebook."
+#~ msgstr ""
+#~ "facebookのアプリケーションIDの取得方法についてよくわからない場合は"
+#~ "「facebook アプリケーションID 取得」などで検索して下さい。"
+
+#~ msgid "facebook page URL"
+#~ msgstr "FacebookページURL"
+
+#~ msgid "OG default image"
+#~ msgstr "デフォルトのOGPイメージ"
+
+#~ msgid ""
+#~ "If, for example someone pressed the Facebook [Like] button, this is the "
+#~ "image that appears on the Facebook timeline."
+#~ msgstr ""
+#~ "Facebookの「いいね！」ボタンを押した際、ここで設定した画像が Facebook のタ"
+#~ "イムラインに表示されます。"
+
+#~ msgid "If a featured image is specified for the page, it takes precedence."
+#~ msgstr ""
+#~ "ページにアイキャッチ画像が指定されている場合は、アイキャッチ画像が優先され"
+#~ "ます。"
+
+#~ msgid "Select an image"
+#~ msgstr "画像を選択"
+
+#~ msgid ""
+#~ "* Picture sizes are 300x300 pixels or more and picture ratio 16:9 is "
+#~ "recommended."
+#~ msgstr "画像サイズ 橫 300px 縦 300px 以上、画像比率 16:9 を推奨します。"
+
+#~ msgid "twitter ID"
+#~ msgstr "twitterアカウント"
+
+#~ msgid "OG tags"
+#~ msgstr "OGタグ"
+
+#~ msgid "Print the OG tags"
+#~ msgstr "OGタグを出力する"
+
+#~ msgid ""
+#~ "If other plug-ins are used for the OG, do not output the OG using this "
+#~ "plugin."
+#~ msgstr ""
+#~ "OGタグの出力を選択して下さい。もし他のプラグインやテーマでOGタグを出力して"
+#~ "いる場合は、このプラグインでの出力は必要ありません。"
+
+#~ msgid "Twitter Card tags"
+#~ msgstr "Twitterカードタグ"
+
+#~ msgid "Print the Twitter Card tags"
+#~ msgstr "Twitter カードタグを html head 内へ出力します。"
+
+#~ msgid "Social bookmark buttons"
+#~ msgstr "ソーシャルボタン"
+
+#~ msgid "Print the social bookmark buttons"
+#~ msgstr "ソーシャルブックマーク（シェアボタンやtweetボタン）を表示します。"
+
+#~ msgid "ignore postID for SNS buttons"
+#~ msgstr "SNSボタンの非表示設定"
+
+#~ msgid ""
+#~ "if you need filtering by post_ID, add the ignore post_ID separate by \","
+#~ "\"."
+#~ msgstr ""
+#~ "特定のポストのみSNSボタンを表示したくない場合、カンマ(,)区切りでポストIDを"
+#~ "入力します。"
+
+#~ msgid "example"
+#~ msgstr "例"
+
+#~ msgid "Follow me box"
+#~ msgstr "Follow me box"
+
+#~ msgid "Print the Follow me box"
+#~ msgstr "Follow me ユニットを本文の下に表示する"
+
+#~ msgid "Follow me box title"
+#~ msgstr "Follow me box の見出しテキスト"
+
+#~ msgid "Edit Guide"
+#~ msgstr "編集ガイド"
+
+#~ msgid "Active Setting"
+#~ msgstr "有効化設定"
+
+#~ msgid "Main Setting"
+#~ msgstr "メイン設定"
+
+#~ msgid "News from VK All in One Expansion Unit"
+#~ msgstr "VK All in One Expansion Unit からのお知らせ"
+
+#~ msgid "Sorry, there is no post"
+#~ msgstr "お知らせはありません。"
+
+#~ msgid "Normally, I will include the %1$s in the title tag."
+#~ msgstr "通常 %1$s が全ページのタイトルタグに入ります。"
+
+#~ msgid ""
+#~ "However, in the home page, as described above, other title will not be "
+#~ "added, it is possible to make the &lt;title&gt; little longer, which can "
+#~ "be set separately here."
+#~ msgstr ""
+#~ "ただ、トップページにおいては上記のように他のタイトルと連結されないので、も"
+#~ "う少し長めの&lt;title&gt;をつける事が出来るために、ここで別途設定する事が"
+#~ "出来るようになっています。"
+
+#~ msgid "*　It is necessary to set the Theme options page."
+#~ msgstr "* テーマオプションページで設定する必要があります。"
+
+#~ msgid "Social media"
+#~ msgstr "ソーシャルメディア"
+
+#~ msgid "If you are unsure, you can leave for later."
+#~ msgstr "不明な場合は後で設定することができます。"
+
+#~ msgid ""
+#~ "If you wish to link to a personal account or a Facebook page  banner will "
+#~ "be displayed if you enter the URL."
+#~ msgstr ""
+#~ "個人アカウントやFacebookページのバナーにリンクしたい場合は URL を入力して"
+#~ "下さい。"
+
+#~ msgid "Facebook user ID (optional)"
+#~ msgstr "Facebook ユーザーID( オプション )"
+
+#~ msgid "Please enter the Facebook user ID of the administrator."
+#~ msgstr "管理者のFacebookユーザーIDを入力してください。"
+
+#~ msgid "* It is not the application ID of the Facebook page."
+#~ msgstr "* FacebookページのアプリケーションIDではありません。"
+
+#~ msgid ""
+#~ "You can see the personal Facebook ID when you access the following url "
+#~ "http://graph.facebook.com/(own url name(example: hidekazu.ishikawa))."
+#~ msgstr ""
+#~ "このアドレス [ http://graph.facebook.com/( 自分の名前のURL (例 : hidekazu."
+#~ "ishikawa) ) ] にアクセスして個人の Facebook ID を確認できます。"
+
+#~ msgid ""
+#~ "Please search for terms as [find facebook user ID] if you are still not "
+#~ "sure."
+#~ msgstr ""
+#~ "まだ不明な場合は、[ FacebookのユーザーIDを検索 ] などのキーワードで検索し"
+#~ "て下さい。"
+
+#~ msgid "twitter account"
+#~ msgstr "Twitter アカウント"
+
+#~ msgid ""
+#~ "If you would like to link to a Twitter account, banner will be displayed "
+#~ "if you enter the account name."
+#~ msgstr ""
+#~ "Twitterアカウントをバナーにリンクしたい場合は、アカウント名を入力して下さ"
+#~ "い。"
+
+#~ msgid "widget"
+#~ msgstr "ウィジェット"
+
+#~ msgid ""
+#~ "* If you prefer to use Twitter widgets etc, this can be left blank, paste "
+#~ "the source code into a [text] %s here."
+#~ msgstr ""
+#~ "Twitter のウィジェットなどを使用する時、ここを空にできます。%s にソース"
+#~ "コードを貼り付けます。"
+
+#~ msgid "OGP default image"
+#~ msgstr "OGP デフォルト画像"
+
+#~ msgid "Social buttons"
+#~ msgstr "ソーシャルボタン"
+
+#~ msgid "Please check the type of page that displays the social button."
+#~ msgstr "ページに表示するソーシャルボタンの種類を選択して下さい。"
+
+#~ msgid "Home page"
+#~ msgstr "トップページ"
+
+#~ msgid "Page"
+#~ msgstr "ページ"
+
+#~ msgid "Post"
+#~ msgstr "投稿"
+
+#~ msgid ""
+#~ "Within the type of page that is checked, if there is a particular page "
+#~ "you do not wish to display, enter the Page ID. If multiple pages, please "
+#~ "separate by commas."
+#~ msgstr ""
+#~ "表示したくない特定のページが有る場合にページ ID を入力して下さい。複数の"
+#~ "ページがある場合は、カンマで区切って入力して下さい。"
+
+#~ msgid "facebook comments box"
+#~ msgstr "Facebookのコメントボックス"
+
+#~ msgid "Please check the type of the page to display Facebook comments."
+#~ msgstr "Facebook のコメントを表示するページタイプを確認して下さい。"
+
+#~ msgid "If you wish to use Facebook LikeBox, please check the location."
+#~ msgstr "Facebook のいいねボックスを使用する場合は、場所を確認して下さい。"
+
+#~ msgid "* Please be sure to set Facebook application ID."
+#~ msgstr "Facebook のアプリケーションIDを設定してください。"
+
+#~ msgid "Side bar"
+#~ msgstr "サイドバー"
+
+#~ msgid "URL of the Facebook page."
+#~ msgstr "Facebook ページの URL"
+
+#~ msgid "Display stream"
+#~ msgstr "タイムラインを表示する"
+
+#~ msgid "Display"
+#~ msgstr "表示"
+
+#~ msgid "Display faces"
+#~ msgstr "アイコンを表示する"
+
+#~ msgid "Height of LikeBox"
+#~ msgstr "いいねボックスの高さ"
+
+#~ msgid "Do not output the OGP"
+#~ msgstr "OGP を出力しません"
+
+#~ msgid ""
+#~ "If other plug-ins are used for the OGP, do not output the OGP using "
+#~ "BizVektor."
+#~ msgstr ""
+#~ "他の OGP プラグインを使用している場合は、BizVektor を使用して出力しませ"
+#~ "ん。"
+
+#~ msgid "I want to output the OGP tags using BizVektor"
+#~ msgstr "BizVektor を使用して OGP タグを出力したい。"
+
+#~ msgid "Do not output OGP tags using BizVektor"
+#~ msgstr "BizVektor を使用して OGP タグを出力しない。"
+
+#~ msgid "Page top"
+#~ msgstr "ページ先頭へ"
+
+#~ msgid ""
+#~ "*It is necessary to set the \"%s\" -> \"Contact\" section in \"Main "
+#~ "setting\" page."
+#~ msgstr ""
+#~ "* 「%s」→ 「メイン設定」ページで『お問い合わせ情報』を設定する必要がありま"
+#~ "す。"
+
+#~ msgid "Choose Print Bootstrap css"
+#~ msgstr "Bootstrap の CSS を出力するか選択"
+
+#~ msgid "Choose Print link fontawesome."
+#~ msgstr "出力する fontawesome link を選択して下さい。"
+
+#~ msgid "Choose Print meta description."
+#~ msgstr "出力する meta description を選択して下さい。"
+
+#~ msgid "Choose Rewrite the title tag"
+#~ msgstr "タイトルタグの書き換えを選択する"
+
+#~ msgid "Choose Print meta Keyword."
+#~ msgstr "メタキーワードを選んでください。"
+
+#~ msgid "Choose Social media cooperation."
+#~ msgstr "連携するソーシャルメディアを選択します。"
+
+#~ msgid "Choose Print Google Analytics tracking code."
+#~ msgstr "出力する Google アナリティクスのトラッキングコードを選択します。"
+
+#~ msgid "Choose Related posts."
+#~ msgstr "関連記事を選択"
+
+#~ msgid "Choose display a child page index"
+#~ msgstr "子ページの一覧を表示するか選択"
+
+#~ msgid "Displays the content of a chosen page."
+#~ msgstr "選択したページの内容を表示します。"
+
+#~ msgid "page content for top"
+#~ msgstr "固定ページ本文"
+
+#~ msgid "if checked you will display a child page index "
+#~ msgstr ""
+#~ "チェックを入れると個別ページ下へ同じ親ページをもつ子ページ一覧を表示しま"
+#~ "す。"
+
+#~ msgid "PR Block1 title"
+#~ msgstr "PR ブロック1 タイトル"
+
+#~ msgid "PR Block2 title"
+#~ msgstr "PR ブロック2 タイトル"
+
+#~ msgid "PR Block3 title"
+#~ msgstr "PR ブロック3 タイトル"
+
+#~ msgid "PR Block4 title"
+#~ msgstr "PR ブロック4 タイトル"
+
+#~ msgid " ex:fa-rocket"
+#~ msgstr "例: fa-rocket"
+
+#~ msgid "if checked you will display a sitemap"
+#~ msgstr "チェックを入れるとHTMLサイトマップを表示します。"
+
+#, fuzzy
+#~ msgid "Post each setting."
+#~ msgstr "3PR エリア1 設定"
+
+#~ msgid ""
+#~ "To choose your favorite icon, and enter the class. For example, the use "
+#~ "of 「fa-rocket」"
+#~ msgstr "気に入ったアイコンフォントのクラス名を入力します。"
+
+#~ msgid "Class of IconFont:"
+#~ msgstr "アイコンフォントの"
+
+#~ msgid ""
+#~ "Select the column. You click \"Save\" or \"Apply\". The column input "
+#~ "field is increased or decreased."
+#~ msgstr "列を選択したら一度保存して、"
+
+#~ msgid "You can select a block column:"
+#~ msgstr "PRブロックの列"
+
+#~ msgid "Choose display a child page index to posts."
+#~ msgstr "子ページの一覧を表示するか選択"
+
+#~ msgid "Insert Site Map"
+#~ msgstr "サイトマップを挿入する"
+
+#~ msgid "Choose other widgets."
+#~ msgstr "Other ウィジェットを選択"
+
+#, fuzzy
+#~ msgid "http://ex-unit.bizvektor.com/ja/?feed"
+#~ msgstr "http://ex-unit.bizvektor.com/ja/?feed"
+
+#~ msgid "http://ex-unit.bizvektor.com/?feed"
+#~ msgstr "http://ex-unit.bizvektor.com/ja/?feed"
+
+#~ msgid "AdWords"
+#~ msgstr "広告の挿入"
+
+#, fuzzy
+#~ msgid "acebook application ID"
+#~ msgstr "facebookアプリケーションID"
+
+#~ msgid "Site's Profile"
+#~ msgstr "プロフィール"
+
+#~ msgid "Media round setting:"
+#~ msgstr "画像を丸く切り抜くか:"
+
+#, fuzzy
+#~ msgid "Media float setting:"
+#~ msgstr "メイン設定"
+
+#~ msgid "Other Widgets"
+#~ msgstr "Other ウィジェット"
+
+#~ msgid "Do not output the OG"
+#~ msgstr "OGタグ出力設定"
+
+#~ msgid "Output OG tags(default)"
+#~ msgstr "OGタグを出力する"
+
+#~ msgctxt "Archive description"
+#~ msgid "Article of %s."
+#~ msgstr "%s の記事"
+
+#~ msgid "WebClip Setting"
+#~ msgstr "ウェブクリップ設定"
+
+#~ msgid ""
+#~ "Description of meta tags in the search results screen of search sites "
+#~ "such as Google, will be Displayed, such as the bottom of the site title.\n"
+#~ "If the excerpt column is blank, is 240 characters than text beginning of "
+#~ "a sentence has become a specification that is applied as a description."
+#~ msgstr ""
+#~ "メタタグのディスクリプションはGoogleなどの検索サイトの検索結果画面で、サイ"
+#~ "トタイトルの下などに表示されます。"
+
+#~ msgid "Displays a your site's profile"
+#~ msgstr "サイトのプロフィールを表示します"
+
+#~ msgid "Site's Profile Text"
+#~ msgstr "Site's Profile Text"
+
+#~ msgid "3PR area Title-1"
+#~ msgstr "3PR エリア1 タイトル"
+
+#~ msgid "3PR area Title-2"
+#~ msgstr "3PR エリア2 タイトル"
+
+#~ msgid "3PR area Title-3"
+#~ msgstr "3PR エリア3 タイトル"
+
+#~ msgid "3PR Box1 Setting"
+#~ msgstr "3PR ボックス1 設定"
+
+#~ msgid "3PR Box2 Setting"
+#~ msgstr "3PR ボックス2 設定"
+
+#~ msgid "3PR Box3 Setting"
+#~ msgstr "3PR ボックス3 設定"
+
+#~ msgid "VK Ex Unit"
+#~ msgstr "VK Ex Unit"

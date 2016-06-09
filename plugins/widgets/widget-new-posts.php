@@ -9,7 +9,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 	function __construct() {
 
-		$widget_name = LIGHTNING_ADVANCED_SHORT_NAME. '_' . __( 'Content Area Posts Widget', LIGHTNING_ADVANCED_TEXTDOMAIN );
+		$widget_name = LIGHTNING_ADVANCED_SHORT_NAME. ' ' . __( 'Content Area Posts Widget', LIGHTNING_ADVANCED_TEXTDOMAIN );
 
 		parent::__construct(
 			'ltg_adv_post_list',

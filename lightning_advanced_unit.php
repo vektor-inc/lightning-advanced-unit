@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Lightning Advanced Unit
  * Plugin URI:
- * Version: 0.0.1
+ * Version: 0.0.0
  * Author: Vektor,Inc.
  * Author URI: http://www.vektor-inc.co.jp
  * Description:
@@ -24,6 +24,15 @@ define( 'LIGHTNING_ADVANCED_SHORT_NAME', 'LTG' );
 
 require_once( LIGHTNING_ADVANCED_DIR . 'plugins/navigation/navigation.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'plugins/widgets/widget-new-posts.php' );
+
+/*-------------------------------------------*/
+/*  translations
+/*-------------------------------------------*/
+function lightning_adv_unit_textdomain() {
+	load_plugin_textdomain( LIGHTNING_ADVANCED_TEXTDOMAIN, false, dirname(plugin_basename(__FILE__)).'/languages/' );
+}
+add_action( 'plugins_loaded', 'lightning_adv_unit_textdomain' );
+
 
 /*-------------------------------------------*/
 /*  Load lightning_adv js
