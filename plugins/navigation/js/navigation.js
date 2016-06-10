@@ -7,6 +7,8 @@ jQuery(window).resize(function(){
 /*-------------------------------------------*/
 /*	メニューの開閉
 /*	<div id="menu" onclick="showHide('menu');" class="itemOpen">MENU</div>
+/*  * header.siteHeader を left で制御しているのは Safariでは
+/*  position:fixed しているとウィンドウにfixしてしまってwrapを横にずらしてもついて来ないため
 /*-------------------------------------------*/
 
 function run_slide_menu_control(){
@@ -46,12 +48,19 @@ function slide_menu_open(menuPosition){
 			// 右にメニューを表示するために左に逃げる
 			"margin-left": "-" + menu_width,
 		},200);
+		jQuery('header.siteHeader').stop().animate({
+			"left":"-"+menu_width,
+		},200);
 		jQuery('#navSection').css({"display":"block","width":menu_width, "right" :"-"+menu_width }).stop().animate({
 			"right":0,
 		},200);
+
 	} else if ( menuPosition == 'left' ){
 		jQuery('#wrap').stop().animate({
 			"margin-left":menu_width,
+		},200);
+		jQuery('header.siteHeader').stop().animate({
+			"left":menu_width,
 		},200);
 		jQuery('#navSection').css({"display":"block","width":menu_width, "left" :"-"+menu_width }).stop().animate({
 			"left":0,
@@ -76,8 +85,9 @@ function slide_menu_close(menuPosition){
 	var menu_width = wrap_width - 60 + 'px';
 
 	jQuery('#wrap').stop().animate({ "margin-left":"0" },200);
+	jQuery('header.siteHeader').stop().animate({ "left":"0" },200);
 
-	if ( menuPosition == 'right' ) {
+	if ( menuPosition == 'right' ) {jQuery('header.siteHeader').stop().animate({ "left":"0" },200);
 		jQuery('#navSection').stop().animate({ "right":"-"+menu_width },200,function(){
 			menuClose_common();
 		});
@@ -97,8 +107,11 @@ function menuClose_common(){
 function run_menuResize(){
 	var wrap_width = jQuery('body').width();
 	jQuery('#bodyInner').css({"width":wrap_width});
-	jQuery('#wrap').css({"width":wrap_width,"margin-left":"","margin-right":""});
-	menuClose_common();
+	// jQuery('#wrap').css({"width":wrap_width,"margin-left":"","margin-right":""});
+	// menuClose_common();
 	var headerHeight = jQuery('header.siteHeader').height;
 	jQuery('#top__fullcarousel').css({"margin-top":headerHeight});
+	if ( wrap_width > 767 ) {
+		slide_menu_close();
+	}
 }

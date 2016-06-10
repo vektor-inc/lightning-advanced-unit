@@ -1,9 +1,9 @@
 <?php
 /*-------------------------------------------*/
-/*  translations
+/*  Customizer
 /*-------------------------------------------*/
-add_action( 'customize_register', 'lightning_adv_unit_customize_register' );
-function lightning_adv_unit_customize_register($wp_customize) {
+add_action( 'customize_register', 'lightning_adv_unit_customize_register_menu_btn_position' );
+function lightning_adv_unit_customize_register_menu_btn_position($wp_customize) {
 	$wp_customize->add_setting( 'lightning_theme_options[menu_btn_position]',  array(
         'default'           => 'left',
         'type'              => 'option',
@@ -23,6 +23,9 @@ function lightning_adv_unit_customize_register($wp_customize) {
 	));
 }
 
+/*-------------------------------------------*/
+/*  Position Change
+/*-------------------------------------------*/
 add_filter( 'lightning_menu_btn_position', 'lightning_adv_unit_menu_btn_position_custom' );
 function lightning_adv_unit_menu_btn_position_custom($menu_btn_position){
 	$options = get_option('lightning_theme_options');
