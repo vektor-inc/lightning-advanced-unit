@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-06-09 13:19+0900\n"
+"POT-Creation-Date: 2016-06-11 02:05+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
 "Language-Team: Vektor,Inc. <info@vektor-inc.co.jp>\n"
@@ -12,7 +12,31 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-PoeditTearchPath-0: .\n"
+
+#: plugins/menu-btn-position.php:14
+msgid "Menu button position ( Mobile mode )"
+msgstr ""
+
+#: plugins/menu-btn-position.php:19
+msgid "Left"
+msgstr ""
+
+#: plugins/menu-btn-position.php:20
+msgid "Right"
+msgstr ""
+
+#: plugins/navigation/navigation.php:15
+msgid "Menu Type ( Mobile mode )"
+msgstr ""
+
+#: plugins/navigation/navigation.php:20
+msgid "Side Slide"
+msgstr ""
+
+#: plugins/navigation/navigation.php:21
+msgid "Vertical Show Hide (Lightning default)"
+msgstr ""
 
 #: plugins/widgets/widget-new-posts.php:12
 msgid "Content Area Posts Widget"
