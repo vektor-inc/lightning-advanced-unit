@@ -38,11 +38,11 @@ var spritesmith = require('gulp.spritesmith');
 
 // js最小化
 gulp.task('jsmin', function () {
-  gulp.src(['./js/pluginName.js','./js/pluginName_admin.js'])
+  gulp.src(['./plugins/navigation/js/navigation.js'])
   .pipe(plumber()) // エラーでも監視を続行
   .pipe(jsmin())
   .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest('./js'));
+  .pipe(gulp.dest('./plugins/navigation/js'));
 });
 
 // Watch
@@ -50,8 +50,7 @@ gulp.task('watch', function() {
     // gulp.watch('css/*.css', ['cssmin'])
     // gulp.watch('js/*.js', ['scripts']);
     // gulp.watch('_scss/style.scss', ['copy']);
-    gulp.watch('js/pluginName.js', ['jsmin']);
-    gulp.watch('js/pluginName_admin.js.js', ['jsmin']);
+    gulp.watch('./plugins/navigation/js/navigation.js', ['jsmin']);
 });
 
 // gulp.task('default', ['scripts','watch','sprite']);
