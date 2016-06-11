@@ -31,7 +31,6 @@ function run_slide_menu_control(){
 }
 
 function slide_menu_open(menuPosition){
-	// console.log('_|＼○_ﾋｬｯ ε=＼＿○ﾉ ﾎｰｳ!!');
 	var navSection_open_position = 'navSection_open_' + menuPosition;
 	jQuery('#navSection').addClass(navSection_open_position);
 
