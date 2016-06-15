@@ -102,6 +102,8 @@ function menuClose_common(){
 	jQuery('#navSection').removeClass('navSection_open_left');
 	jQuery('#gMenu_outer').insertAfter('.navbar-header');
 	jQuery('#navSection').css({"right":"","left":""});
+	jQuery('#bodyInner').css({"width":""});
+	jQuery('#wrap').css({"width":""});
 }
 function run_menuResize(){
 	var wrap_width = jQuery('body').width();
