@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Lightning Advanced Unit
  * Plugin URI: http://lightning.vektor-inc.co.jp/
- * Version: 0.0.1
+ * Version: 1.0.0
  * Author: Vektor,Inc.
  * Author URI: http://www.vektor-inc.co.jp
  * Description: This is a plug-ins that extend the functionality of the theme "Lightning".
