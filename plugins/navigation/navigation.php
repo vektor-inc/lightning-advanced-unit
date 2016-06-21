@@ -11,22 +11,24 @@ function lightning_adv_unit_customize_register_menu_type($wp_customize) {
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'lightning_sanitize_radio',
     ));
+  $choices_array = array(
+      'side_slide' => __('Side Slide', LIGHTNING_ADVANCED_TEXTDOMAIN),
+      'vertical_show_hide' => __('Vertical Show Hide (Lightning default)', LIGHTNING_ADVANCED_TEXTDOMAIN),
+      );
+  $choices_array = apply_filters( 'ligthning_menu_choices_array_custom', $choices_array );
   $wp_customize->add_control( 'lightning_theme_options[menu_type]',array(
     'label'     => __('Menu Type ( Mobile mode )', LIGHTNING_ADVANCED_TEXTDOMAIN),
     'section'   => 'lightning_design',
     'settings'  => 'lightning_theme_options[menu_type]',
     'type' => 'radio',
-    'choices' => array(
-      'side_slide' => __('Side Slide', LIGHTNING_ADVANCED_TEXTDOMAIN),
-      'vertical_show_hide' => __('Vertical Show Hide (Lightning default)', LIGHTNING_ADVANCED_TEXTDOMAIN),
-      ),
+    'choices' => $choices_array,
     'priority' => 300,
   ));
 }
 
 function ltg_adv_is_slide_menu(){
   $options = get_option('lightning_theme_options');
-  if ( !isset( $options['menu_type'] ) || $options['menu_type'] != 'vertical_show_hide' ){
+  if ( !isset( $options['menu_type'] ||  ( $options['menu_type'] == 'side_slide' ) ) {
     return true;
   } else {
     return false;
