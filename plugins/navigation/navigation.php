@@ -28,7 +28,7 @@ function lightning_adv_unit_customize_register_menu_type($wp_customize) {
 
 function ltg_adv_is_slide_menu(){
   $options = get_option('lightning_theme_options');
-  if ( !isset( $options['menu_type'] ||  ( $options['menu_type'] == 'side_slide' ) ) {
+  if ( !isset( $options['menu_type'] ) ||  ( $options['menu_type'] == 'side_slide' ) ) {
     return true;
   } else {
     return false;
