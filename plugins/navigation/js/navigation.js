@@ -104,6 +104,7 @@ function menuClose_common(){
 	jQuery('#navSection').css({"right":"","left":""});
 	jQuery('#bodyInner').css({"width":""});
 	jQuery('#wrap').css({"width":""});
+	jQuery('#navSection').css({"display":""});
 }
 function run_menuResize(){
 	var wrap_width = jQuery('body').width();
