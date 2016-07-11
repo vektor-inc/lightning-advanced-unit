@@ -40,6 +40,7 @@ function slide_menu_open(menuPosition){
 
 	var menu_width = wrap_width - 60 + 'px';
 
+	jQuery('#headerTop').appendTo('#navSection');
 	jQuery('#gMenu_outer').appendTo('#navSection');
 
 	if ( menuPosition == 'right' ){
@@ -100,11 +101,11 @@ function menuClose_common(){
 	// アニメーションが終わってから実行
 	jQuery('#navSection').removeClass('navSection_open_right');
 	jQuery('#navSection').removeClass('navSection_open_left');
+	jQuery('#navSection').css({ "right":"", "left":"", "display":"" });
+	jQuery('#headerTop').prependTo('header.siteHeader');
 	jQuery('#gMenu_outer').insertAfter('.navbar-header');
-	jQuery('#navSection').css({"right":"","left":""});
 	jQuery('#bodyInner').css({"width":""});
 	jQuery('#wrap').css({"width":""});
-	jQuery('#navSection').css({"display":""});
 }
 function run_menuResize(){
 	var wrap_width = jQuery('body').width();
