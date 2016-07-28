@@ -20,10 +20,10 @@ define( 'LIGHTNING_ADVANCED_URL', plugin_dir_url( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_SHORT_NAME', 'LTG' );
 
-require_once( LIGHTNING_ADVANCED_DIR . 'plugins/navigation/navigation.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'plugins/widgets/widget-new-posts.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'plugins/menu-btn-position.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'plugins/header-top/header-top.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/navigation/navigation.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-new-posts.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/menu-btn-position.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/header-top/header-top.php' );
 
 /*-------------------------------------------*/
 /*  translations

@@ -69,7 +69,7 @@ if ( ! class_exists( 'Lightning_header_top' ) ) {
         public function __construct(){
         	add_action( 'after_setup_theme', array( $this, 'lightning_header_top_add_menu' ) );
         	add_action( 'lightning_header_prepend', array( $this, 'lightning_header_top_prepend_item' ) );   
-        	require_once( LIGHTNING_ADVANCED_DIR . 'plugins/header-top/header-top-customizer.php' );  	
+        	require_once( LIGHTNING_ADVANCED_DIR . 'inc/header-top/header-top-customizer.php' );  	
         }
 
     } // class Lightning_header_top 

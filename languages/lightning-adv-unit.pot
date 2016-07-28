@@ -14,111 +14,111 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-PoeditTearchPath-0: .\n"
 
-#: plugins/menu-btn-position.php:14
+#: inc/menu-btn-position.php:14
 msgid "Menu button position ( Mobile mode )"
 msgstr ""
 
-#: plugins/menu-btn-position.php:19
+#: inc/menu-btn-position.php:19
 msgid "Left"
 msgstr ""
 
-#: plugins/menu-btn-position.php:20
+#: inc/menu-btn-position.php:20
 msgid "Right"
 msgstr ""
 
-#: plugins/navigation/navigation.php:15
+#: inc/navigation/navigation.php:15
 msgid "Menu Type ( Mobile mode )"
 msgstr ""
 
-#: plugins/navigation/navigation.php:20
+#: inc/navigation/navigation.php:20
 msgid "Side Slide"
 msgstr ""
 
-#: plugins/navigation/navigation.php:21
+#: inc/navigation/navigation.php:21
 msgid "Vertical Show Hide (Lightning default)"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:12
+#: inc/widgets/widget-new-posts.php:12
 msgid "Content Area Posts Widget"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:17
+#: inc/widgets/widget-new-posts.php:17
 msgid "Displays a list of your most recent posts"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:108
+#: inc/widgets/widget-new-posts.php:108
 msgid "Last updated"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:132
-#: plugins/widgets/widget-new-posts.php:156
+#: inc/widgets/widget-new-posts.php:132
+#: inc/widgets/widget-new-posts.php:156
 msgid "Read more"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:176
+#: inc/widgets/widget-new-posts.php:176
 msgid "<dl><dt>%s</dt><dd>%l</dd></dl>"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:196
+#: inc/widgets/widget-new-posts.php:196
 msgid "Tags"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:229
+#: inc/widgets/widget-new-posts.php:229
 msgid "Recent Posts"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:238
+#: inc/widgets/widget-new-posts.php:238
 msgid "Display Format"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:240
-#: plugins/widgets/widget-new-posts.php:242
+#: inc/widgets/widget-new-posts.php:240
+#: inc/widgets/widget-new-posts.php:242
 msgid "Thumbnail"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:240
-#: plugins/widgets/widget-new-posts.php:242
+#: inc/widgets/widget-new-posts.php:240
+#: inc/widgets/widget-new-posts.php:242
 msgid "Date"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:240
-#: plugins/widgets/widget-new-posts.php:242
+#: inc/widgets/widget-new-posts.php:240
+#: inc/widgets/widget-new-posts.php:242
 msgid "Category"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:240
-#: plugins/widgets/widget-new-posts.php:242
+#: inc/widgets/widget-new-posts.php:240
+#: inc/widgets/widget-new-posts.php:242
 msgid "Title"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:240
+#: inc/widgets/widget-new-posts.php:240
 msgid "Excerpt"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:242
+#: inc/widgets/widget-new-posts.php:242
 msgid "Content"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:246
+#: inc/widgets/widget-new-posts.php:246
 msgid "Title:"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:251
+#: inc/widgets/widget-new-posts.php:251
 msgid "Display count"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:256
+#: inc/widgets/widget-new-posts.php:256
 msgid "Slug for the custom type you want to display"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:261
+#: inc/widgets/widget-new-posts.php:261
 msgid "taxonomy ID"
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:263
+#: inc/widgets/widget-new-posts.php:263
 msgid "if you need filtering by term, add the term ID separate by \",\"."
 msgstr ""
 
-#: plugins/widgets/widget-new-posts.php:265
+#: inc/widgets/widget-new-posts.php:265
 msgid "if empty this area, I will do not filtering."
 msgstr ""

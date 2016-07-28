@@ -15,114 +15,114 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_x;_e;_ex\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../plugins/menu-btn-position.php:14
+#: ../inc/menu-btn-position.php:14
 msgid "Menu button position ( Mobile mode )"
 msgstr "メニューボタンの位置（モバイル端末時）"
 
-#: ../plugins/menu-btn-position.php:19
+#: ../inc/menu-btn-position.php:19
 msgid "Left"
 msgstr "左"
 
-#: ../plugins/menu-btn-position.php:20
+#: ../inc/menu-btn-position.php:20
 msgid "Right"
 msgstr "右"
 
-#: ../plugins/navigation/navigation.php:15
+#: ../inc/navigation/navigation.php:15
 msgid "Menu Type ( Mobile mode )"
 msgstr "メニュータイプ（モバイル端末時）"
 
-#: ../plugins/navigation/navigation.php:20
+#: ../inc/navigation/navigation.php:20
 msgid "Side Slide"
 msgstr "横スライド"
 
-#: ../plugins/navigation/navigation.php:21
+#: ../inc/navigation/navigation.php:21
 msgid "Vertical Show Hide (Lightning default)"
 msgstr "縦展開（Ligthning標準）"
 
-#: ../plugins/widgets/widget-new-posts.php:12
+#: ../inc/widgets/widget-new-posts.php:12
 msgid "Content Area Posts Widget"
 msgstr "コンテンツエリア投稿リスト"
 
-#: ../plugins/widgets/widget-new-posts.php:17
+#: ../inc/widgets/widget-new-posts.php:17
 msgid "Displays a list of your most recent posts"
 msgstr "最新の投稿記事リストを表示します。"
 
-#: ../plugins/widgets/widget-new-posts.php:108
+#: ../inc/widgets/widget-new-posts.php:108
 msgid "Last updated"
 msgstr "最終更新日"
 
-#: ../plugins/widgets/widget-new-posts.php:132
-#: ../plugins/widgets/widget-new-posts.php:156
+#: ../inc/widgets/widget-new-posts.php:132
+#: ../inc/widgets/widget-new-posts.php:156
 msgid "Read more"
 msgstr "詳しくはこちら"
 
-#: ../plugins/widgets/widget-new-posts.php:176
+#: ../inc/widgets/widget-new-posts.php:176
 msgid "<dl><dt>%s</dt><dd>%l</dd></dl>"
 msgstr "<dl><dt>%s</dt><dd>%l</dd></dl>"
 
-#: ../plugins/widgets/widget-new-posts.php:196
+#: ../inc/widgets/widget-new-posts.php:196
 msgid "Tags"
 msgstr "タグ"
 
-#: ../plugins/widgets/widget-new-posts.php:229
+#: ../inc/widgets/widget-new-posts.php:229
 msgid "Recent Posts"
 msgstr "最新記事"
 
-#: ../plugins/widgets/widget-new-posts.php:238
+#: ../inc/widgets/widget-new-posts.php:238
 msgid "Display Format"
 msgstr "表示形式"
 
-#: ../plugins/widgets/widget-new-posts.php:240
-#: ../plugins/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:240
+#: ../inc/widgets/widget-new-posts.php:242
 msgid "Thumbnail"
 msgstr "サムネイル画像"
 
-#: ../plugins/widgets/widget-new-posts.php:240
-#: ../plugins/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:240
+#: ../inc/widgets/widget-new-posts.php:242
 msgid "Date"
 msgstr "日付"
 
-#: ../plugins/widgets/widget-new-posts.php:240
-#: ../plugins/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:240
+#: ../inc/widgets/widget-new-posts.php:242
 msgid "Category"
 msgstr "カテゴリー"
 
-#: ../plugins/widgets/widget-new-posts.php:240
-#: ../plugins/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:240
+#: ../inc/widgets/widget-new-posts.php:242
 msgid "Title"
 msgstr "タイトル"
 
-#: ../plugins/widgets/widget-new-posts.php:240
+#: ../inc/widgets/widget-new-posts.php:240
 msgid "Excerpt"
 msgstr "抜粋"
 
-#: ../plugins/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:242
 msgid "Content"
 msgstr "本文"
 
-#: ../plugins/widgets/widget-new-posts.php:246
+#: ../inc/widgets/widget-new-posts.php:246
 msgid "Title:"
 msgstr "タイトル"
 
-#: ../plugins/widgets/widget-new-posts.php:251
+#: ../inc/widgets/widget-new-posts.php:251
 msgid "Display count"
 msgstr "表示する記事数"
 
-#: ../plugins/widgets/widget-new-posts.php:256
+#: ../inc/widgets/widget-new-posts.php:256
 msgid "Slug for the custom type you want to display"
 msgstr "表示したい記事タイプ"
 
-#: ../plugins/widgets/widget-new-posts.php:261
+#: ../inc/widgets/widget-new-posts.php:261
 msgid "taxonomy ID"
 msgstr "カテゴリー（タクソノミー）ID"
 
-#: ../plugins/widgets/widget-new-posts.php:263
+#: ../inc/widgets/widget-new-posts.php:263
 msgid "if you need filtering by term, add the term ID separate by \",\"."
 msgstr ""
 "特定のカテゴリーのみ表示したい場合は<br/>カンマ(,)区切りでカテゴリーIDを入力"
 "します。"
 
-#: ../plugins/widgets/widget-new-posts.php:265
+#: ../inc/widgets/widget-new-posts.php:265
 msgid "if empty this area, I will do not filtering."
 msgstr "空欄の場合はフィルタリングは行いません。"
 
