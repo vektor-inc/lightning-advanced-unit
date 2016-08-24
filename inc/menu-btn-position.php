@@ -19,7 +19,7 @@ function lightning_adv_unit_customize_register_menu_btn_position($wp_customize) 
 			'left' => __('Left', LIGHTNING_ADVANCED_TEXTDOMAIN),
 			'right' => __('Right', LIGHTNING_ADVANCED_TEXTDOMAIN),
 			),
-		'priority' => 501,
+		'priority' => 601,
 	));
 }
 

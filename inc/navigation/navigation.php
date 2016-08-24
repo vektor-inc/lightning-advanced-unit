@@ -22,7 +22,7 @@ function lightning_adv_unit_customize_register_menu_type($wp_customize) {
     'settings'  => 'lightning_theme_options[menu_type]',
     'type' => 'radio',
     'choices' => $choices_array,
-    'priority' => 300,
+    'priority' => 600,
   ));
 }
 
