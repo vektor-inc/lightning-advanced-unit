@@ -3,8 +3,8 @@ Contributors: vektor-inc,bizvektor,kurudrive
 Donate link:
 Tags: Lightning,
 Requires at least: 4.2
-Tested up to: 4.5.2
-Stable tag: 1.2.0
+Tested up to: 4.6.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ e.g.
 
 
 == Changelog ==
+
+= 1.2.0 =
+* [ Add function ] Sidebar position changer
 
 = 1.1.0 =
 * Added the filter to menu type items.
