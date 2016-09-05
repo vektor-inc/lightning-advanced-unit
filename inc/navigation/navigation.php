@@ -57,7 +57,7 @@ function ltg_adv_insert_header_before_html(){
         echo '<section id="navSection" class="navSection">';
         echo get_search_form();
         echo '</section>';
-    echo '<div id="wrap">';
+    echo '<div id="wrap" class="wrap">';
   }
 }
 

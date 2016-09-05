@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Lightning Advanced Unit
  * Plugin URI: http://lightning.vektor-inc.co.jp/
- * Version: 1.3.0
+ * Version: 1.3.2
  * Author: Vektor,Inc.
  * Author URI: http://www.vektor-inc.co.jp
  * Description: This is a plug-ins that extend the functionality of the theme "Lightning".
@@ -24,7 +24,6 @@ require_once( LIGHTNING_ADVANCED_DIR . 'inc/navigation/navigation.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-new-posts.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/menu-btn-position.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-position.php' );
-// require_once( LIGHTNING_ADVANCED_DIR . 'inc/header-top/header-top.php' );
 
 /*-------------------------------------------*/
 /*  translations

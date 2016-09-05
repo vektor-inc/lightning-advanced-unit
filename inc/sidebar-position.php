@@ -26,13 +26,11 @@ function lightning_adv_unit_customize_register_sidebar_position($wp_customize) {
 /*-------------------------------------------*/
 /*  Position Change
 /*-------------------------------------------*/
-add_action( 'wp_head', 'lightning_adv_unit_sidebar_position_custom' , 161 );
+add_action( 'wp_head', 'lightning_adv_unit_sidebar_position_custom', 2 );
 function lightning_adv_unit_sidebar_position_custom(){
-	$options = get_option('lightning_theme_options');
-	if (isset($options['sidebar_position']) && $options['sidebar_position'] == "left"){
-		$custom_css = "@media (min-width: 992px) { .subSection { float:left;margin-left:0; } .mainSection { float:right; } }";
-		echo '<style type="text/css">';
-		echo $custom_css;
-		echo '</style>';
+	$options = get_option( 'lightning_theme_options' );
+	if ( isset($options['sidebar_position'] ) && $options['sidebar_position'] === "left" ){
+		$custom_css = "@media (min-width: 992px) { .siteContent .subSection { float:left;margin-left:0; } .siteContent .mainSection { float:right; } }";
+		wp_add_inline_style( 'lightning-design-style', $custom_css );
 	}
 }
