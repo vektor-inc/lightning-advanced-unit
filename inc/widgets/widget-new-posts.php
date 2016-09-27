@@ -19,6 +19,8 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
+		global $is_contentsarea_posts_widget;
+		$is_contentsarea_posts_widget = true;
 		if ( ! isset( $instance['format'] ) ) { $instance['format'] = 0; }
 
 		echo $args['before_widget'];
