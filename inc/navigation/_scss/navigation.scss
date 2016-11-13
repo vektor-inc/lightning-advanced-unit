@@ -17,7 +17,7 @@ body { overflow-x:hidden; }
 @media (max-width: 767px){
   .menuBtn { position: fixed;top:inherit; }
   .navSection { overflow:scroll; display: none;position: fixed;height:100%;
-    .searchform { margin:10px;overflow:hidden;padding: 0 3em;
+    .searchform { margin:10px;overflow:hidden;padding: 0 0 0 3em;
       input#s { width:65%; }
       input[type=submit] { width:30%; }
     }
@@ -29,4 +29,3 @@ body { overflow-x:hidden; }
   .navSection_open_right { border-left:$border_primary; }
   // .navSection_open_right .searchform { padding-right:4em }
 } // @media (max-width: 767px){
-
