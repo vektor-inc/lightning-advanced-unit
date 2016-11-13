@@ -17,9 +17,7 @@ body { overflow-x:hidden; }
 @media (max-width: 767px){
   .menuBtn { position: fixed;top:inherit; }
   .navSection { overflow:scroll; display: none;position: fixed;height:100%;
-    .searchform { margin:10px;overflow:hidden;padding: 0 0 0 3em;
-      input#s { width:65%; }
-      input[type=submit] { width:30%; }
+    .searchform { margin:10px;overflow:hidden;padding: 0 3em 0;
     }
     &.navSection_open_left .searchform,
     &.navSection_open_right .searchform { display: block; }
