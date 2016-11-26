@@ -15,7 +15,8 @@ function lightning_adv_unit_customize_register_menu_type($wp_customize) {
       'side_slide' => __('Side Slide', LIGHTNING_ADVANCED_TEXTDOMAIN),
       'vertical_show_hide' => __('Vertical Show Hide (Lightning default)', LIGHTNING_ADVANCED_TEXTDOMAIN),
       );
-  $choices_array = apply_filters( 'ligthning_menu_choices_array_custom', $choices_array );
+  $choices_array = apply_filters( 'ligthning_menu_choices_array_custom', $choices_array ); // 2017年3月になったら削除
+  $choices_array = apply_filters( 'lightning_menu_choices_array_custom', $choices_array );
   $wp_customize->add_control( 'lightning_theme_options[menu_type]',array(
     'label'     => __('Menu Type ( Mobile mode )', LIGHTNING_ADVANCED_TEXTDOMAIN),
     'section'   => 'lightning_design',
