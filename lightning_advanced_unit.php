@@ -12,6 +12,10 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
+$template = get_option('template');
+
+if ( $template == 'lightning' ){
+
 $data = get_file_data( __FILE__, array( 'version' => 'Version','textdomain' => 'Text Domain' ) );
 define( 'LIGHTNING_ADVANCED_VERSION', $data['version'] );
 define( 'LIGHTNING_ADVANCED_TEXTDOMAIN', $data['textdomain'] );
@@ -32,3 +36,5 @@ function lightning_adv_unit_textdomain() {
 	load_plugin_textdomain( LIGHTNING_ADVANCED_TEXTDOMAIN, false, dirname(plugin_basename(__FILE__)).'/languages/' );
 }
 add_action( 'plugins_loaded', 'lightning_adv_unit_textdomain' );
+
+} // if ( $template == 'lightning' ){
