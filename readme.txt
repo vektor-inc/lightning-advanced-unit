@@ -4,7 +4,7 @@ Donate link:
 Tags: Lightning,
 Requires at least: 4.2
 Tested up to: 4.6.0
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ e.g.
 
 
 == Changelog ==
+
+= 1.3.6 =
+* [ Specification change ] Work on Lightning only.
 
 = 1.2.0 =
 * [ Add function ] Sidebar position changer
