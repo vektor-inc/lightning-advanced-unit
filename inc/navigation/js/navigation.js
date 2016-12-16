@@ -114,7 +114,7 @@ function run_menuResize(){
 	// menuClose_common();
 	var headerHeight = jQuery('header.siteHeader').height;
 	jQuery('#top__fullcarousel').css({"margin-top":headerHeight});
-	if ( wrap_width > 767 ) {
+	if ( wrap_width > 991 ) {
 		slide_menu_close();
 	}
 }
