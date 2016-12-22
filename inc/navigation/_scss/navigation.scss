@@ -16,7 +16,7 @@ body { overflow-x:hidden; }
 
 @media (max-width: 991px){
   .menuBtn { position: fixed;top:inherit; }
-  .navSection { overflow:scroll; display: none;position: fixed;height:100%;
+  .navSection { overflow:scroll; display: none;position: fixed;height:100%;z-index: 1000;
     .searchform { margin:10px;overflow:hidden;padding: 0 3em 0;
     }
     &.navSection_open_left .searchform,
