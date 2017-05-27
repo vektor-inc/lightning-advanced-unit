@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-08-24 13:27+0900\n"
+"POT-Creation-Date: 2017-05-28 02:24+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
 "Language-Team: Vektor translate Team <info@vektor-inc.co.jp>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_x;_e;_ex\n"
@@ -27,10 +27,6 @@ msgstr "左"
 msgid "Right"
 msgstr "右"
 
-#: ../inc/sidebar-position.php:14
-msgid "Sidebar position ( PC mode )"
-msgstr "サイドバーの位置（PC閲覧時）"
-
 #: ../inc/navigation/navigation.php:15
 msgid "Side Slide"
 msgstr "横スライド"
@@ -39,9 +35,19 @@ msgstr "横スライド"
 msgid "Vertical Show Hide (Lightning default)"
 msgstr "縦展開（Ligthning標準）"
 
-#: ../inc/navigation/navigation.php:20
+#: ../inc/navigation/navigation.php:21
 msgid "Menu Type ( Mobile mode )"
 msgstr "メニュータイプ（モバイル端末時）"
+
+#: ../inc/sidebar-child-list-hidden.php:14
+msgid "Sidebar menu hide list children"
+msgstr ""
+"サイドバーに表示されるページリストを全て表示せずにアクティブでない階層を非表"
+"示にする"
+
+#: ../inc/sidebar-position.php:14
+msgid "Sidebar position ( PC mode )"
+msgstr "サイドバーの位置（PC閲覧時）"
 
 #: ../inc/widgets/widget-new-posts.php:12
 msgid "Content Area Posts Widget"
@@ -51,84 +57,96 @@ msgstr "コンテンツエリア投稿リスト"
 msgid "Displays a list of your most recent posts"
 msgstr "最新の投稿記事リストを表示します。"
 
-#: ../inc/widgets/widget-new-posts.php:108
+#: ../inc/widgets/widget-new-posts.php:110
 msgid "Last updated"
 msgstr "最終更新日"
 
-#: ../inc/widgets/widget-new-posts.php:132
-#: ../inc/widgets/widget-new-posts.php:156
+#: ../inc/widgets/widget-new-posts.php:134
+#: ../inc/widgets/widget-new-posts.php:158
 msgid "Read more"
 msgstr "詳しくはこちら"
 
-#: ../inc/widgets/widget-new-posts.php:176
+#: ../inc/widgets/widget-new-posts.php:178
 msgid "<dl><dt>%s</dt><dd>%l</dd></dl>"
 msgstr "<dl><dt>%s</dt><dd>%l</dd></dl>"
 
-#: ../inc/widgets/widget-new-posts.php:196
+#: ../inc/widgets/widget-new-posts.php:198
 msgid "Tags"
 msgstr "タグ"
 
-#: ../inc/widgets/widget-new-posts.php:229
+#: ../inc/widgets/widget-new-posts.php:231
 msgid "Recent Posts"
 msgstr "最新記事"
 
-#: ../inc/widgets/widget-new-posts.php:238
+#: ../inc/widgets/widget-new-posts.php:240
 msgid "Display Format"
 msgstr "表示形式"
 
-#: ../inc/widgets/widget-new-posts.php:240
 #: ../inc/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:244
 msgid "Thumbnail"
 msgstr "サムネイル画像"
 
-#: ../inc/widgets/widget-new-posts.php:240
 #: ../inc/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:244
 msgid "Date"
 msgstr "日付"
 
-#: ../inc/widgets/widget-new-posts.php:240
 #: ../inc/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:244
 msgid "Category"
 msgstr "カテゴリー"
 
-#: ../inc/widgets/widget-new-posts.php:240
 #: ../inc/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:244
 msgid "Title"
 msgstr "タイトル"
 
-#: ../inc/widgets/widget-new-posts.php:240
+#: ../inc/widgets/widget-new-posts.php:242
 msgid "Excerpt"
 msgstr "抜粋"
 
-#: ../inc/widgets/widget-new-posts.php:242
+#: ../inc/widgets/widget-new-posts.php:244
 msgid "Content"
 msgstr "本文"
 
-#: ../inc/widgets/widget-new-posts.php:247
+#: ../inc/widgets/widget-new-posts.php:249
 msgid "Title:"
 msgstr "タイトル"
 
-#: ../inc/widgets/widget-new-posts.php:252
+#: ../inc/widgets/widget-new-posts.php:254
 msgid "Display count"
 msgstr "表示する記事数"
 
-#: ../inc/widgets/widget-new-posts.php:257
+#: ../inc/widgets/widget-new-posts.php:259
 msgid "Slug for the custom type you want to display"
 msgstr "表示したい記事タイプ"
 
-#: ../inc/widgets/widget-new-posts.php:262
+#: ../inc/widgets/widget-new-posts.php:264
 msgid "taxonomy ID"
 msgstr "カテゴリー（タクソノミー）ID"
 
-#: ../inc/widgets/widget-new-posts.php:264
+#: ../inc/widgets/widget-new-posts.php:266
 msgid "if you need filtering by term, add the term ID separate by \",\"."
 msgstr ""
 "特定のカテゴリーのみ表示したい場合は<br/>カンマ(,)区切りでカテゴリーIDを入力"
 "します。"
 
-#: ../inc/widgets/widget-new-posts.php:266
+#: ../inc/widgets/widget-new-posts.php:268
 msgid "if empty this area, I will do not filtering."
 msgstr "空欄の場合はフィルタリングは行いません。"
+
+#: ../node_modules/rx/dist/rx.min.js:1
+msgid "N"
+msgstr ""
+
+#: ../node_modules/rx/dist/rx.min.js:1
+msgid "E"
+msgstr ""
+
+#: ../node_modules/rx/dist/rx.min.js:1
+msgid "C"
+msgstr ""
 
 #~ msgid "Main setting"
 #~ msgstr "メイン設定"
