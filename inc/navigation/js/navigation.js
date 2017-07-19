@@ -103,9 +103,12 @@ function menuClose_common(){
 	jQuery('#navSection').removeClass('navSection_open_left');
 	jQuery('#navSection').css({ "right":"", "left":"", "display":"" });
 	jQuery('#headerTop').prependTo('header.siteHeader');
-	jQuery('#gMenu_outer').insertAfter('.navbar-header');
 	jQuery('#bodyInner').css({"width":""});
 	jQuery('#wrap').css({"width":""});
+	// judge animation execution
+	jQuery('#navSection').is(':animated'){
+		jQuery('#gMenu_outer').insertAfter('.navbar-header');
+	}
 }
 function run_menuResize(){
 	var wrap_width = jQuery('body').width();
