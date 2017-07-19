@@ -105,8 +105,8 @@ function menuClose_common(){
 	jQuery('#headerTop').prependTo('header.siteHeader');
 	jQuery('#bodyInner').css({"width":""});
 	jQuery('#wrap').css({"width":""});
-	// judge animation execution
-	jQuery('#navSection').is(':animated'){
+	// judge animate execution
+	if(jQuery('#navSection').is(':animated')){
 		jQuery('#gMenu_outer').insertAfter('.navbar-header');
 	}
 }
