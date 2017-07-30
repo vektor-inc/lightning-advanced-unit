@@ -29,6 +29,7 @@ require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-new-posts.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/menu-btn-position.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-position.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-child-list-hidden.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/custom_post_type_url.php' );
 
 /*-------------------------------------------*/
 /*  translations
