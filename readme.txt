@@ -4,7 +4,7 @@ Donate link:
 Tags: Lightning,
 Requires at least: 4.2
 Tested up to: 4.7.0
-Stable tag: 2.1.1
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ e.g.
 
 
 == Changelog ==
+
+= 2.2.0 =
+* [ Specification change ] When active Origin Pro or Variety that, labal color active. 
 
 = 2.0.0 =
 * [ Specification change ] Change mobile menu break point
