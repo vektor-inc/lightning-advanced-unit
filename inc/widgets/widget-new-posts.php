@@ -82,7 +82,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 	} // widget($args, $instance)
 
 	/*-------------------------------------------*/
-	/*  display_pattern_0
+	/*  display_pattern_0 Lighjnting standard
 	/*-------------------------------------------*/
 	function display_pattern_0() { ?>
 		<article class="media">
@@ -102,7 +102,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 				<a href="<?php the_permalink(); ?>" class="media-body_excerpt"><?php the_excerpt(); ?></a>
 				<!--
 				<div><a href="<?php the_permalink(); ?>" class="btn btn-default btn-sm"><?php _e('Read more', 'lightning'); ?></a></div>
-				-->   
+				-->
 			</div>
 		</div>
 		</article><?php
@@ -110,7 +110,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 
 	/*-------------------------------------------*/
-	/*  display_pattern_1
+	/*  display_pattern_1 Cointent Body
 	/*-------------------------------------------*/
 	function display_pattern_1() {
 		global $post;
