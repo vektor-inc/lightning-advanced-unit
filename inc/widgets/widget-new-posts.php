@@ -127,7 +127,11 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 			<?php 
 			$lightning_adv_more_btn_txt = '<span class="btn btn-default btn-block">'. __('Read more', LIGHTNING_ADVANCED_TEXTDOMAIN ). '</span>';
 			$more_btn  = apply_filters( 'lightning-adv-more-btn-txt' ,$lightning_adv_more_btn_txt);
-			the_content( $more_btn );?>
+			global $is_pagewidget;
+			$is_pagewidget = true;
+			the_content( $more_btn );
+			$is_pagewidget = false;
+			?>
 			</div><!-- [ /.entry-body ] -->
 
 			<div class="entry-footer">
