@@ -89,7 +89,6 @@ var vk_title_bg_image_addiditional = function(e){
     var d=jQuery(e).parent().children("._display");
 		// 画像IDを保存するinputタグ
     var w=jQuery(e).parent().children("._form").children('.__id')[0];
-		console.log(w);
     var u=wp.media({library:{type:'image'},multiple:false}).on('select', function(e){
         u.state().get('selection').each(function(f){
 					d.children().remove();
@@ -115,44 +114,7 @@ var vk_title_bg_image_delete = function(e){
 };
 }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
-		// media uploader imageurl input area
-		echo '<p><label for="'.$this->get_field_id( 'media_image' ).'">'.__( 'Select image:', 'vkExUnit' ).'</label><br/>'.
-			'<input type="hidden" class="pr_media_image  '.$this->get_field_id( 'media_image' ).'" id="'.$this->get_field_id( 'media_image' ).'" name="'.$this->get_field_name( 'media_image' ).'" value="'.esc_attr( $instance[ 'media_image' ] ).'" />';
-
-		// media uploader select btn
-		echo '<input type="button" class="media_select" value="'.__( 'Select image', 'vkExUnit' ).'" onclick="clickSelectPrBroks(event.target);" />';
-
-		// media uploader clear btn
-		echo '<input type="button" class="media_clear" value="'.__( 'Clear image', 'vkExUnit' ).'" onclick="clickClearPrBroks(event.target);" />'.
-		'<br />'.__( 'When you have an image. Image is displayed with priority', 'vkExUnit' ).'</p>';
-
-		// media image display
-		echo '<div class="media image_pr">';
-		if ( ! empty( $instance[ 'media_image' ] ) ) {
-			echo '<img class="media_img" src="'.esc_url( $instance[ 'media_image' ] ).'" />';
-		}
-		echo '</div>';
-
 		// title bg color
 		echo '<p class="color_picker_wrap">'.
 			'<label for="'.$this->get_field_id( 'title_bg_color' ).'">'.__( 'Title background color:', 'vkExUnit' ).'</label><br/>'.
@@ -242,14 +204,23 @@ var vk_title_bg_image_delete = function(e){
 
 		public function widget( $args, $instance )
 		{
-			print '<pre style="text-align:left">';print_r($instance);print '</pre>';
+?>
+<style type="text/css">
+.widget_ltg_full_wide_title {
+	width:100vw;
+	margin-left:calc( ( ( 100vw - 1140px ) / 2 ) * -1 );
+}
+</style>
+<?php
 			echo $args ['before_widget'];
 			// echo $args ['before_title'];
 			echo '<div class="" style="'.$this->widget_outer_style($instance).'">';
-			echo '<h3 style="'.$this->widget_font_style($instance).'">'.esc_html( $instance['title'] ).'</h3>';
-			echo '</div>';
+			echo '<div class="container">';
+			echo '<h1 style="'.$this->widget_font_style($instance).'">'.esc_html( $instance['title'] ).'</h1>';
 			// サブテキストがある場合
 			echo '<p class="widget-title-caption">'.esc_html( $instance['text'] ).'</p>';
+			echo '</div>';
+			echo '</div>';
 			// echo $args ['after_title'];
 			echo $args ['after_widget'];
 		}
