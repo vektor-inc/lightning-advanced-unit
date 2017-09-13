@@ -27,6 +27,7 @@ class LTG_Full_Wide_Title extends WP_Widget {
 	public static function default_options( $args=array() )
 	{
 		$defaults = array(
+			'media_image_id'    => Null,
 			'media_image' => '',
 			'title_bg_color' => '',
 			'title_font_color' => '',
@@ -60,6 +61,80 @@ class LTG_Full_Wide_Title extends WP_Widget {
 		);
 		echo '</p>';
 
+		$image = null;
+		// ちゃんと数字が入っているかどうか？
+		if ( is_numeric( $instance['media_image_id'] ) ) {
+			// 数字だったら、その数字の画像を full サイズで取得
+				$image = wp_get_attachment_image_src( $instance['media_image_id'], 'full' );
+		}
+?>
+
+<div class="vkExUnit_banner_area" style="padding: 2em 0;">
+<div class="_display" style="height:auto">
+    <?php if ( $image ): ?>
+        <img src="<?php echo esc_url( $image[0] ); ?>" style="width:100%;height:auto;" />
+    <?php endif; ?>
+</div>
+<button class="button button-default button-block" style="display:block;width:100%;text-align: center; margin:4px 0;" onclick="javascript:vk_title_bg_image_addiditional(this);return false;"><?php _e('Set image', 'vkExUnit'); ?></button>
+<button class="button button-default button-block" style="display:block;width:100%;text-align: center; margin:4px 0;" onclick="javascript:vk_title_bg_image_delete(this);return false;"><?php _e('Delete image', 'vkExUnit'); ?></button>
+<div class="_form" style="line-height: 2em">
+    <input type="hidden" class="__id" name="<?php echo $this->get_field_name( 'media_image_id' ); ?>" value="<?php echo esc_attr( $instance['media_image_id'] ); ?>" />
+</div>
+</div>
+<script type="text/javascript">
+// 背景画像登録処理
+if ( vk_title_bg_image_addiditional == undefined ){
+var vk_title_bg_image_addiditional = function(e){
+		// プレビュー画像を表示するdiv
+    var d=jQuery(e).parent().children("._display");
+		// 画像IDを保存するinputタグ
+    var w=jQuery(e).parent().children("._form").children('.__id')[0];
+		console.log(w);
+    var u=wp.media({library:{type:'image'},multiple:false}).on('select', function(e){
+        u.state().get('selection').each(function(f){
+					d.children().remove();
+					d.append(jQuery('<img style="width:100%;mheight:auto">').attr('src',f.toJSON().url));
+					jQuery(w).val(f.toJSON().id).change();
+				});
+    });
+    u.open();
+};
+}
+// 背景画像削除処理
+if ( vk_title_bg_image_delete == undefined ){
+var vk_title_bg_image_delete = function(e){
+		// プレビュー画像を表示するdiv
+		var d=jQuery(e).parent().children("._display");
+		// 画像IDを保存するinputタグ
+		var w=jQuery(e).parent().children("._form").children('.__id')[0];
+
+		// プレビュー画像のimgタグを削除
+		d.children().remove();
+		// w.attr("value","");
+		jQuery(e).parent().children("._form").children('.__id').attr("value","").change();
+};
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
 		// media uploader imageurl input area
 		echo '<p><label for="'.$this->get_field_id( 'media_image' ).'">'.__( 'Select image:', 'vkExUnit' ).'</label><br/>'.
 			'<input type="hidden" class="pr_media_image  '.$this->get_field_id( 'media_image' ).'" id="'.$this->get_field_id( 'media_image' ).'" name="'.$this->get_field_name( 'media_image' ).'" value="'.esc_attr( $instance[ 'media_image' ] ).'" />';
@@ -116,6 +191,7 @@ class LTG_Full_Wide_Title extends WP_Widget {
 
 		public function update( $new_instance, $old_instance )
 		{
+			$instance[ 'media_image_id' ] = $new_instance[ 'media_image_id' ];
 			$instance[ 'media_image' ] = $new_instance[ 'media_image' ];
 			$instance[ 'title_bg_color' ] = $new_instance[ 'title_bg_color' ];
 			$instance[ 'title_font_color' ] = $new_instance[ 'title_font_color' ];
@@ -127,18 +203,26 @@ class LTG_Full_Wide_Title extends WP_Widget {
 
 	 public static function widget_outer_style( $instance ){
 		 $widget_outer_style = 'border:1px solid #f00;';
-		 // esc_url( $instance[ 'media_image' ] );
+
+		 // 画像IDから画像のURLを取得
+		 if ( ! empty( $instance['media_image_id'] ) ) {
+			 $image = wp_get_attachment_image_src( $instance['media_image_id'], 'full' );
+			 $image = $image[0];
+		 } else {
+			 $image = null;
+		 }
+
 		 // 画像が登録されている場合
-		 if ( ! empty( $instance[ 'media_image' ] ) && empty( $instance[ 'title_bg_color' ] ) ) {
-			 $widget_outer_style = 'background: url(\''.esc_url( $instance[ 'media_image' ] ).'\');';
+		 if ( ! empty( $image ) && empty( $instance[ 'title_bg_color' ] ) ) {
+			 $widget_outer_style = 'background: url(\''.esc_url( $image ).'\');';
 			 // 背景色が登録されている場合（画像は登録されていない）
-		 } else if ( ! empty( $instance[ 'title_bg_color' ] ) && empty( $instance[ 'media_image' ] ) ) {
+		 } else if ( ! empty( $instance[ 'title_bg_color' ] ) && empty( $image ) ) {
 			 $widget_outer_style = 'background: '.esc_url( $instance[ 'title_bg_color' ] ).';';
 			 //  画像も背景色もどちらも登録されている場合
-		 } else if ( ! empty( $instance[ 'media_image' ] ) && ! empty( $instance[ 'title_bg_color' ] ) ) {
-			 $widget_outer_style = 'background: url(\''.esc_url( $instance[ 'media_image' ] ).'\');';
+		 } else if ( ! empty( $image ) && ! empty( $instance[ 'title_bg_color' ] ) ) {
+			 $widget_outer_style = 'background: url(\''.esc_url( $image ).'\');';
 			 // その他（画像も背景色も登録されていない）
-		 } else if ( empty( $instance[ 'media_image' ]) && empty( $instance[ 'title_bg_color' ] ) ) {
+		 } else if ( empty( $image) && empty( $instance[ 'title_bg_color' ] ) ) {
 			 $widget_outer_style = '';
 		 }
 		 return $widget_outer_style;
