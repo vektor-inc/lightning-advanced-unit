@@ -197,6 +197,7 @@ var vk_title_bg_image_delete = function(e){
 
 		public function widget( $args, $instance )
 		{
+			$instance = self::default_options( $instance );
 			echo $args ['before_widget'];
 			echo '<div class="widget_ltg_full_wide_title_outer" style="'.$this->widget_outer_style($instance).'">';
 			echo '<h1 style="'.$this->widget_font_style($instance).'">'.wp_kses_post( $instance['title'] ).'</h1>';
