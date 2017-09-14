@@ -51,7 +51,7 @@ class LTG_Full_Wide_Title extends WP_Widget {
 		$name = $this->get_field_name('title');
 
 		echo '<p>';
-		echo  __( 'Title', LIGHTNING_ADVANCED_TEXTDOMAIN ).'<br>';
+		echo  __( 'Title:', LIGHTNING_ADVANCED_TEXTDOMAIN ).'<br>';
 		printf (
 			'<input type="text" id="%s" name="%s" value="%s" />',
 			$id,
@@ -68,14 +68,14 @@ class LTG_Full_Wide_Title extends WP_Widget {
 		}
 ?>
 
-<div class="vkExUnit_banner_area" style="padding: 2em 0;">
+<div class="vkExUnit_banner_area" style="padding: 0.7em 0;">
 <div class="_display" style="height:auto">
     <?php if ( $image ): ?>
         <img src="<?php echo esc_url( $image[0] ); ?>" style="width:100%;height:auto;" />
     <?php endif; ?>
 </div>
-<button class="button button-default button-block" style="display:block;width:100%;text-align: center; margin:4px 0;" onclick="javascript:vk_title_bg_image_addiditional(this);return false;"><?php _e('Set image', 'vkExUnit'); ?></button>
-<button class="button button-default button-block" style="display:block;width:100%;text-align: center; margin:4px 0;" onclick="javascript:vk_title_bg_image_delete(this);return false;"><?php _e('Delete image', 'vkExUnit'); ?></button>
+<button class="button button-default button-block" style="display:block;width:100%;text-align: center; margin:4px 0;" onclick="javascript:vk_title_bg_image_addiditional(this);return false;"><?php _e('Set image', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></button>
+<button class="button button-default button-block" style="display:block;width:100%;text-align: center; margin:4px 0;" onclick="javascript:vk_title_bg_image_delete(this);return false;"><?php _e('Delete image', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></button>
 <div class="_form" style="line-height: 2em">
     <input type="hidden" class="__id" name="<?php echo $this->get_field_name( 'media_image_id' ); ?>" value="<?php echo esc_attr( $instance['media_image_id'] ); ?>" />
 </div>
@@ -116,12 +116,12 @@ var vk_title_bg_image_delete = function(e){
 <?php
 		// title bg color
 		echo '<p class="color_picker_wrap">'.
-			'<label for="'.$this->get_field_id( 'title_bg_color' ).'">'.__( 'Title background color:', 'vkExUnit' ).'</label><br/>'.
+			'<label for="'.$this->get_field_id( 'title_bg_color' ).'">'.__( 'Title background color:', LIGHTNING_ADVANCED_TEXTDOMAIN ).'</label><br/>'.
 			'<input type="text" id="'.$this->get_field_id( 'title_bg_color' ).'" class="color_picker" name="'.$this->get_field_name( 'title_bg_color' ).'" value="'. esc_attr( $instance[ 'title_bg_color' ] ).'" /></p>';
 
 		// title font color
 		echo '<p class="color_picker_wrap">'.
-			'<label for="'.$this->get_field_id( 'title_font_color' ).'">'.__( 'Text color of the title:', 'vkExUnit' ).'</label><br/>'.
+			'<label for="'.$this->get_field_id( 'title_font_color' ).'">'.__( 'Text color of the title:', LIGHTNING_ADVANCED_TEXTDOMAIN ).'</label><br/>'.
 			'<input type="text" id="'.$this->get_field_id( 'title_font_color' ).'" class="color_picker" name="'.$this->get_field_name( 'title_font_color' ).'" value="'. esc_attr( $instance[ 'title_font_color' ] ).'" /></p>';
 
 
@@ -136,13 +136,8 @@ var vk_title_bg_image_delete = function(e){
 		$name = $this->get_field_name('text');
 
 		echo '<p>';
-		echo  __( 'Sub title', LIGHTNING_ADVANCED_TEXTDOMAIN ).'<br>';
-		printf (
-			'<textarea id="%s" name="%s">%s</textarea>',
-			$id,
-			$name,
-			esc_textarea( $text )
-		);
+		echo  __( 'Sub title:', LIGHTNING_ADVANCED_TEXTDOMAIN ).'<br>';
+		echo '<textarea id="'.$id.'" name="'.$name.'" style="width:100%;">'.esc_textarea( $text ).'</textarea>';
 		echo '</p>';
 	}
 
