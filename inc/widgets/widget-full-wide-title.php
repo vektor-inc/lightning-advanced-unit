@@ -199,11 +199,11 @@ var vk_title_bg_image_delete = function(e){
 		{
 			$instance = self::default_options( $instance );
 			echo $args ['before_widget'];
-			echo '<div class="widget_ltg_full_wide_title_outer" style="'.$this->widget_outer_style($instance).'">';
-			echo '<h1 style="'.$this->widget_font_style($instance).'">'.wp_kses_post( $instance['title'] ).'</h1>';
+			echo '<div class="widget_ltg_adv_full_wide_title_outer" style="'.$this->widget_outer_style($instance).'">';
+			echo '<h2 class="widget_ltg_adv_full_wide_title_title" style="'.$this->widget_font_style($instance).'">'.wp_kses_post( $instance['title'] ).'</h1>';
 			// サブテキストがある場合
 			if ( ! empty( $instance['text'] ) ){
-				echo '<p style="'.$this->widget_font_style($instance).'" class="widget-title-caption">'.wp_kses_post( $instance['text'] ).'</p>';
+				echo '<p style="'.$this->widget_font_style($instance).'" class="widget_ltg_adv_full_wide_title_caption">'.wp_kses_post( $instance['text'] ).'</p>';
 			}
 			echo '</div>';
 			echo $args ['after_widget'];
