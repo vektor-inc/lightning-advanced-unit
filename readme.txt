@@ -4,7 +4,7 @@ Donate link:
 Tags: Lightning,
 Requires at least: 4.2
 Tested up to: 4.7.0
-Stable tag: 2.2.0
+Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,7 @@ This is a plug-ins that extend the functionality of the theme "Lightning".
 
 [ Powerful　Widgets ]
 
+*   Full Wide Title Widget
 *   Content area widget - Thumbnail / Date / Category / Excerpt
 *   Content area widget - Thumbnail / Date / Category / Content
 
