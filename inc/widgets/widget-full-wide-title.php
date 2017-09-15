@@ -169,7 +169,7 @@ var vk_title_bg_image_delete = function(e){
 
 		 // 画像が登録されている場合
 		 if ( ! empty( $image ) && empty( $instance[ 'title_bg_color' ] ) ) {
-			 $widget_outer_style = 'background: url(\''.esc_url( $image ).'\');';
+			 $widget_outer_style = 'background-image: url(\''.esc_url( $image ).'\');';
 			 // 背景色が登録されている場合（画像は登録されていない）
 		 } else if ( ! empty( $instance[ 'title_bg_color' ] ) && empty( $image ) ) {
 			 $widget_outer_style = 'background: '.sanitize_hex_color( $instance[ 'title_bg_color' ] ).';';
