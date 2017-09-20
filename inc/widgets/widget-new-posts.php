@@ -18,6 +18,21 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		);
 	}
 
+	/*-------------------------------------------*/
+	/*  一覧へのリンクhtmlを出力する関数
+	/*-------------------------------------------*/
+	static public function more_link_html( $instance )
+	{
+		if ( ! empty ( $instance['more_text'] ) && ! empty ( $instance['more_url'] )) {
+			$more_link_html = '<div class="text-right" style="margin-top:1em;">';
+			$more_link_html .= '<a href="'.esc_url( $instance['more_url'] ).'" class="btn btn-default btn-xs">'.wp_kses_post( $instance['more_text'] ).'</a>';
+			$more_link_html .= '</div>';
+		} else {
+			$more_link_html = '';
+		}
+		return $more_link_html;
+	}
+
 	function widget( $args, $instance ) {
 		global $is_contentsarea_posts_widget;
 		$is_contentsarea_posts_widget = true;
@@ -29,12 +44,12 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 			echo $args['before_title'];
 			echo $instance['label'];
 			echo $args['after_title'];
-		}	
+		}
 
 		$count      = ( isset( $instance['count'] ) && $instance['count'] ) ? $instance['count'] : 10;
 		$post_type  = ( isset( $instance['post_type'] ) && $instance['post_type'] ) ? $instance['post_type'] : 'post';
 
-		if ( $instance['format'] ) { 
+		if ( $instance['format'] ) {
 			$this->_taxonomy_init( $post_type );
 		}
 
@@ -73,6 +88,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 			}
 
 		endif;
+		echo  $this->more_link_html( $instance );
 		echo '</div>';
 		echo $args['after_widget'];
 
@@ -124,7 +140,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 			<div class="entry-body">
 
-			<?php 
+			<?php
 			$lightning_adv_more_btn_txt = '<span class="btn btn-default btn-block">'. __('Read more', LIGHTNING_ADVANCED_TEXTDOMAIN ). '</span>';
 			$more_btn  = apply_filters( 'lightning-adv-more-btn-txt' ,$lightning_adv_more_btn_txt);
 			global $is_pagewidget;
@@ -206,6 +222,8 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 			'post_type' => 'post',
 			'terms'     => '',
 			'format'    => '0',
+			'more_url'  => '',
+			'more_text' => '',
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -240,7 +258,16 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		<?php _e( 'if you need filtering by term, add the term ID separate by ",".', LIGHTNING_ADVANCED_TEXTDOMAIN );
 		echo '<br/>';
 		_e( 'if empty this area, I will do not filtering.', LIGHTNING_ADVANCED_TEXTDOMAIN );
-		echo '<br/><br/>';
+		echo '<br/><br/>';?>
+
+		<?php // Read more ?>
+		<label for="<?php echo $this->get_field_id( 'more_url' );  ?>"><?php _e( 'Destination URL:', 'vkExUnit' ); ?></label><br/>
+		<input type="text" id="<?php echo $this->get_field_id( 'more_url' ); ?>" name="<?php echo $this->get_field_name( 'more_url' ); ?>" value="<?php echo esc_attr( $instance['more_url'] ); ?>" />
+		<br /><br />
+		<label for="<?php echo $this->get_field_id( 'more_text' );  ?>"><?php _e( 'Notation text:', 'vkExUnit' ); ?></label><br/>
+		<input type="text" placeholder="最新記事一覧 ≫" id="<?php echo $this->get_field_id( 'more_text' ); ?>" name="<?php echo $this->get_field_name( 'more_text' ); ?>" value="<?php echo esc_attr( $instance['more_text'] ); ?>" />
+				<br /><br />
+	<?php
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -250,6 +277,8 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		$instance['label']      = $new_instance['label'];
 		$instance['post_type']  = ! empty( $new_instance['post_type'] ) ? strip_tags( $new_instance['post_type'] ) : 'post';
 		$instance['terms']      = preg_replace( '/([^0-9,]+)/', '', $new_instance['terms'] );
+		$instance['more_url']   = $new_instance['more_url'];
+		$instance['more_text']  = $new_instance['more_text'];
 		return $instance;
 	}
 }
