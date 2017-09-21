@@ -245,40 +245,40 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		<input type="text" id="<?php echo $this->get_field_id( 'label' ); ?>-title" name="<?php echo $this->get_field_name( 'label' ); ?>" value="<?php echo esc_attr( $instance['label'] ); ?>" />
         <br /><br />
 
-		<?php echo _e( 'Display Format', 'vkExUnit' ); ?>:<br/>
-		<label><input type="radio" name="<?php echo $this->get_field_name( 'format' );  ?>" value="0" <?php if ( ! $instance['format'] ) { echo 'checked'; } ?> /><?php echo __( 'Thumbnail', 'vkExUnit' ) .'/'. __( 'Title', 'vkExUnit' ) .'/'. __( 'Date', 'vkExUnit' ); ?></label><br/>
-		<label><input type="radio" name="<?php echo $this->get_field_name( 'format' );  ?>" value="1" <?php if ( $instance['format'] == 1 ) { echo 'checked'; } ?>/><?php echo __( 'Date', 'vkExUnit' ) .'/'. __( 'Category', 'vkExUnit' ) .'/'. __( 'Title', 'vkExUnit' ); ?></label>
+		<?php echo _e( 'Display Format', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?>:<br/>
+		<label><input type="radio" name="<?php echo $this->get_field_name( 'format' );  ?>" value="0" <?php if ( ! $instance['format'] ) { echo 'checked'; } ?> /><?php echo __( 'Thumbnail', LIGHTNING_ADVANCED_TEXTDOMAIN ) .'/'. __( 'Title', LIGHTNING_ADVANCED_TEXTDOMAIN ) .'/'. __( 'Date', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label><br/>
+		<label><input type="radio" name="<?php echo $this->get_field_name( 'format' );  ?>" value="1" <?php if ( $instance['format'] == 1 ) { echo 'checked'; } ?>/><?php echo __( 'Date', LIGHTNING_ADVANCED_TEXTDOMAIN ) .'/'. __( 'Category', LIGHTNING_ADVANCED_TEXTDOMAIN ) .'/'. __( 'Title', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label>
         <br/><br/>
 
-		<?php echo _e( 'Order by', 'vkExUnit' ); ?>:<br/>
-		<label style="padding-bottom: 0.5em"><input type="radio" name="<?php echo $this->get_field_name( 'orderby' );  ?>" value="date" <?php if ( $instance['orderby'] != 'modified' ) { echo 'checked'; } ?> /><?php _e( 'Publish date', 'vkExUnit' ); ?></label><br/>
-		<label><input type="radio" name="<?php echo $this->get_field_name( 'orderby' );  ?>" value="modified" <?php if ( $instance['orderby'] == 'modified' ) { echo 'checked'; } ?>/><?php _e( 'Modified date', 'vkExUnit' ); ?></label>
+		<?php echo _e( 'Order by', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?>:<br/>
+		<label style="padding-bottom: 0.5em"><input type="radio" name="<?php echo $this->get_field_name( 'orderby' );  ?>" value="date" <?php if ( $instance['orderby'] != 'modified' ) { echo 'checked'; } ?> /><?php _e( 'Publish date', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label><br/>
+		<label><input type="radio" name="<?php echo $this->get_field_name( 'orderby' );  ?>" value="modified" <?php if ( $instance['orderby'] == 'modified' ) { echo 'checked'; } ?>/><?php _e( 'Modified date', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label>
         <br/><br/>
 
 		<?php //表示件数 ?>
-		<label for="<?php echo $this->get_field_id( 'count' );  ?>"><?php _e( 'Display count','vkExUnit' ); ?>:</label><br/>
+		<label for="<?php echo $this->get_field_id( 'count' );  ?>"><?php _e( 'Display count',LIGHTNING_ADVANCED_TEXTDOMAIN ); ?>:</label><br/>
 		<input type="text" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" value="<?php echo esc_attr( $instance['count'] ); ?>" />
         <br /><br />
 
 		<?php //投稿タイプ ?>
-		<label for="<?php echo $this->get_field_id( 'post_type' ); ?>"><?php _e( 'Slug for the custom type you want to display', 'vkExUnit' ) ?>:</label><br />
+		<label for="<?php echo $this->get_field_id( 'post_type' ); ?>"><?php _e( 'Slug for the custom type you want to display', LIGHTNING_ADVANCED_TEXTDOMAIN ) ?>:</label><br />
 		<input type="text" id="<?php echo $this->get_field_id( 'post_type' ); ?>" name="<?php echo $this->get_field_name( 'post_type' ); ?>" value="<?php echo esc_attr( $instance['post_type'] ) ?>" />
         <br/><br/>
 
 		<?php // Terms ?>
-		<label for="<?php echo $this->get_field_id( 'terms' ); ?>"><?php _e( 'taxonomy ID', 'vkExUnit' ) ?>:</label><br />
+		<label for="<?php echo $this->get_field_id( 'terms' ); ?>"><?php _e( 'taxonomy ID', LIGHTNING_ADVANCED_TEXTDOMAIN ) ?>:</label><br />
 		<input type="text" id="<?php echo $this->get_field_id( 'terms' ); ?>" name="<?php echo $this->get_field_name( 'terms' ); ?>" value="<?php echo esc_attr( $instance['terms'] ) ?>" /><br />
-		<?php _e( 'if you need filtering by term, add the term ID separate by ",".', 'vkExUnit' );
+		<?php _e( 'if you need filtering by term, add the term ID separate by ",".', LIGHTNING_ADVANCED_TEXTDOMAIN );
 		echo '<br/>';
-		_e( 'if empty this area, I will do not filtering.', 'vkExUnit' );
+		_e( 'if empty this area, I will do not filtering.', LIGHTNING_ADVANCED_TEXTDOMAIN );
 		?>
 		<br/><br/>
 
 		<?php // Read more ?>
-		<label for="<?php echo $this->get_field_id( 'more_url' );  ?>"><?php _e( 'Destination URL:', 'vkExUnit' ); ?></label><br/>
+		<label for="<?php echo $this->get_field_id( 'more_url' );  ?>"><?php _e( 'Destination URL:', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label><br/>
 		<input type="text" id="<?php echo $this->get_field_id( 'more_url' ); ?>" name="<?php echo $this->get_field_name( 'more_url' ); ?>" value="<?php echo esc_attr( $instance['more_url'] ); ?>" />
 		<br /><br />
-		<label for="<?php echo $this->get_field_id( 'more_text' );  ?>"><?php _e( 'Notation text:', 'vkExUnit' ); ?></label><br/>
+		<label for="<?php echo $this->get_field_id( 'more_text' );  ?>"><?php _e( 'Notation text:', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label><br/>
 		<input type="text" placeholder="最新記事一覧 ≫" id="<?php echo $this->get_field_id( 'more_text' ); ?>" name="<?php echo $this->get_field_name( 'more_text' ); ?>" value="<?php echo esc_attr( $instance['more_text'] ); ?>" />
 				<br /><br />
 
