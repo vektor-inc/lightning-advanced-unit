@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-09-14 12:44+0900\n"
+"POT-Creation-Date: 2017-09-21 12:13+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
 "Language-Team: Vektor translate Team <info@vektor-inc.co.jp>\n"
@@ -58,7 +58,7 @@ msgid "This widget is used for single column only."
 msgstr "このウィジェットは１カラム表示選択時に利用できます。"
 
 #: ../inc/widgets/widget-full-wide-title.php:54
-#: ../inc/widgets/widget-new-posts.php:219
+#: ../inc/widgets/widget-new-posts.php:244
 msgid "Title:"
 msgstr "タイトル :"
 
@@ -90,76 +90,92 @@ msgstr "コンテンツエリア投稿リスト"
 msgid "Displays a list of your most recent posts"
 msgstr "最新の投稿記事リストを表示します。"
 
-#: ../inc/widgets/widget-new-posts.php:104
-#: ../inc/widgets/widget-new-posts.php:128
+#: ../inc/widgets/widget-new-posts.php:120
+#: ../inc/widgets/widget-new-posts.php:144
 msgid "Read more"
 msgstr "詳しくはこちら"
 
-#: ../inc/widgets/widget-new-posts.php:148
+#: ../inc/widgets/widget-new-posts.php:168
 msgid "<dl><dt>%s</dt><dd>%l</dd></dl>"
 msgstr "<dl><dt>%s</dt><dd>%l</dd></dl>"
 
-#: ../inc/widgets/widget-new-posts.php:168
+#: ../inc/widgets/widget-new-posts.php:188
 msgid "Tags"
 msgstr "タグ"
 
-#: ../inc/widgets/widget-new-posts.php:201
+#: ../inc/widgets/widget-new-posts.php:223
 msgid "Recent Posts"
 msgstr "最新記事"
 
-#: ../inc/widgets/widget-new-posts.php:210
+#: ../inc/widgets/widget-new-posts.php:248
 msgid "Display Format"
 msgstr "表示形式"
 
-#: ../inc/widgets/widget-new-posts.php:212
-#: ../inc/widgets/widget-new-posts.php:214
+#: ../inc/widgets/widget-new-posts.php:249
 msgid "Thumbnail"
 msgstr "サムネイル画像"
 
-#: ../inc/widgets/widget-new-posts.php:212
-#: ../inc/widgets/widget-new-posts.php:214
-msgid "Date"
-msgstr "日付"
-
-#: ../inc/widgets/widget-new-posts.php:212
-#: ../inc/widgets/widget-new-posts.php:214
-msgid "Category"
-msgstr "カテゴリー"
-
-#: ../inc/widgets/widget-new-posts.php:212
-#: ../inc/widgets/widget-new-posts.php:214
+#: ../inc/widgets/widget-new-posts.php:249
+#: ../inc/widgets/widget-new-posts.php:250
 msgid "Title"
 msgstr "タイトル"
 
-#: ../inc/widgets/widget-new-posts.php:212
-msgid "Excerpt"
-msgstr "抜粋"
+#: ../inc/widgets/widget-new-posts.php:249
+#: ../inc/widgets/widget-new-posts.php:250
+msgid "Date"
+msgstr "日付"
 
-#: ../inc/widgets/widget-new-posts.php:214
-msgid "Content"
-msgstr "本文"
+#: ../inc/widgets/widget-new-posts.php:250
+msgid "Category"
+msgstr "カテゴリー"
 
-#: ../inc/widgets/widget-new-posts.php:224
+#: ../inc/widgets/widget-new-posts.php:253
+msgid "Order by"
+msgstr "表示順"
+
+#: ../inc/widgets/widget-new-posts.php:254
+msgid "Publish date"
+msgstr "公開日"
+
+#: ../inc/widgets/widget-new-posts.php:255
+msgid "Modified date"
+msgstr "最終更新日"
+
+#: ../inc/widgets/widget-new-posts.php:259
 msgid "Display count"
 msgstr "表示する記事数"
 
-#: ../inc/widgets/widget-new-posts.php:229
+#: ../inc/widgets/widget-new-posts.php:264
 msgid "Slug for the custom type you want to display"
 msgstr "表示したい記事タイプ"
 
-#: ../inc/widgets/widget-new-posts.php:234
+#: ../inc/widgets/widget-new-posts.php:269
 msgid "taxonomy ID"
 msgstr "カテゴリー（タクソノミー）ID"
 
-#: ../inc/widgets/widget-new-posts.php:236
+#: ../inc/widgets/widget-new-posts.php:271
 msgid "if you need filtering by term, add the term ID separate by \",\"."
 msgstr ""
 "特定のカテゴリーのみ表示したい場合は<br/>カンマ(,)区切りでカテゴリーIDを入力"
 "します。"
 
-#: ../inc/widgets/widget-new-posts.php:238
+#: ../inc/widgets/widget-new-posts.php:273
 msgid "if empty this area, I will do not filtering."
 msgstr "空欄の場合はフィルタリングは行いません。"
+
+#: ../inc/widgets/widget-new-posts.php:278
+msgid "Destination URL:"
+msgstr "リンク先URL:"
+
+#: ../inc/widgets/widget-new-posts.php:281
+msgid "Notation text:"
+msgstr "表記テキスト:"
+
+#~ msgid "Excerpt"
+#~ msgstr "抜粋"
+
+#~ msgid "Content"
+#~ msgstr "本文"
 
 #~ msgid "Last updated"
 #~ msgstr "最終更新日"
@@ -771,9 +787,6 @@ msgstr "空欄の場合はフィルタリングは行いません。"
 #~ msgid "left"
 #~ msgstr "左寄せ"
 
-#~ msgid "Button text"
-#~ msgstr "ボタンの表記文言"
-
 #~ msgid "Button link url"
 #~ msgstr "ボタンのリンク先URL"
 
@@ -1022,9 +1035,6 @@ msgstr "空欄の場合はフィルタリングは行いません。"
 
 #~ msgid "instagram URL:"
 #~ msgstr "instagram リンク先ページのURL"
-
-#~ msgid "linkedin URL:"
-#~ msgstr "linkedin リンク先ページのURL"
 
 #~ msgid "Categories/Custom taxonomies list"
 #~ msgstr "カテゴリー/カスタム分類リスト"
