@@ -39,7 +39,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		if ( ! isset( $instance['format'] ) ) { $instance['format'] = 0; }
 
 		echo $args['before_widget'];
-		echo '<div class="veu_postList pt_'.$instance['format'].'">';
+		echo '<div class="pt_'.$instance['format'].'">';
 		if ( ! empty ( $instance['label'] ) ) {
 			echo $args['before_title'];
 			echo $instance['label'];
