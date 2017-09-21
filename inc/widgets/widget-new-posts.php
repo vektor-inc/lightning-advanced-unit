@@ -40,9 +40,13 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 		echo $args['before_widget'];
 		echo '<div class="pt_'.$instance['format'].'">';
-		if ( isset( $instance['label'] ) && $instance['label'] ) {
+		if ( ! empty( $instance['label'] ) ) {
 			echo $args['before_title'];
 			echo $instance['label'];
+			echo $args['after_title'];
+		} else if ( ! isset( $instance['label'] ) ){
+			echo $args['before_title'];
+			echo __( 'Recent Posts', LIGHTNING_ADVANCED_TEXTDOMAIN );
 			echo $args['after_title'];
 		}
 
@@ -261,10 +265,10 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		echo '<br/><br/>';?>
 
 		<?php // Read more ?>
-		<label for="<?php echo $this->get_field_id( 'more_url' );  ?>"><?php _e( 'Destination URL:', 'vkExUnit' ); ?></label><br/>
+		<label for="<?php echo $this->get_field_id( 'more_url' );  ?>"><?php _e( 'Destination URL:', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label><br/>
 		<input type="text" id="<?php echo $this->get_field_id( 'more_url' ); ?>" name="<?php echo $this->get_field_name( 'more_url' ); ?>" value="<?php echo esc_attr( $instance['more_url'] ); ?>" />
 		<br /><br />
-		<label for="<?php echo $this->get_field_id( 'more_text' );  ?>"><?php _e( 'Notation text:', 'vkExUnit' ); ?></label><br/>
+		<label for="<?php echo $this->get_field_id( 'more_text' );  ?>"><?php _e( 'Notation text:', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label><br/>
 		<input type="text" placeholder="最新記事一覧 ≫" id="<?php echo $this->get_field_id( 'more_text' ); ?>" name="<?php echo $this->get_field_name( 'more_text' ); ?>" value="<?php echo esc_attr( $instance['more_text'] ); ?>" />
 				<br /><br />
 	<?php
