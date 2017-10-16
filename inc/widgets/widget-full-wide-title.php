@@ -27,11 +27,13 @@ class LTG_Full_Wide_Title extends WP_Widget {
 	public static function default_options( $args=array() )
 	{
 		$defaults = array(
-			'media_image_id'   => Null,
-			'title_bg_color'   => '',
-			'title_font_color' => '',
-			'title'            => Null,
-			'after_widget'     => '',
+			'media_image_id'   		=> Null,
+			'title_bg_color'   		=> '',
+			'title_font_color' 		=> '',
+			'title'            		=> Null,
+			'after_widget'     		=> '',
+			'title_shadow_use' 		=> false,
+			'title_shadow_color'	=> '#000',
 		);
 		return wp_parse_args( (array) $args, $defaults );
 	}
@@ -124,6 +126,15 @@ var vk_title_bg_image_delete = function(e){
 			'<label for="'.$this->get_field_id( 'title_font_color' ).'">'.__( 'Text color of the title:', LIGHTNING_ADVANCED_TEXTDOMAIN ).'</label><br/>'.
 			'<input type="text" id="'.$this->get_field_id( 'title_font_color' ).'" class="color_picker" name="'.$this->get_field_name( 'title_font_color' ).'" value="'. esc_attr( $instance[ 'title_font_color' ] ).'" /></p>';
 
+		// Shadow Use
+		$checked = ( $instance['title_shadow_use'] ) ? ' checked': '' ;
+		echo '<p><input type="checkbox" id="'.$this->get_field_id( 'title_shadow_use' ).'" name="'.$this->get_field_name( 'title_shadow_use' ).'" value="true"'.$checked.' >';
+		echo '<label for="'.$this->get_field_id( 'title_shadow_use' ).'">'. __( 'Text shadow', LIGHTNING_ADVANCED_TEXTDOMAIN ).'</label><br/></p>';
+
+		// Shadow color
+		echo '<p class="color_picker_wrap">'.
+			'<label for="'.$this->get_field_id( 'title_shadow_color' ).'">'.__( 'Text shadow color:', LIGHTNING_ADVANCED_TEXTDOMAIN ).'</label><br/>'.
+			'<input type="text" id="'.$this->get_field_id( 'title_shadow_color' ).'" class="color_picker" name="'.$this->get_field_name( 'title_shadow_color' ).'" value="'. esc_attr( $instance[ 'title_shadow_color' ] ).'" /></p>';
 
 		// サブタイトルの入力
 		if ( isset( $instance['text'] ) && $instance['text'] ) {
@@ -152,6 +163,8 @@ var vk_title_bg_image_delete = function(e){
 			$instance[ 'title_font_color' ] = sanitize_hex_color( $new_instance[ 'title_font_color' ] );
 			$instance[ 'title' ] = wp_kses_post( $new_instance[ 'title' ] );
 			$instance[ 'text' ] = wp_kses_post( $new_instance[ 'text' ] );
+			$instance[ 'title_shadow_use' ] = ( $new_instance[ 'title_shadow_use' ] ) ? true : false;
+			$instance[ 'title_shadow_color' ] = sanitize_hex_color( $new_instance[ 'title_shadow_color' ] );
 			return $new_instance;
 		}
 
@@ -184,14 +197,24 @@ var vk_title_bg_image_delete = function(e){
 	 }
 
 	 public static function widget_font_style( $instance ){
-		 $widget_font_style = 'border:1px solid #f00;';
+		 $widget_font_style = '';
 		 // 色が登録されている場合
 		 if ( ! empty( $instance[ 'title_font_color' ] ) ) {
-			 $widget_font_style = 'color:' .$instance[ 'title_font_color' ].';';
+			 $widget_font_style .= 'color:' .$instance[ 'title_font_color' ].';';
 		 } else {
 			 // その他（色が登録されていない）
-			 $widget_font_style = '';
+			 $widget_font_style .= '';
 		 }
+
+		 // シャドウ
+		 if ( isset( $instance[ 'title_shadow_use' ] ) && $instance[ 'title_shadow_use' ] ) {
+			 if ( ! empty( $instance[ 'title_shadow_color' ] ) ){
+				 $widget_font_style .= 'text-shadow:0px 0px 10px '.$instance[ 'title_shadow_color' ];
+			 } else {
+				 $widget_font_style .= 'text-shadow:0px 0px 10px #000';
+			 }
+		 }
+
 		 return $widget_font_style;
 	 }
 
@@ -199,8 +222,8 @@ var vk_title_bg_image_delete = function(e){
 		{
 			$instance = self::default_options( $instance );
 			echo $args ['before_widget'];
-			echo '<div class="widget_ltg_adv_full_wide_title_outer" style="'.$this->widget_outer_style($instance).'">';
-			echo '<h2 class="widget_ltg_adv_full_wide_title_title" style="'.$this->widget_font_style($instance).'">'.wp_kses_post( $instance['title'] ).'</h1>';
+			echo '<div class="widget_ltg_adv_full_wide_title_outer" style="'.esc_attr( $this->widget_outer_style($instance) ).'">';
+			echo '<h2 class="widget_ltg_adv_full_wide_title_title" style="'.esc_attr( $this->widget_font_style($instance) ).'">'.wp_kses_post( $instance['title'] ).'</h1>';
 			// サブテキストがある場合
 			if ( ! empty( $instance['text'] ) ){
 				echo '<p style="'.$this->widget_font_style($instance).'" class="widget_ltg_adv_full_wide_title_caption">'.wp_kses_post( $instance['text'] ).'</p>';
