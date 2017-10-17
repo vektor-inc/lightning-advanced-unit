@@ -209,9 +209,9 @@ var vk_title_bg_image_delete = function(e){
 		 // シャドウ
 		 if ( isset( $instance[ 'title_shadow_use' ] ) && $instance[ 'title_shadow_use' ] ) {
 			 if ( ! empty( $instance[ 'title_shadow_color' ] ) ){
-				 $widget_font_style .= 'text-shadow:0px 0px 10px '.$instance[ 'title_shadow_color' ];
+				 $widget_font_style .= 'text-shadow:0 0 0.3em '.$instance[ 'title_shadow_color' ];
 			 } else {
-				 $widget_font_style .= 'text-shadow:0px 0px 10px #000';
+				 $widget_font_style .= 'text-shadow:0 0 0.3em #000';
 			 }
 		 }
 
