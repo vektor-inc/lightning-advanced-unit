@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-09-21 13:48+0900\n"
+"POT-Creation-Date: 2017-10-16 22:36+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
 "Language-Team: Vektor translate Team <info@vektor-inc.co.jp>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_x;_e;_ex\n"
@@ -57,28 +57,36 @@ msgstr "全幅見出し"
 msgid "This widget is used for single column only."
 msgstr "このウィジェットは１カラム表示選択時に利用できます。"
 
-#: ../inc/widgets/widget-full-wide-title.php:54
+#: ../inc/widgets/widget-full-wide-title.php:56
 #: ../inc/widgets/widget-new-posts.php:245
 msgid "Title:"
 msgstr "タイトル :"
 
-#: ../inc/widgets/widget-full-wide-title.php:77
+#: ../inc/widgets/widget-full-wide-title.php:79
 msgid "Set image"
 msgstr "画像を選択"
 
-#: ../inc/widgets/widget-full-wide-title.php:78
+#: ../inc/widgets/widget-full-wide-title.php:80
 msgid "Delete image"
 msgstr "画像を削除"
 
-#: ../inc/widgets/widget-full-wide-title.php:119
+#: ../inc/widgets/widget-full-wide-title.php:121
 msgid "Title background color:"
 msgstr "背景色："
 
-#: ../inc/widgets/widget-full-wide-title.php:124
+#: ../inc/widgets/widget-full-wide-title.php:126
 msgid "Text color of the title:"
 msgstr "タイトルの文字色："
 
-#: ../inc/widgets/widget-full-wide-title.php:139
+#: ../inc/widgets/widget-full-wide-title.php:132
+msgid "Text shadow"
+msgstr "文字の影"
+
+#: ../inc/widgets/widget-full-wide-title.php:136
+msgid "Text shadow color:"
+msgstr "文字の影の色 :"
+
+#: ../inc/widgets/widget-full-wide-title.php:150
 msgid "Sub title:"
 msgstr "サブタイトル :"
 
@@ -169,6 +177,18 @@ msgstr "リンク先URL:"
 #: ../inc/widgets/widget-new-posts.php:271
 msgid "Notation text:"
 msgstr "表記テキスト:"
+
+#: ../node_modules/rx/dist/rx.min.js:1
+msgid "N"
+msgstr ""
+
+#: ../node_modules/rx/dist/rx.min.js:1
+msgid "E"
+msgstr ""
+
+#: ../node_modules/rx/dist/rx.min.js:1
+msgid "C"
+msgstr ""
 
 #~ msgid "Order by"
 #~ msgstr "表示順"
@@ -791,9 +811,6 @@ msgstr "表記テキスト:"
 
 #~ msgid "Button link url"
 #~ msgstr "ボタンのリンク先URL"
-
-#~ msgid "Text message"
-#~ msgstr "テキストメッセージ"
 
 #~ msgid "CTA setting"
 #~ msgstr "CTA設定"
