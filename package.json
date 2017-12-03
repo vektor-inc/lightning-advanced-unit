@@ -26,8 +26,7 @@
     "gulp-jsmin": "^0.1.5",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp.spritesmith": "^6.5.1",
+    "gulp.spritesmith": "^6.7.0",
     "run-sequence": "^2.1.0"
   }
 }
-
