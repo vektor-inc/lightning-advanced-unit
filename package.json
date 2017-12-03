@@ -1,0 +1,32 @@
+{
+  "name": "lightning-advanced-unit",
+  "version": "2.5.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vektor-inc/lightning-advanced-unit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vektor-inc/lightning-advanced-unit/issues"
+  },
+  "homepage": "https://github.com/vektor-inc/lightning-advanced-unit#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp.spritesmith": "^6.7.0",
+    "run-sequence": "^2.1.0"
+  }
+}

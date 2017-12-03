@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Lightning Advanced Unit
  * Plugin URI: http://lightning.vektor-inc.co.jp/
- * Version: 2.5.0
+ * Version: 2.6.0
  * Author: Vektor,Inc.
  * Author URI: http://www.vektor-inc.co.jp
  * Description: This is a plug-ins that extend the functionality of the theme "Lightning".
@@ -39,6 +39,7 @@ require_once( LIGHTNING_ADVANCED_DIR . 'inc/menu-btn-position.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-position.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-child-list-hidden.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-full-wide-title.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-fix/sidebar-fix.php' );
 
 /*-------------------------------------------*/
 /*  translations
@@ -49,3 +50,12 @@ function lightning_adv_unit_textdomain() {
 add_action( 'plugins_loaded', 'lightning_adv_unit_textdomain' );
 
 } // if ( $template == 'lightning' ){
+
+/*-------------------------------------------*/
+/*  Load js & CSS
+/*-------------------------------------------*/
+add_action( 'wp_enqueue_scripts','lightning_adv_unit_script',100 );
+function lightning_adv_unit_script() {
+  wp_register_script( 'lightning_adv_unit_script' , LIGHTNING_ADVANCED_URL.'js/lightning-adv.min.js', array( 'jquery','lightning-js' ), LIGHTNING_ADVANCED_VERSION );
+  wp_enqueue_script( 'lightning_adv_unit_script' );
+}

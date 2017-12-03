@@ -37,13 +37,24 @@ function ltg_adv_is_slide_menu(){
 }
 
 /*-------------------------------------------*/
+/*	add body class
+/*-------------------------------------------*/
+add_filter( 'body_class', 'ltg_adv_add_body_class_menu_slide' );
+function ltg_adv_add_body_class_menu_slide( $class ){
+	if ( ltg_adv_is_slide_menu() ){
+		if( apply_filters( 'lightning_slide_menu_enable', true ) ) {
+			$class[] = 'menu-slide';
+		}
+	}
+	return $class;
+}
+
+/*-------------------------------------------*/
 /*  Load js & CSS
 /*-------------------------------------------*/
 add_action( 'wp_enqueue_scripts','ltg_adv_nav_add_script',100 );
 function ltg_adv_nav_add_script() {
   if ( ltg_adv_is_slide_menu() ) {
-    wp_register_script( 'ltg_adv_nav_js' , LIGHTNING_ADVANCED_URL.'inc/navigation/js/navigation.min.js', array( 'jquery','lightning-js' ), LIGHTNING_ADVANCED_VERSION );
-    wp_enqueue_script( 'ltg_adv_nav_js' );
     wp_enqueue_style( 'ltg_adv_nav_style_css', LIGHTNING_ADVANCED_URL.'inc/navigation/css/navigation.css', array( 'lightning-design-style' ), LIGHTNING_ADVANCED_VERSION, 'all' );
   }
 }
@@ -66,7 +77,7 @@ function ltg_adv_insert_header_before_html(){
 /*  insert_footer_after_html
 /*-------------------------------------------*/
 add_action( 'lightning_footer_after', 'ltg_adv_insert_footer_after_html' );
-function ltg_adv_insert_footer_after_html(){ 
+function ltg_adv_insert_footer_after_html(){
   if ( ltg_adv_is_slide_menu() ) {
     echo '</div><!-- [ /#wrap ] -->';
     echo '</div><!-- [ /#bodyInner ] -->';
