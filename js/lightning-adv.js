@@ -1,10 +1,10 @@
 
 jQuery(document).ready(function(){
-	if( !$('body').hasClass('menu-slide') ){ return; }
+	if( !jQuery('body').hasClass('menu-slide') ){ return; }
 	run_slide_menu_control();
 });
 jQuery(window).resize(function(){
-	if( !$('body').hasClass('menu-slide') ){ return; }
+	if( !jQuery('body').hasClass('menu-slide') ){ return; }
 	run_menuResize();
 });
 /*-------------------------------------------*/
