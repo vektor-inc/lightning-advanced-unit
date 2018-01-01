@@ -3,8 +3,8 @@ Contributors: vektor-inc,bizvektor,kurudrive
 Donate link:
 Tags: Lightning,
 Requires at least: 4.5
-Tested up to: 4.9.1
-Stable tag: 2.6.0
+Tested up to: 4.9.2
+Stable tag: 2.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ e.g.
 
 
 == Changelog ==
+
+= 2.6.1 =
+* [ bug fix ] Add processing when there is no sidebar.
 
 = 2.6.0 =
 * [ Add function ] sidebar fix

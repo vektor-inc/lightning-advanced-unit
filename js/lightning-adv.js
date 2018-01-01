@@ -139,6 +139,11 @@ function run_menuResize(){
 
 	});
   jQuery(window).scroll(function(){
+		if( !$('body').hasClass('sidebar-fix') ){ return; }
+		// サイドバーの位置を取得
+		var sidebar_position_now = jQuery('.sideSection').offset();
+		// サイドバーがなかったら処理中止
+		if ( !sidebar_position_now ) { return }
     sideFix_scroll();
   });
 
@@ -154,8 +159,6 @@ function run_menuResize(){
 	/* スクロール時の処理
 	/*-------------------------------------------*/
 	function sideFix_scroll(){
-
-		if( !$('body').hasClass('sidebar-fix') ){ return; }
 
 		// 画面の幅を取得
 		var wrap_width = $('body').width();
