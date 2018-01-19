@@ -10,17 +10,29 @@ add_action(
 );
 
 class LTG_Full_Wide_Title extends WP_Widget {
-	function __construct()
+
+	public function __construct()
 	{
 		$widget_id = 'ltg_full_wide_title';
 		$widget_name = LIGHTNING_ADVANCED_SHORT_NAME. ' ' . __( 'Full Wide Title', LIGHTNING_ADVANCED_TEXTDOMAIN );
-		$widget_description = array( 'description' => __( 'This widget is used for single column only.', LIGHTNING_ADVANCED_TEXTDOMAIN ) );
+		$widget_description = array(
+			'description' => __( 'This widget is used for single column only.', LIGHTNING_ADVANCED_TEXTDOMAIN ),
+			'customize_selective_refresh' => true,
+		);
 
 		parent::__construct (
 			$widget_id,
 			$widget_name,
 			$widget_description
 		);
+		// // https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
+		// Enqueue style if widget is active (appears in a sidebar) or if in Customizer preview.
+		// if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
+		// 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		// }
+		// public function enqueue_scripts() {
+    //     wp_enqueue_style( 'my-plugin-example-widget', plugins_url( 'example-widget.css', __FILE__ ), array(), '0.1' );
+    // }
 
 	}
 
@@ -114,6 +126,30 @@ var vk_title_bg_image_delete = function(e){
 		jQuery(e).parent().children("._form").children('.__id').attr("value","").change();
 };
 }
+
+// jQuery(document).ready(function(i){
+// 	console.log('うえい');
+// 	$(document).on('click','.color_picker_wrap',function(){
+// 	      console.log('押した');
+// 	});
+// 	$(document).off('click','p');
+// 	$('.color_picker_wrap').on('click','input',function(){
+// 	     console.log('押した');
+// 	});
+// 	$('.color_picker_wrap').off('click','.wp-picker-clear');
+// 	// jQuery('.wp-picker-clear').click();
+// });
+// if ( vk_title_color_delete == undefined ){
+// var vk_title_color_delete = function(e){
+// 		// プレビュー画像を表示するdiv
+// 		var d=jQuery(e).parent().children("._display");
+//
+// 		// プレビュー画像のimgタグを削除
+// 		d.children().remove();
+// 		// w.attr("value","");
+// 		jQuery(e).parent().children("._form").children('.__id').attr("value","").change();
+// };
+// }
 </script>
 <?php
 		// title bg color
