@@ -15,18 +15,21 @@ var spritesmith = require('gulp.spritesmith');
 
 // ファイル結合
 gulp.task('concat', function() {
-  return gulp.src(['./js/lightning-adv-common.js','./inc/navigation/js/navigation.js','./inc/sidebar-fix/js/sidebar-fix.js'])
-    .pipe(concat('lightning-adv.js'))
-    .pipe(gulp.dest('./js/'));
+	// return gulp.src(['./js/lightning-adv-common.js','./inc/navigation/js/navigation.js','./inc/sidebar-fix/js/sidebar-fix.js'])
+	return gulp.src(['./js/lightning-adv-common.js', './inc/sidebar-fix/js/sidebar-fix.js'])
+		.pipe(concat('lightning-adv.js'))
+		.pipe(gulp.dest('./js/'));
 });
 
 // js最小化
-gulp.task('jsmin', function () {
-  gulp.src(['./js/lightning-adv.js'])
-  .pipe(plumber()) // エラーでも監視を続行
-  .pipe(jsmin())
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest('./js'));
+gulp.task('jsmin', function() {
+	gulp.src(['./js/lightning-adv.js'])
+		.pipe(plumber()) // エラーでも監視を続行
+		.pipe(jsmin())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('./js'));
 });
 
 
@@ -42,10 +45,10 @@ gulp.task('jsmin', function () {
 
 // Watch
 gulp.task('watch', function() {
-		gulp.watch('./js/lightning-adv-common.js', ['concat']);
-    gulp.watch('./inc/navigation/js/navigation.js', ['concat']);
-		gulp.watch('./inc/sidebar-fix/js/sidebar-fix.js', ['concat']);
-		gulp.watch('./js/lightning-adv.js', ['jsmin']);
+	gulp.watch('./js/lightning-adv-common.js', ['concat']);
+	gulp.watch('./inc/navigation/js/navigation.js', ['concat']);
+	gulp.watch('./inc/sidebar-fix/js/sidebar-fix.js', ['concat']);
+	gulp.watch('./js/lightning-adv.js', ['jsmin']);
 });
 
 // gulp.task('default', ['scripts','watch','sprite']);
