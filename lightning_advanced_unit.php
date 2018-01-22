@@ -31,17 +31,8 @@ define( 'LIGHTNING_ADVANCED_URL', plugin_dir_url( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_SHORT_NAME', 'LTG' );
 
-/*
-スライドメニューをフックで解除に出来るように plugin_loaded を追加
- */
-add_action( 'plugins_loaded', 'lightning_adv_unit_setup' );
-function lightning_adv_unit_setup() {
-	if ( apply_filters( 'lightning_slide_nav_load', true ) ) {
-		require_once( LIGHTNING_ADVANCED_DIR . 'inc/navigation/navigation.php' );
-	}
-}
 
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/vk-mobile-nav-config.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/navi-common.php' );
 
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-new-posts.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/menu-btn-position.php' );

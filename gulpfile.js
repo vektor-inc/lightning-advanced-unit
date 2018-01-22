@@ -30,6 +30,13 @@ gulp.task('jsmin', function() {
 			suffix: '.min'
 		}))
 		.pipe(gulp.dest('./js'));
+	gulp.src(['./inc/navigation/js/navigation.js'])
+		.pipe(plumber()) // エラーでも監視を続行
+		.pipe(jsmin())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('./inc/navigation/js/'));
 });
 
 
@@ -46,9 +53,9 @@ gulp.task('jsmin', function() {
 // Watch
 gulp.task('watch', function() {
 	gulp.watch('./js/lightning-adv-common.js', ['concat']);
-	gulp.watch('./inc/navigation/js/navigation.js', ['concat']);
 	gulp.watch('./inc/sidebar-fix/js/sidebar-fix.js', ['concat']);
 	gulp.watch('./js/lightning-adv.js', ['jsmin']);
+	gulp.watch('./inc/navigation/js/navigation.js', ['jsmin']);
 });
 
 // gulp.task('default', ['scripts','watch','sprite']);
