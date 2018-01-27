@@ -31,7 +31,7 @@ define( 'LIGHTNING_ADVANCED_URL', plugin_dir_url( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_SHORT_NAME', 'LTG' );
 
-
+// ナビゲーションの切り替え処理・カスタマイザー
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/navi-common.php' );
 
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-new-posts.php' );

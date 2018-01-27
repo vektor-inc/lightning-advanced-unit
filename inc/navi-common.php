@@ -12,17 +12,45 @@ function ltg_adv_is_slide_menu() {
 
 
 $options = get_option( 'lightning_theme_options' );
-// print '<pre style="text-align:left">';print_r($a);print '</pre>';
-if ( ! isset( $options['menu_type'] ) || ( $options['menu_type'] == 'vk_mobile_nav' ) ) {
+
+if ( isset( $options['menu_type'] ) && ( $options['menu_type'] == 'vk_mobile_nav' ) ) {
+
+	/*-------------------------------------------*/
+	/*  VK Mobile Nav の時
+	/*-------------------------------------------*/
+
+	// VK Mobile Nav 読み込み
 	require_once( LIGHTNING_ADVANCED_DIR . 'inc/vk-mobile-nav-config.php' );
+
+	// メニュー開閉ボタンや標準ナビの表示制御
+	add_action( 'wp_head', 'lightning_adv_unit_disable_default_menu_css', 4 );
+	function lightning_adv_unit_disable_default_menu_css() {
+
+		// Lightning標準のメニューボタンを消す
+		$dynamic_css = '.menuBtn { display:none; }';
+
+		// モバイルデバイスの時は幅が広くてもPCメニューを強制非表示
+		$dynamic_css .= 'body.mobile-device .gMenu_outer{ display:none; }';
+
+		// 画面が広い時にVK Mobile Nav のメニューボタンを消す
+		// （モバイルデバイスの時は画面サイズに関係なく vk-mobile-nav の方から display;block が出力される）
+		$dynamic_css .= '@media (min-width: 992px){ .vk-mobile-nav-menu-btn{ display:none; }}';
+
+		wp_add_inline_style( 'lightning-design-style', $dynamic_css );
+	}
 } elseif ( isset( $options['menu_type'] ) && ( $options['menu_type'] == 'side_slide' ) ) {
+
+	/*-------------------------------------------*/
+	/*  旧スライドメニューの時
+	/*-------------------------------------------*/
+
 	// 	スライドメニューをフックで解除に出来るように plugin_loaded を追加
-	// add_action( 'plugins_loaded', 'lightning_adv_unit_setup' );
-	// function lightning_adv_unit_setup() {
-	// if ( apply_filters( 'lightning_slide_nav_load', true ) ) {
-		require_once( LIGHTNING_ADVANCED_DIR . 'inc/navigation/navigation.php' );
-	// }
-	// }
+	add_action( 'plugins_loaded', 'lightning_adv_unit_load_slide_nav' );
+	function lightning_adv_unit_load_slide_nav() {
+		if ( apply_filters( 'lightning_slide_nav_load', true ) ) {
+			require_once( LIGHTNING_ADVANCED_DIR . 'inc/navigation/navigation.php' );
+		}
+	}
 }
 
 /*-------------------------------------------*/

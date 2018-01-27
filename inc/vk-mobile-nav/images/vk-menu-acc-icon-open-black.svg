@@ -5,6 +5,5 @@
 <style type="text/css">
 	.st0{fill:#333333;}
 </style>
-<rect x="9.8" y="23" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.9059 24.0144)" class="st0" width="28.5" height="2"/>
-<rect x="23" y="9.8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.9559 24.0351)" class="st0" width="2" height="28.5"/>
+<polygon class="st0" points="24,32.1 9.8,18 11.3,16.6 24,29.3 36.7,16.6 38.2,18 "/>
 </svg>
