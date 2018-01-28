@@ -6,12 +6,23 @@ $color_font_default : rgba(255,255,255,0.8);
 $time_transition:0.5s;
 $btn_radius:2px;
 
+$admin_bar_height_pc:32px;
+$admin_bar_height_mobile:46px;
+
+$manu_btn_margin:10px;
+
 body.admin-bar {
 	.vk-mobile-nav-menu-btn {
-		top:56px;
+		top:calc( #{$admin_bar_height_pc} + #{$manu_btn_margin} );
+		@media screen and (max-width: 782px){
+			top:calc( #{$admin_bar_height_mobile} + #{$manu_btn_margin} );
+		}
 	}
 	.vk-mobile-nav.vk-mobile-nav-open{
-		top:46px;
+		top:$admin_bar_height_pc;
+		@media screen and (max-width: 782px){
+			top:$admin_bar_height_mobile;
+		}
 	}
 }
 
@@ -20,8 +31,8 @@ body.admin-bar {
 /*-------------------------------------------*/
 .vk-mobile-nav-menu-btn {
 	position: fixed;
-	top:10px;
-	left:10px;
+	top:$manu_btn_margin;
+	left:$manu_btn_margin;
 	z-index: 2000;
 	overflow:hidden;
 	border:1px solid #333;
@@ -63,6 +74,7 @@ $margin-section-bottom:1.5em;
 	padding:60px 0;
 	overflow:scroll;
 	transition: top $time_transition ease-out;
+	box-shadow:1px 1px 4px rgba(0,0,0,0.1);
 	.global-nav {
 		margin-bottom:$margin-section-bottom;
 	}

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-12-04 00:47+0900\n"
+"POT-Creation-Date: 2018-01-28 22:52+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
 "Language-Team: Vektor translate Team <info@vektor-inc.co.jp>\n"
@@ -27,17 +27,25 @@ msgstr "左"
 msgid "Right"
 msgstr "右"
 
-#: ../inc/navigation/navigation.php:15
-msgid "Side Slide"
-msgstr "横スライド"
+#: ../inc/navi-common.php:77
+msgid "VK Mobile Nav(Recommend)"
+msgstr "VK Mobile Nav(推奨)"
 
-#: ../inc/navigation/navigation.php:16
+#: ../inc/navi-common.php:78
 msgid "Vertical Show Hide (Lightning default)"
 msgstr "縦展開（Ligthning標準）"
 
-#: ../inc/navigation/navigation.php:21
+#: ../inc/navi-common.php:79
+msgid "Side Slide(Not recommend)"
+msgstr "Side Slide(非推奨)"
+
+#: ../inc/navi-common.php:84
 msgid "Menu Type ( Mobile mode )"
 msgstr "メニュータイプ（モバイル端末時）"
+
+#: ../inc/navi-common.php:88
+msgid "It will not take effect unless you save and reload the page."
+msgstr "保存してページを再読込しないと反映されません。"
 
 #: ../inc/sidebar-child-list-hidden.php:14
 msgid "Sidebar menu hide list children"
@@ -52,6 +60,14 @@ msgstr "サイドバーを固定しない"
 #: ../inc/sidebar-position.php:14
 msgid "Sidebar position ( PC mode )"
 msgstr "サイドバーの位置（PC閲覧時）"
+
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:52
+msgid "Mobile Nav Upper"
+msgstr "モバイルナビ上部"
+
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:62
+msgid "Mobile Nav Bottom"
+msgstr "モバイルナビ下部"
 
 #: ../inc/widgets/widget-full-wide-title.php:16
 msgid "Full Wide Title"
@@ -181,6 +197,9 @@ msgstr "リンク先URL:"
 #: ../inc/widgets/widget-new-posts.php:271
 msgid "Notation text:"
 msgstr "表記テキスト:"
+
+#~ msgid "Side Slide"
+#~ msgstr "横スライド"
 
 #~ msgid "Order by"
 #~ msgstr "表示順"

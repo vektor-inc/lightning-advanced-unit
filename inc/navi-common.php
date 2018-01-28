@@ -36,6 +36,13 @@ if ( isset( $options['menu_type'] ) && ( $options['menu_type'] == 'vk_mobile_nav
 		// （モバイルデバイスの時は画面サイズに関係なく vk-mobile-nav の方から display;block が出力される）
 		$dynamic_css .= '@media (min-width: 992px){ .vk-mobile-nav-menu-btn{ display:none; }}';
 
+		// delete before after space
+		$dynamic_css = trim( $dynamic_css );
+		// convert tab and br to space
+		$dynamic_css = preg_replace( '/[\n\r\t]/', '', $dynamic_css );
+		// Change multiple spaces to single space
+		$dynamic_css = preg_replace( '/\s(?=\s)/', '', $dynamic_css );
+
 		wp_add_inline_style( 'lightning-design-style', $dynamic_css );
 	}
 } elseif ( isset( $options['menu_type'] ) && ( $options['menu_type'] == 'side_slide' ) ) {
@@ -71,16 +78,16 @@ function lightning_adv_unit_customize_register_menu_type( $wp_customize ) {
 		'vertical_show_hide' => __( 'Vertical Show Hide (Lightning default)', LIGHTNING_ADVANCED_TEXTDOMAIN ),
 		'side_slide'         => __( 'Side Slide(Not recommend)', LIGHTNING_ADVANCED_TEXTDOMAIN ),
 	);
-	$choices_array = apply_filters( 'ligthning_menu_choices_array_custom', $choices_array ); // 2017年3月になったら削除
 	$choices_array = apply_filters( 'lightning_menu_choices_array_custom', $choices_array );
 	$wp_customize->add_control(
 		'lightning_theme_options[menu_type]', array(
-			'label'    => __( 'Menu Type ( Mobile mode )', LIGHTNING_ADVANCED_TEXTDOMAIN ),
-			'section'  => 'lightning_design',
-			'settings' => 'lightning_theme_options[menu_type]',
-			'type'     => 'radio',
-			'choices'  => $choices_array,
-			'priority' => 600,
+			'label'       => __( 'Menu Type ( Mobile mode )', LIGHTNING_ADVANCED_TEXTDOMAIN ),
+			'section'     => 'lightning_design',
+			'settings'    => 'lightning_theme_options[menu_type]',
+			'type'        => 'radio',
+			'description' => '<p style="color:red">' . __( 'It will not take effect unless you save and reload the page.', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</p>',
+			'choices'     => $choices_array,
+			'priority'    => 600,
 		)
 	);
 }
