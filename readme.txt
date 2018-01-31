@@ -4,7 +4,7 @@ Donate link:
 Tags: Lightning,
 Requires at least: 4.5
 Tested up to: 4.9.1
-Stable tag: 2.6.3
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ e.g.
 
 
 == Changelog ==
+
+= 3.0.0 =
+* [ Add function ] New Mobile Menu Release
 
 = 2.6.1 =
 * [ bug fix ] Add processing when there is no sidebar.
