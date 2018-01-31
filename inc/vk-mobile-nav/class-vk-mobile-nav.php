@@ -83,6 +83,7 @@ if ( ! class_exists( 'Vk_Mobile_Nav' ) ) {
 					'container'      => '',
 					'items_wrap'     => '<nav class="global-nav"><ul id="%1$s" class="vk-menu-acc  %2$s">%3$s</ul></nav>',
 					'fallback_cb'    => '',
+					'echo'           => true,
 					// 'depth'          => 1,
 				)
 			);
