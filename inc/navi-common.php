@@ -34,7 +34,7 @@ if ( isset( $options['menu_type'] ) && ( $options['menu_type'] == 'vk_mobile_nav
 		$dynamic_css = '.menuBtn { display:none; }';
 
 		// モバイルデバイスの時は幅が広くてもPCメニューを強制非表示
-		$dynamic_css .= 'body.mobile-device .gMenu_outer{ display:none; }';
+		$dynamic_css .= 'body.device-mobile .gMenu_outer{ display:none; }';
 
 		// delete before after space
 		$dynamic_css = trim( $dynamic_css );
