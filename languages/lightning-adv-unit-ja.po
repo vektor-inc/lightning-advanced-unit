@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-01-28 22:52+0900\n"
+"POT-Creation-Date: 2018-01-31 12:15+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
 "Language-Team: Vektor translate Team <info@vektor-inc.co.jp>\n"
@@ -61,13 +61,52 @@ msgstr "サイドバーを固定しない"
 msgid "Sidebar position ( PC mode )"
 msgstr "サイドバーの位置（PC閲覧時）"
 
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:52
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:54
 msgid "Mobile Nav Upper"
 msgstr "モバイルナビ上部"
 
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:62
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:64
 msgid "Mobile Nav Bottom"
 msgstr "モバイルナビ下部"
+
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:85
+#, php-format
+msgid ""
+"This is the widget area.<br>You can set widget item from [ <a href=\"%s"
+"\">Appearance > Customize</a> ] Page -> \"Widgets\" panel -> \"Mobile Nav "
+"Upper\" Panel."
+msgstr ""
+"ここはウィジェットエリアです。<br>[ <a href=%s>外観 > カスタマイズ</a> ] 画面"
+"の “ウィジェット” パネルの “モバイルナビ上部” パネルから設定する事ができま"
+"す。"
+
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:86
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:106
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:116
+msgid "* This message is displayed only to users with editing authority."
+msgstr "* このメッセージは編集権限のあるユーザーにのみ表示されています。"
+
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:105
+#, php-format
+msgid ""
+"Menu is not set.<br>Please set menu from [ <a href=\"%s\">Appearance > "
+"Customize</a> ] Page -> \"Menus\" panel -> Menu Locations \"Mobile Navigation"
+"\"."
+msgstr ""
+"メニューが設定されていません。<br>[ <a href=%s>外観 > カスタマイズ</a> ] 画面"
+"の “メニュー” パネル から “Mobile Navigation” の位置にメニューを設定してくだ"
+"さい。"
+
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:115
+#, php-format
+msgid ""
+"This is the widget area.<br>You can set widget item from [ <a href=\"%s"
+"\">Appearance > Customize</a> ] Page -> \"Widgets\" panel -> \"Mobile Nav "
+"Bottom\" Panel."
+msgstr ""
+"ここはウィジェットエリアです。<br>[ <a href=%s>外観 > カスタマイズ</a> ] 画面"
+"の “ウィジェット” パネルの “モバイルナビ下部” パネルから設定する事ができま"
+"す。"
 
 #: ../inc/widgets/widget-full-wide-title.php:16
 msgid "Full Wide Title"
