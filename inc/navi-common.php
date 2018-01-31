@@ -26,15 +26,15 @@ if ( isset( $options['menu_type'] ) && ( $options['menu_type'] == 'vk_mobile_nav
 	add_action( 'wp_head', 'lightning_adv_unit_disable_default_menu_css', 4 );
 	function lightning_adv_unit_disable_default_menu_css() {
 
+		global $vk_mobile_nav;
+		add_action( 'lightning_header_before', array( $vk_mobile_nav, 'menu_set_html' ) );
+		// add_action( 'wp_footer', array( $vk_mobile_nav, 'menu_set_html' ) );
+
 		// Lightning標準のメニューボタンを消す
 		$dynamic_css = '.menuBtn { display:none; }';
 
 		// モバイルデバイスの時は幅が広くてもPCメニューを強制非表示
 		$dynamic_css .= 'body.mobile-device .gMenu_outer{ display:none; }';
-
-		// 画面が広い時にVK Mobile Nav のメニューボタンを消す
-		// （モバイルデバイスの時は画面サイズに関係なく vk-mobile-nav の方から display;block が出力される）
-		$dynamic_css .= '@media (min-width: 992px){ .vk-mobile-nav-menu-btn{ display:none; }}';
 
 		// delete before after space
 		$dynamic_css = trim( $dynamic_css );

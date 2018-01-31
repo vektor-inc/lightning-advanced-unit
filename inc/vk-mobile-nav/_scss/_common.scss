@@ -26,6 +26,24 @@ body.admin-bar {
 	}
 }
 
+body.device-pc {
+	// PCで画面が広い時に非表示
+	@media ( min-width: 992px){
+		.vk-mobile-nav-menu-btn {
+			display: none;
+		}
+		.vk-mobile-nav {
+			display: none;
+		}
+	}
+}
+body.device-mobile {
+	/* モバイル端末では画面サイズ関係なく表示 */
+	.vk-mobile-nav-menu-btn {
+		display: block;
+	}
+}
+
 /*-------------------------------------------*/
 /* .vk-mobile-nav-menu-btn
 /*-------------------------------------------*/
@@ -50,20 +68,15 @@ body.admin-bar {
 	background:url('../images/vk-menu-btn-close.svg') center 50% no-repeat;
 }
 
-body.mobile-device {
-	/* モバイル端末では画面サイズ関係なく強制的に表示 */
-	.vk-mobile-nav-menu-btn {
-		display: block;
-	}
-}
-
 /*-------------------------------------------*/
 /* .vk-mobile-nav
 /*-------------------------------------------*/
 $margin-section-bottom:1.5em;
+// メニューボタンがタップされてたら
 .vk-mobile-nav.vk-mobile-nav-open{
 	top:0;
 }
+
 .vk-mobile-nav {
 	position: fixed;
 	top:-2000px;
