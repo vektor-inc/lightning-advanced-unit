@@ -81,10 +81,12 @@ if ( ! class_exists( 'Vk_Mobile_Nav' ) ) {
 			if ( is_active_sidebar( 'vk-mobile-nav-upper' ) ) {
 				dynamic_sidebar( 'vk-mobile-nav-upper' );
 			} else {
-				echo '<div class="veu_adminEdit alert alert-info">';
-				echo '<p>' . sprintf( __( 'This is the widget area.<br>You can set widget item from [ <a href="%s">Appearance > Customize</a> ] Page -> "Widgets" panel -> "Mobile Nav Upper" Panel.', $vk_mobile_nav_textdomain ), admin_url( 'customize.php' ) ) . '</p>';
-				echo '<p>' . __( '* This message is displayed only to users with editing authority.', $vk_mobile_nav_textdomain ) . '</p>';
-				echo '</div>';
+				if ( current_user_can( 'edit_theme_options' ) ) {
+					echo '<div class="veu_adminEdit alert alert-info">';
+					echo '<p>' . sprintf( __( 'This is the widget area.<br>You can set widget item from [ <a href="%s">Appearance > Customize</a> ] Page -> "Widgets" panel -> "Mobile Nav Upper" Panel.', $vk_mobile_nav_textdomain ), admin_url( 'customize.php' ) ) . '</p>';
+					echo '<p>' . __( '* This message is displayed only to users with editing authority.', $vk_mobile_nav_textdomain ) . '</p>';
+					echo '</div>';
+				}
 			}
 
 			$menu = wp_nav_menu(
@@ -111,10 +113,12 @@ if ( ! class_exists( 'Vk_Mobile_Nav' ) ) {
 			if ( is_active_sidebar( 'vk-mobile-nav-bottom' ) ) {
 				dynamic_sidebar( 'vk-mobile-nav-bottom' );
 			} else {
-				echo '<div class="veu_adminEdit alert alert-info">';
-				echo '<p>' . sprintf( __( 'This is the widget area.<br>You can set widget item from [ <a href="%s">Appearance > Customize</a> ] Page -> "Widgets" panel -> "Mobile Nav Bottom" Panel.', $vk_mobile_nav_textdomain ), admin_url( 'customize.php' ) ) . '</p>';
-				echo '<p>' . __( '* This message is displayed only to users with editing authority.', $vk_mobile_nav_textdomain ) . '</p>';
-				echo '</div>';
+				if ( current_user_can( 'edit_theme_options' ) ) {
+					echo '<div class="veu_adminEdit alert alert-info">';
+					echo '<p>' . sprintf( __( 'This is the widget area.<br>You can set widget item from [ <a href="%s">Appearance > Customize</a> ] Page -> "Widgets" panel -> "Mobile Nav Bottom" Panel.', $vk_mobile_nav_textdomain ), admin_url( 'customize.php' ) ) . '</p>';
+					echo '<p>' . __( '* This message is displayed only to users with editing authority.', $vk_mobile_nav_textdomain ) . '</p>';
+					echo '</div>';
+				}
 			}
 
 			echo '</div>';
