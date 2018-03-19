@@ -38,3 +38,12 @@ function lightning_adv_unit_menu_btn_position_custom( $menu_btn_position ) {
 	}
 	return $menu_btn_position;
 }
+
+add_filter( 'body_class', 'lightning_adv_unit_add_menu_btn_class' );
+function lightning_adv_unit_add_menu_btn_class( $classes ) {
+	$options = get_option( 'lightning_theme_options' );
+	if ( isset( $options['menu_btn_position'] ) && $options['menu_btn_position'] ) {
+		$classes[] = 'mobile-nav-btn-' . $options['menu_btn_position'];
+	}
+	return $classes;
+}
