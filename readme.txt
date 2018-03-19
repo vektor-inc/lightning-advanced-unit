@@ -44,6 +44,9 @@ e.g.
 
 == Changelog ==
 
+= 3.0.1 =
+* [ Add function ] New Mobile Menu position compatible
+
 = 3.0.0 =
 * [ Add function ] New Mobile Menu Release
 
