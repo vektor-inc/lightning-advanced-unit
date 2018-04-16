@@ -13,6 +13,21 @@ function ltg_adv_is_slide_menu() {
 
 $options = get_option( 'lightning_theme_options' );
 
+/*
+@since 2018.4.16
+メニュー未設定時の対策
+ */
+$skin = get_option( 'lightning_design_skin' );
+if ( $skin == 'variety' || $skin == 'charm' || $skin == 'fort' || $skin == 'pale' ) {
+	/*-------------------------------------------*/
+	/*  メニュータイプが未指定の時はVK Mobile Navに指定
+	/*-------------------------------------------*/
+	if ( empty( $options['menu_type'] ) ) {
+		$options['menu_type'] = 'vk_mobile_nav';
+		update_option( 'lightning_theme_options', $options );
+	}
+}
+
 if ( isset( $options['menu_type'] ) && ( $options['menu_type'] == 'vk_mobile_nav' ) ) {
 
 	/*-------------------------------------------*/
