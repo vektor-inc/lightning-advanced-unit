@@ -33,7 +33,8 @@ class LTG_Full_Wide_Title extends WP_Widget {
 			'title_shadow_use'   => false,
 			'title_shadow_color' => '#000',
 			'margin_top'         => '0',
-			'margin_botton'      => '40px',
+			'margin_bottom'      => '40px',
+			'bg_parallax'        => false,
 		);
 		return wp_parse_args( (array) $args, $defaults );
 	}
@@ -140,7 +141,14 @@ var vk_title_bg_image_delete = function(e){
 };
 }
 </script>
+
 <?php
+
+// Shadow Use
+$checked = ( $options['bg_parallax'] ) ? ' checked' : '';
+echo '<p><input type="checkbox" id="' . $this->get_field_id( 'bg_parallax' ) . '" name="' . $this->get_field_name( 'bg_parallax' ) . '" value="true"' . $checked . ' >';
+echo '<label for="' . $this->get_field_id( 'bg_parallax' ) . '">' . __( 'Set to parallax', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/></p>';
+
 echo '<p>';
 echo  __( 'Margin Top', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ' : ';
 $id   = $this->get_field_id( 'margin_top' );
@@ -248,7 +256,7 @@ echo '</p>';
 			$widget_outer_style .= 'margin-top:0;';
 		}
 		if ( isset( $instance['margin_bottom'] ) && $instance['margin_bottom'] != '' ) {
-			$widget_outer_style .= 'margin-bottom:0;';
+			$widget_outer_style .= 'margin-bottom:0px;background-repeat:no-repeat;';
 		}
 
 		if ( $widget_outer_style ) {
@@ -261,9 +269,13 @@ echo '</p>';
 			echo '<style type="text/css">' . $dynamic_css . '</style>';
 			// wp_add_inline_style( 'lightning-design-style', $dynamic_css );
 		}
+		$add_class = '';
+		if ( $instance['bg_parallax'] && $instance['media_image_id'] ) {
+			$add_class = ' vk-prlx';
+		}
 
 		echo $args ['before_widget'];
-		echo '<div class="widget_ltg_adv_full_wide_title_outer" style="' . esc_attr( $this->widget_outer_style( $instance ) ) . '">';
+		echo '<div class="widget_ltg_adv_full_wide_title_outer' . $add_class . '" style="' . esc_attr( $this->widget_outer_style( $instance ) ) . '">';
 		echo '<h2 class="widget_ltg_adv_full_wide_title_title" style="' . esc_attr( $this->widget_font_style( $instance ) ) . '">' . wp_kses_post( $instance['title'] ) . '</h2>';
 		// サブテキストがある場合
 		if ( ! empty( $instance['text'] ) ) {
