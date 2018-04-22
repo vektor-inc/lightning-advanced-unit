@@ -4,7 +4,7 @@ Donate link:
 Tags: Lightning,
 Requires at least: 4.5
 Tested up to: 4.9.5
-Stable tag: 3.1.2
+Stable tag: 3.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ e.g.
 
 
 == Changelog ==
+
+= 3.2.0 =
+* [ Add function ] Add full wide title widget parallax
 
 = 3.0.1 =
 * [ Add function ] New Mobile Menu position compatible
