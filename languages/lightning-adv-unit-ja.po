@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-01-31 12:15+0900\n"
+"POT-Creation-Date: 2018-04-23 02:28+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kurudrive <kurudrive@gmail.com>\n"
 "Language-Team: Vektor translate Team <info@vektor-inc.co.jp>\n"
@@ -15,35 +15,35 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_x;_e;_ex\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../inc/menu-btn-position.php:14
+#: ../inc/menu-btn-position.php:17
 msgid "Menu button position ( Mobile mode )"
 msgstr "メニューボタンの位置（モバイルモード）"
 
-#: ../inc/menu-btn-position.php:19 ../inc/sidebar-position.php:20
+#: ../inc/menu-btn-position.php:22 ../inc/sidebar-position.php:20
 msgid "Left"
 msgstr "左"
 
-#: ../inc/menu-btn-position.php:20 ../inc/sidebar-position.php:19
+#: ../inc/menu-btn-position.php:23 ../inc/sidebar-position.php:19
 msgid "Right"
 msgstr "右"
 
-#: ../inc/navi-common.php:77
+#: ../inc/navi-common.php:92
 msgid "VK Mobile Nav(Recommend)"
 msgstr "VK Mobile Nav(推奨)"
 
-#: ../inc/navi-common.php:78
+#: ../inc/navi-common.php:93
 msgid "Vertical Show Hide (Lightning default)"
 msgstr "縦展開（Ligthning標準）"
 
-#: ../inc/navi-common.php:79
+#: ../inc/navi-common.php:94
 msgid "Side Slide(Not recommend)"
 msgstr "Side Slide(非推奨)"
 
-#: ../inc/navi-common.php:84
+#: ../inc/navi-common.php:99
 msgid "Menu Type ( Mobile mode )"
 msgstr "メニュータイプ（モバイル端末時）"
 
-#: ../inc/navi-common.php:88
+#: ../inc/navi-common.php:103
 msgid "It will not take effect unless you save and reload the page."
 msgstr "保存してページを再読込しないと反映されません。"
 
@@ -69,7 +69,7 @@ msgstr "モバイルナビ上部"
 msgid "Mobile Nav Bottom"
 msgstr "モバイルナビ下部"
 
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:85
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:86
 #, php-format
 msgid ""
 "This is the widget area.<br>You can set widget item from [ <a href=\"%s"
@@ -80,13 +80,13 @@ msgstr ""
 "の “ウィジェット” パネルの “モバイルナビ上部” パネルから設定する事ができま"
 "す。"
 
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:86
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:106
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:116
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:87
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:108
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:119
 msgid "* This message is displayed only to users with editing authority."
 msgstr "* このメッセージは編集権限のあるユーザーにのみ表示されています。"
 
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:105
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:107
 #, php-format
 msgid ""
 "Menu is not set.<br>Please set menu from [ <a href=\"%s\">Appearance > "
@@ -97,7 +97,7 @@ msgstr ""
 "の “メニュー” パネル から “Mobile Navigation” の位置にメニューを設定してくだ"
 "さい。"
 
-#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:115
+#: ../inc/vk-mobile-nav/class-vk-mobile-nav.php:118
 #, php-format
 msgid ""
 "This is the widget area.<br>You can set widget item from [ <a href=\"%s"
@@ -108,46 +108,63 @@ msgstr ""
 "の “ウィジェット” パネルの “モバイルナビ下部” パネルから設定する事ができま"
 "す。"
 
-#: ../inc/widgets/widget-full-wide-title.php:16
+#: ../inc/widgets/widget-full-wide-title.php:15
 msgid "Full Wide Title"
 msgstr "全幅見出し"
 
-#: ../inc/widgets/widget-full-wide-title.php:17
+#: ../inc/widgets/widget-full-wide-title.php:16
 msgid "This widget is used for single column only."
 msgstr "このウィジェットは１カラム表示選択時に利用できます。"
 
-#: ../inc/widgets/widget-full-wide-title.php:56
+#: ../inc/widgets/widget-full-wide-title.php:50
 #: ../inc/widgets/widget-new-posts.php:245
 msgid "Title:"
 msgstr "タイトル :"
 
-#: ../inc/widgets/widget-full-wide-title.php:79
-msgid "Set image"
-msgstr "画像を選択"
+#: ../inc/widgets/widget-full-wide-title.php:67
+msgid "Sub title:"
+msgstr "サブタイトル :"
 
-#: ../inc/widgets/widget-full-wide-title.php:80
-msgid "Delete image"
-msgstr "画像を削除"
-
-#: ../inc/widgets/widget-full-wide-title.php:121
-msgid "Title background color:"
-msgstr "背景色："
-
-#: ../inc/widgets/widget-full-wide-title.php:126
+#: ../inc/widgets/widget-full-wide-title.php:73
 msgid "Text color of the title:"
 msgstr "タイトルの文字色："
 
-#: ../inc/widgets/widget-full-wide-title.php:132
+#: ../inc/widgets/widget-full-wide-title.php:79
 msgid "Text shadow"
 msgstr "文字の影"
 
-#: ../inc/widgets/widget-full-wide-title.php:136
+#: ../inc/widgets/widget-full-wide-title.php:83
 msgid "Text shadow color:"
 msgstr "文字の影の色 :"
 
+#: ../inc/widgets/widget-full-wide-title.php:88
+msgid "Title background color:"
+msgstr "背景色："
+
+#: ../inc/widgets/widget-full-wide-title.php:105
+msgid "Set image"
+msgstr "画像を選択"
+
+#: ../inc/widgets/widget-full-wide-title.php:106
+msgid "Delete image"
+msgstr "画像を削除"
+
 #: ../inc/widgets/widget-full-wide-title.php:150
-msgid "Sub title:"
-msgstr "サブタイトル :"
+msgid "Set to parallax"
+msgstr "パララックスにする"
+
+#: ../inc/widgets/widget-full-wide-title.php:153
+msgid "Margin Top"
+msgstr "余白 上"
+
+#: ../inc/widgets/widget-full-wide-title.php:157
+#: ../inc/widgets/widget-full-wide-title.php:165
+msgid "Ex"
+msgstr "例"
+
+#: ../inc/widgets/widget-full-wide-title.php:161
+msgid "Margin Bottom"
+msgstr "余白 下"
 
 #: ../inc/widgets/widget-new-posts.php:12
 msgid "Content Area Posts Widget"
