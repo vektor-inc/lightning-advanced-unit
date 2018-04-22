@@ -36,7 +36,9 @@ class LTG_Full_Wide_Title extends WP_Widget {
 		return wp_parse_args( (array) $args, $defaults );
 	}
 
-
+	/*-------------------------------------------*/
+	/*  form
+	/*-------------------------------------------*/
 	public function form( $instance ) {
 		$instance = self::default_options( $instance );
 
@@ -59,6 +61,41 @@ class LTG_Full_Wide_Title extends WP_Widget {
 			esc_attr( $title )
 		);
 		echo '</p>';
+
+		// サブタイトルの入力
+		if ( isset( $instance['text'] ) && $instance['text'] ) {
+			$text = $instance['text'];
+		} else {
+			$text = '';
+		}
+
+		$id   = $this->get_field_id( 'text' );
+		$name = $this->get_field_name( 'text' );
+
+		echo '<p>';
+		echo  __( 'Sub title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '<br>';
+		echo '<textarea id="' . $id . '" name="' . $name . '" style="width:100%;">' . esc_textarea( $text ) . '</textarea>';
+		echo '</p>';
+
+		// title font color
+		echo '<p class="color_picker_wrap">' .
+			'<label for="' . $this->get_field_id( 'title_font_color' ) . '">' . __( 'Text color of the title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/>' .
+			'<input type="text" id="' . $this->get_field_id( 'title_font_color' ) . '" class="color_picker" name="' . $this->get_field_name( 'title_font_color' ) . '" value="' . esc_attr( $instance['title_font_color'] ) . '" /></p>';
+
+		// Shadow Use
+		$checked = ( $instance['title_shadow_use'] ) ? ' checked' : '';
+		echo '<p><input type="checkbox" id="' . $this->get_field_id( 'title_shadow_use' ) . '" name="' . $this->get_field_name( 'title_shadow_use' ) . '" value="true"' . $checked . ' >';
+		echo '<label for="' . $this->get_field_id( 'title_shadow_use' ) . '">' . __( 'Text shadow', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/></p>';
+
+		// Shadow color
+		echo '<p class="color_picker_wrap">' .
+			'<label for="' . $this->get_field_id( 'title_shadow_color' ) . '">' . __( 'Text shadow color:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/>' .
+			'<input type="text" id="' . $this->get_field_id( 'title_shadow_color' ) . '" class="color_picker" name="' . $this->get_field_name( 'title_shadow_color' ) . '" value="' . esc_attr( $instance['title_shadow_color'] ) . '" /></p>';
+
+		// bg color
+		echo '<p class="color_picker_wrap">' .
+			'<label for="' . $this->get_field_id( 'title_bg_color' ) . '">' . __( 'Title background color:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/>' .
+			'<input type="text" id="' . $this->get_field_id( 'title_bg_color' ) . '" class="color_picker" name="' . $this->get_field_name( 'title_bg_color' ) . '" value="' . esc_attr( $instance['title_bg_color'] ) . '" /></p>';
 
 		$image = null;
 		// ちゃんと数字が入っているかどうか？
@@ -114,40 +151,6 @@ var vk_title_bg_image_delete = function(e){
 }
 </script>
 <?php
-		// title bg color
-		echo '<p class="color_picker_wrap">' .
-			'<label for="' . $this->get_field_id( 'title_bg_color' ) . '">' . __( 'Title background color:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/>' .
-			'<input type="text" id="' . $this->get_field_id( 'title_bg_color' ) . '" class="color_picker" name="' . $this->get_field_name( 'title_bg_color' ) . '" value="' . esc_attr( $instance['title_bg_color'] ) . '" /></p>';
-
-		// title font color
-		echo '<p class="color_picker_wrap">' .
-			'<label for="' . $this->get_field_id( 'title_font_color' ) . '">' . __( 'Text color of the title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/>' .
-			'<input type="text" id="' . $this->get_field_id( 'title_font_color' ) . '" class="color_picker" name="' . $this->get_field_name( 'title_font_color' ) . '" value="' . esc_attr( $instance['title_font_color'] ) . '" /></p>';
-
-		// Shadow Use
-		$checked = ( $instance['title_shadow_use'] ) ? ' checked' : '';
-		echo '<p><input type="checkbox" id="' . $this->get_field_id( 'title_shadow_use' ) . '" name="' . $this->get_field_name( 'title_shadow_use' ) . '" value="true"' . $checked . ' >';
-		echo '<label for="' . $this->get_field_id( 'title_shadow_use' ) . '">' . __( 'Text shadow', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/></p>';
-
-		// Shadow color
-		echo '<p class="color_picker_wrap">' .
-			'<label for="' . $this->get_field_id( 'title_shadow_color' ) . '">' . __( 'Text shadow color:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/>' .
-			'<input type="text" id="' . $this->get_field_id( 'title_shadow_color' ) . '" class="color_picker" name="' . $this->get_field_name( 'title_shadow_color' ) . '" value="' . esc_attr( $instance['title_shadow_color'] ) . '" /></p>';
-
-		// サブタイトルの入力
-if ( isset( $instance['text'] ) && $instance['text'] ) {
-	$text = $instance['text'];
-} else {
-	$text = '';
-}
-
-		$id   = $this->get_field_id( 'text' );
-		$name = $this->get_field_name( 'text' );
-
-		echo '<p>';
-		echo  __( 'Sub title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '<br>';
-		echo '<textarea id="' . $id . '" name="' . $name . '" style="width:100%;">' . esc_textarea( $text ) . '</textarea>';
-		echo '</p>';
 	}
 
 		/*-------------------------------------------*/
@@ -165,7 +168,9 @@ if ( isset( $instance['text'] ) && $instance['text'] ) {
 		return $new_instance;
 	}
 
-
+	/*-------------------------------------------*/
+	/*  functions
+	/*-------------------------------------------*/
 	public static function widget_outer_style( $instance ) {
 		$widget_outer_style = 'border:1px solid #f00;';
 
@@ -215,6 +220,9 @@ if ( isset( $instance['text'] ) && $instance['text'] ) {
 		return $widget_font_style;
 	}
 
+	/*-------------------------------------------*/
+	/*  widget
+	/*-------------------------------------------*/
 	public function widget( $args, $instance ) {
 		$instance = self::default_options( $instance );
 		echo $args ['before_widget'];
