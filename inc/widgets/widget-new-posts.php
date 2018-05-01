@@ -82,9 +82,17 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 		if ( $post_loop->have_posts() ) :
 			if ( ! $instance['format'] ) {
+
 				while ( $post_loop->have_posts() ) :
 					$post_loop->the_post();
-					$this->display_pattern_0();
+					if (
+						file_exists( get_stylesheet_directory() . '/module_loop_' . $post_type . '.php' ) &&
+						$post_type != 'post'
+					) {
+						get_template_part( 'module_loop_' . $post_type );
+					} else {
+						get_template_part( 'module_loop_post' );
+					}
 				endwhile;
 			} elseif ( $instance['format'] == 1 ) {
 				while ( $post_loop->have_posts() ) :
@@ -102,36 +110,6 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		wp_reset_query();
 
 	} // widget($args, $instance)
-
-	/*-------------------------------------------*/
-	/*  display_pattern_0 Lighjnting standard
-	/*-------------------------------------------*/
-	function display_pattern_0() { ?>
-		<article class="media">
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php if ( has_post_thumbnail() ) : ?>
-			<div class="media-left postList_thumbnail">
-				<a href="<?php the_permalink(); ?>">
-				<?php
-				$attr = array( 'class' => 'media-object' );
-				the_post_thumbnail( 'thumbnail', $attr );
-				?>
-				</a>
-			</div>
-			<?php endif; ?>
-			<div class="media-body">
-				<?php get_template_part( 'module_loop_post_meta' ); ?>
-				<h1 class="media-heading entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-				<a href="<?php the_permalink(); ?>" class="media-body_excerpt"><?php the_excerpt(); ?></a>
-				<!--
-				<div><a href="<?php the_permalink(); ?>" class="btn btn-default btn-sm"><?php _e( 'Read more', 'lightning' ); ?></a></div>
-				-->
-			</div>
-		</div>
-		</article>
-		<?php
-	}
-
 
 	/*-------------------------------------------*/
 	/*  display_pattern_1 Cointent Body
@@ -249,14 +227,14 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		<br/>
 		<?php echo _e( 'Display Format', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?>:<br/>
 		<ul>
-		<li><label><input type="radio" name="<?php echo $this->get_field_name( 'format' ); ?>" value="0" 
+		<li><label><input type="radio" name="<?php echo $this->get_field_name( 'format' ); ?>" value="0"
 														<?php
 														if ( $instance['format'] == 0 ) {
 															echo 'checked'; }
 ?>
 /><?php echo __( 'Thumbnail', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Date', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Category', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Title', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Excerpt', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label>
 		</li>
-		<li><label><input type="radio" name="<?php echo $this->get_field_name( 'format' ); ?>" value="1" 
+		<li><label><input type="radio" name="<?php echo $this->get_field_name( 'format' ); ?>" value="1"
 														<?php
 														if ( $instance['format'] == 1 ) {
 															echo 'checked'; }
