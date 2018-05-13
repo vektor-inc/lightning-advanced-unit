@@ -40,6 +40,7 @@ require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-position.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-child-list-hidden.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-full-wide-title.php' );
 require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-fix/sidebar-fix.php' );
+require_once( LIGHTNING_ADVANCED_DIR . 'inc/vk-font-switching-function-config.php' );
 
 /*-------------------------------------------*/
 /*  translations
