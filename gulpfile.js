@@ -23,11 +23,11 @@ gulp.task('concat', function() {
 
 gulp.task('copy_full-wide-title', function() {
   gulp.src('inc/widgets/widget-full-wide-title.php')
-    .pipe(gulp.dest('../../vektor-wp-libraries/vk-widget-full-wide-title/'));
+    .pipe(gulp.dest('../../vektor-wp-libraries/vk-widget-full-wide-title/package/'));
 });
 gulp.task('copy_new-posts', function() {
   gulp.src('inc/widgets/widget-new-posts.php')
-    .pipe(gulp.dest('../../vektor-wp-libraries/vk-widget-new-posts/'));
+    .pipe(gulp.dest('../../vektor-wp-libraries/vk-widget-new-posts/package/'));
 });
 
 // js最小化
