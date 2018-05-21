@@ -21,6 +21,15 @@ gulp.task('concat', function() {
 		.pipe(gulp.dest('./js/'));
 });
 
+gulp.task('copy_full-wide-title', function() {
+  gulp.src('inc/widgets/widget-full-wide-title.php')
+    .pipe(gulp.dest('../../vektor-wp-libraries/vk-widget-full-wide-title/'));
+});
+gulp.task('copy_new-posts', function() {
+  gulp.src('inc/widgets/widget-new-posts.php')
+    .pipe(gulp.dest('../../vektor-wp-libraries/vk-widget-new-posts/'));
+});
+
 // js最小化
 gulp.task('jsmin', function() {
 	gulp.src(['./js/lightning-adv.js'])
@@ -56,6 +65,17 @@ gulp.task('watch', function() {
 	gulp.watch('./inc/sidebar-fix/js/sidebar-fix.js', ['concat']);
 	gulp.watch('./js/lightning-adv.js', ['jsmin']);
 	gulp.watch('./inc/navigation/js/navigation.js', ['jsmin']);
+	gulp.watch('./inc/widgets/widget-full-wide-title.php', ['copy_full-wide-title'])
+	gulp.watch('./inc/widgets/widget-new-posts.php', ['copy_new-posts']);
+});
+
+
+// Watch
+gulp.task('watch_full-title', function() {
+	gulp.watch('./inc/widgets/widget-full-wide-title.php', ['copy_full-wide-title']);
+});
+gulp.task('watch_new-post', function() {
+	gulp.watch('./inc/widgets/widget-new-posts.php', ['copy_new-posts']);
 });
 
 // gulp.task('default', ['scripts','watch','sprite']);
