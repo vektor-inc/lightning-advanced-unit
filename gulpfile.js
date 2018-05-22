@@ -11,7 +11,8 @@ var jsmin = require('gulp-jsmin');
 var plumber = require('gulp-plumber');
 // npm install gulp.spritesmith --save-dev
 var spritesmith = require('gulp.spritesmith');
-
+// 同期的に処理してくれる（ distで使用している ）
+var runSequence = require('run-sequence');
 
 // ファイル結合
 gulp.task('concat', function() {
@@ -80,3 +81,46 @@ gulp.task('watch_new-post', function() {
 
 // gulp.task('default', ['scripts','watch','sprite']);
 gulp.task('default', ['watch']);
+
+// copy dist ////////////////////////////////////////////////
+
+gulp.task('copy_dist', function() {
+    return gulp.src(
+            [
+							'./**/*.php',
+							'./**/*.txt',
+							'./**/*.css',
+							'./**/*.scss',
+							'./**/*.bat',
+							'./**/*.rb',
+							'./**/*.eot',
+							'./**/*.svg',
+							'./**/*.ttf',
+							'./**/*.woff',
+							'./**/*.woff2',
+							'./**/*.otf',
+							'./**/*.less',
+							'./**/*.png',
+							'./inc/**',
+							'./js/**',
+							'./languages/**',
+							"!./compile.bat",
+							"!./config.rb",
+							"!./tests/**",
+							"!./dist/**",
+							"!./.sftp-config.json",
+							"!./.ftpconfig.json",
+							"!./node_modules/**"
+            ],
+            { base: './' }
+        )
+        .pipe( gulp.dest( 'dist' ) ); // distディレクトリに出力
+} );
+// gulp.task('build:dist',function(){
+//     /* ここで、CSS とか JS をコンパイルする */
+// });
+
+gulp.task('dist', function(cb){
+    // return runSequence( 'build:dist', 'copy_dist', cb );
+    return runSequence( 'copy_dist', cb );
+});
