@@ -290,4 +290,8 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		return $instance;
 	}
 }
-add_action( 'widgets_init', create_function( '', 'return register_widget("WP_Widget_ltg_adv_post_list");' ) );
+
+add_action( 'widgets_init', 'lightning_adv_unit_widget_register_post_list' );
+function lightning_adv_unit_widget_register_post_list() {
+	return register_widget( 'WP_Widget_ltg_adv_post_list' );
+}

@@ -3,12 +3,6 @@
 /*-------------------------------------------*/
 /*  LTG Full Wide Title widget
 /*-------------------------------------------*/
-
-add_action(
-	'widgets_init',
-	create_function( '', 'return register_widget( "LTG_Full_Wide_Title" );' )
-);
-
 class LTG_Full_Wide_Title extends WP_Widget {
 	function __construct() {
 		$widget_id          = 'ltg_full_wide_title';
@@ -285,4 +279,9 @@ echo '</p>';
 		echo $args ['after_widget'];
 	}
 
+}
+
+add_action( 'widgets_init', 'lightning_adv_unit_widget_register_full_wide_title' );
+function lightning_adv_unit_widget_register_full_wide_title() {
+	return register_widget( 'LTG_Full_Wide_Title' );
 }
