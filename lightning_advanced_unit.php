@@ -54,6 +54,6 @@ add_action( 'plugins_loaded', 'lightning_adv_unit_textdomain' );
 /*-------------------------------------------*/
 add_action( 'wp_enqueue_scripts', 'lightning_adv_unit_script', 100 );
 function lightning_adv_unit_script() {
-	wp_register_script( 'lightning_adv_unit_script', LIGHTNING_ADVANCED_URL . 'js/lightning-adv.min.js', array( 'jquery', 'lightning-js' ), LIGHTNING_ADVANCED_VERSION );
+	wp_register_script( 'lightning_adv_unit_script', LIGHTNING_ADVANCED_URL . 'js/lightning-adv.min.js', array( 'jquery', 'lightning-js' ), LIGHTNING_ADVANCED_VERSION, true );
 	wp_enqueue_script( 'lightning_adv_unit_script' );
 }
