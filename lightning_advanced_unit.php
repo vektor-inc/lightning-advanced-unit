@@ -19,7 +19,8 @@ if ( ! ( $template == 'lightning' || $template == 'Lightning' ) ) {
 }
 
 $data = get_file_data(
-	__FILE__, array(
+	__FILE__,
+	array(
 		'version'    => 'Version',
 		'textdomain' => 'Text Domain',
 	)
@@ -32,28 +33,36 @@ define( 'LIGHTNING_ADVANCED_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LIGHTNING_ADVANCED_SHORT_NAME', 'LTG' );
 
 // ナビゲーションの切り替え処理・カスタマイザー
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/navi-common.php' );
+require_once LIGHTNING_ADVANCED_DIR . 'inc/navi-common.php';
 
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-new-posts.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/menu-btn-position.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-position.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-child-list-hidden.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-full-wide-title.php' );
-require_once( LIGHTNING_ADVANCED_DIR . 'inc/sidebar-fix/sidebar-fix.php' );
+require_once LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-new-posts.php';
+require_once LIGHTNING_ADVANCED_DIR . 'inc/menu-btn-position.php';
+require_once LIGHTNING_ADVANCED_DIR . 'inc/sidebar-position.php';
+require_once LIGHTNING_ADVANCED_DIR . 'inc/sidebar-child-list-hidden.php';
+require_once LIGHTNING_ADVANCED_DIR . 'inc/widgets/widget-full-wide-title.php';
+require_once LIGHTNING_ADVANCED_DIR . 'inc/sidebar-fix/sidebar-fix.php';
 
-/*-------------------------------------------*/
-/*  translations
+
+/*
+  translations
 /*-------------------------------------------*/
 function lightning_adv_unit_textdomain() {
 	load_plugin_textdomain( LIGHTNING_ADVANCED_TEXTDOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'plugins_loaded', 'lightning_adv_unit_textdomain' );
 
-/*-------------------------------------------*/
-/*  Load js & CSS
+/*
+  Load js & CSS
 /*-------------------------------------------*/
 add_action( 'wp_enqueue_scripts', 'lightning_adv_unit_script', 100 );
 function lightning_adv_unit_script() {
 	wp_register_script( 'lightning_adv_unit_script', LIGHTNING_ADVANCED_URL . 'js/lightning-adv.min.js', array( 'jquery', 'lightning-js' ), LIGHTNING_ADVANCED_VERSION );
 	wp_enqueue_script( 'lightning_adv_unit_script' );
 }
+
+function lightning_adv_unit_notice() {
+	echo '<div class="error"><p>';
+	echo wp_kses_post( __( '[ Lightning Advanced Unit ] Please deactivate this plugin. The functionality of this plugin is currently included in Lightning and support is ceased. Please deactivate this plugin.', 'lightning-adv-unit' ) );
+	echo '</p></div>';
+}
+add_action( 'admin_notices', 'lightning_adv_unit_notice' );
