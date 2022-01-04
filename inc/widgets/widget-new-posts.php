@@ -1,7 +1,9 @@
 <?php
 
-/*-------------------------------------------*/
-/*  Side Post list widget
+/*
+-------------------------------------------*/
+/*
+  Side Post list widget
 /*-------------------------------------------*/
 class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
@@ -18,10 +20,12 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		);
 	}
 
+	/*
+	-------------------------------------------*/
+	/*
+	  一覧へのリンクhtmlを出力する関数
 	/*-------------------------------------------*/
-	/*  一覧へのリンクhtmlを出力する関数
-	/*-------------------------------------------*/
-	static public function more_link_html( $instance ) {
+	public static function more_link_html( $instance ) {
 		if ( ! empty( $instance['more_text'] ) && ! empty( $instance['more_url'] ) ) {
 			$more_link_html  = '<div class="text-right" style="margin-top:1em;">';
 			$more_link_html .= '<a href="' . esc_url( $instance['more_url'] ) . '" class="btn btn-default btn-xs">' . wp_kses_post( $instance['more_text'] ) . '</a>';
@@ -102,7 +106,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 			}
 
 		endif;
-		echo  $this->more_link_html( $instance );
+		echo $this->more_link_html( $instance );
 		echo '</div>';
 		echo $args['after_widget'];
 
@@ -111,8 +115,10 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 	} // widget($args, $instance)
 
-	/*-------------------------------------------*/
-	/*  display_pattern_1 Cointent Body
+	/*
+	-------------------------------------------*/
+	/*
+	  display_pattern_1 Cointent Body
 	/*-------------------------------------------*/
 	function display_pattern_1() {
 		global $post;
@@ -138,7 +144,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 			<div class="entry-footer">
 			<?php
-			$args          = array(
+			$args = array(
 				'before'      => '<nav class="page-link"><dl><dt>Pages :</dt><dd>',
 				'after'       => '</dd></dl></nav>',
 				'link_before' => '<span class="page-numbers">',
@@ -149,8 +155,10 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 			?>
 
 			<?php
-			/*-------------------------------------------*/
-			/*  Category and tax data
+			/*
+			-------------------------------------------*/
+			/*
+			  Category and tax data
 			/*-------------------------------------------*/
 			$args          = array(
 				'template'      => __( '<dl><dt>%s</dt><dd>%l</dd></dl>', 'lightning' ),
@@ -172,7 +180,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 			<?php
 			$tags_list = get_the_tag_list();
 			if ( $tags_list ) :
-			?>
+				?>
 			<div class="entry-meta-dataList entry-tag">
 			<dl>
 			<dt><?php _e( 'Tags', 'lightning' ); ?></dt>
@@ -184,7 +192,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 
 		</article>
 
-	<?php
+		<?php
 	}
 
 	function _taxonomy_init( $post_type ) {
@@ -222,7 +230,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
-		//タイトル
+		// タイトル
 		?>
 		<br/>
 		<?php echo _e( 'Display Format', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?>:<br/>
@@ -231,29 +239,29 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 														<?php
 														if ( $instance['format'] == 0 ) {
 															echo 'checked'; }
-?>
+														?>
 /><?php echo __( 'Thumbnail', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Date', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Category', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Title', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Excerpt', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label>
 		</li>
 		<li><label><input type="radio" name="<?php echo $this->get_field_name( 'format' ); ?>" value="1"
 														<?php
 														if ( $instance['format'] == 1 ) {
 															echo 'checked'; }
-?>
+														?>
 /><?php echo __( 'Thumbnail', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Date', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Category', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Title', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '/' . __( 'Content', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label>
 		</li>
 		</ul>
 		<br/>
-		<?php //タイトル ?>
+		<?php // タイトル ?>
 		<label for="<?php echo $this->get_field_id( 'label' ); ?>"><?php _e( 'Title:' ); ?></label><br/>
 		<input type="text" id="<?php echo $this->get_field_id( 'label' ); ?>-title" name="<?php echo $this->get_field_name( 'label' ); ?>" value="<?php echo $instance['label']; ?>" />
 		<br/><br />
 
-		<?php //表示件数 ?>
+		<?php // 表示件数 ?>
 		<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Display count', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?>:</label><br/>
 		<input type="text" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" value="<?php echo $instance['count']; ?>" />
 		<br /><br />
 
-		<?php //投稿タイプ ?>
+		<?php // 投稿タイプ ?>
 		<label for="<?php echo $this->get_field_id( 'post_type' ); ?>"><?php _e( 'Slug for the custom type you want to display', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?>:</label><br />
 		<input type="text" id="<?php echo $this->get_field_id( 'post_type' ); ?>" name="<?php echo $this->get_field_name( 'post_type' ); ?>" value="<?php echo esc_attr( $instance['post_type'] ); ?>" />
 		<br/><br/>
@@ -275,7 +283,7 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		<label for="<?php echo $this->get_field_id( 'more_text' ); ?>"><?php _e( 'Notation text:', LIGHTNING_ADVANCED_TEXTDOMAIN ); ?></label><br/>
 		<input type="text" placeholder="最新記事一覧 ≫" id="<?php echo $this->get_field_id( 'more_text' ); ?>" name="<?php echo $this->get_field_name( 'more_text' ); ?>" value="<?php echo esc_attr( $instance['more_text'] ); ?>" />
 				<br /><br />
-	<?php
+		<?php
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -290,4 +298,10 @@ class WP_Widget_ltg_adv_post_list extends WP_Widget {
 		return $instance;
 	}
 }
-add_action( 'widgets_init', create_function( '', 'return register_widget("WP_Widget_ltg_adv_post_list");' ) );
+// add_action( 'widgets_init', create_function( '', 'return register_widget("WP_Widget_ltg_adv_post_list");' ) );
+add_action(
+	'widgets_init',
+	function() {
+		register_widget( 'WP_Widget_ltg_adv_post_list' );
+	}
+);

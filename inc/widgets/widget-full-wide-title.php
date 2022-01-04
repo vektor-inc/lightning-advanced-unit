@@ -1,12 +1,14 @@
 <?php
 
-/*-------------------------------------------*/
-/*  LTG Full Wide Title widget
+/*
+  LTG Full Wide Title widget
 /*-------------------------------------------*/
 
 add_action(
 	'widgets_init',
-	create_function( '', 'return register_widget( "LTG_Full_Wide_Title" );' )
+	function() {
+		register_widget( 'LTG_Full_Wide_Title' );
+	}
 );
 
 class LTG_Full_Wide_Title extends WP_Widget {
@@ -39,15 +41,15 @@ class LTG_Full_Wide_Title extends WP_Widget {
 		return wp_parse_args( (array) $args, $defaults );
 	}
 
-	/*-------------------------------------------*/
-	/*  form
+	/*
+	  form
 	/*-------------------------------------------*/
 	public function form( $instance ) {
 		$options = self::default_options( $instance );
 		// ※ wp_parse_args()かけてるのでisset不要
 
 		echo '<p>';
-		echo  __( 'Title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '<br>';
+		echo __( 'Title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '<br>';
 		$id   = $this->get_field_id( 'title' );
 		$name = $this->get_field_name( 'title' );
 		echo '<input type="text" id="' . $id . '" name="' . $name . '" value="' . esc_attr( $options['title'] ) . '" />';
@@ -64,7 +66,7 @@ class LTG_Full_Wide_Title extends WP_Widget {
 		$name = $this->get_field_name( 'text' );
 
 		echo '<p>';
-		echo  __( 'Sub title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '<br>';
+		echo __( 'Sub title:', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '<br>';
 		echo '<textarea id="' . $id . '" name="' . $name . '" style="width:100%;">' . esc_textarea( $text ) . '</textarea>';
 		echo '</p>';
 
@@ -94,11 +96,11 @@ class LTG_Full_Wide_Title extends WP_Widget {
 			// 数字だったら、その数字の画像を full サイズで取得
 				$image = wp_get_attachment_image_src( $options['media_image_id'], 'full' );
 		}
-?>
+		?>
 
 <div class="vkExUnit_banner_area" style="padding: 0.7em 0;">
 <div class="_display" style="height:auto">
-	<?php if ( $image ) : ?>
+		<?php if ( $image ) : ?>
 		<img src="<?php echo esc_url( $image[0] ); ?>" style="width:100%;height:auto;" />
 	<?php endif; ?>
 </div>
@@ -142,33 +144,35 @@ var vk_title_bg_image_delete = function(e){
 }
 </script>
 
-<?php
+		<?php
 
-// Shadow Use
-$checked = ( $options['bg_parallax'] ) ? ' checked' : '';
-echo '<p><input type="checkbox" id="' . $this->get_field_id( 'bg_parallax' ) . '" name="' . $this->get_field_name( 'bg_parallax' ) . '" value="true"' . $checked . ' >';
-echo '<label for="' . $this->get_field_id( 'bg_parallax' ) . '">' . __( 'Set to parallax', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/></p>';
+		// Shadow Use
+		$checked = ( $options['bg_parallax'] ) ? ' checked' : '';
+		echo '<p><input type="checkbox" id="' . $this->get_field_id( 'bg_parallax' ) . '" name="' . $this->get_field_name( 'bg_parallax' ) . '" value="true"' . $checked . ' >';
+		echo '<label for="' . $this->get_field_id( 'bg_parallax' ) . '">' . __( 'Set to parallax', LIGHTNING_ADVANCED_TEXTDOMAIN ) . '</label><br/></p>';
 
-echo '<p>';
-echo  __( 'Margin Top', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ' : ';
-$id   = $this->get_field_id( 'margin_top' );
-$name = $this->get_field_name( 'margin_top' );
-echo '<input type="text" id="' . $id . '" name="' . $name . '" value="' . esc_attr( $options['margin_top'] ) . '" /><br />';
-echo __( 'Ex', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ') 0;';
-echo '</p>';
+		echo '<p>';
+		echo __( 'Margin Top', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ' : ';
+		$id   = $this->get_field_id( 'margin_top' );
+		$name = $this->get_field_name( 'margin_top' );
+		echo '<input type="text" id="' . $id . '" name="' . $name . '" value="' . esc_attr( $options['margin_top'] ) . '" /><br />';
+		echo __( 'Ex', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ') 0;';
+		echo '</p>';
 
-echo '<p>';
-echo  __( 'Margin Bottom', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ' : ';
-$id   = $this->get_field_id( 'margin_bottom' );
-$name = $this->get_field_name( 'margin_bottom' );
-echo '<input type="text" id="' . $id . '" name="' . $name . '" value="' . esc_attr( $options['margin_bottom'] ) . '" /><br />';
-echo __( 'Ex', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ') 40px';
-echo '</p>';
+		echo '<p>';
+		echo __( 'Margin Bottom', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ' : ';
+		$id   = $this->get_field_id( 'margin_bottom' );
+		$name = $this->get_field_name( 'margin_bottom' );
+		echo '<input type="text" id="' . $id . '" name="' . $name . '" value="' . esc_attr( $options['margin_bottom'] ) . '" /><br />';
+		echo __( 'Ex', LIGHTNING_ADVANCED_TEXTDOMAIN ) . ') 40px';
+		echo '</p>';
 
 	}
 
-		/*-------------------------------------------*/
-		/*  update
+		/*
+		-------------------------------------------*/
+		/*
+		  update
 		/*-------------------------------------------*/
 
 	public function update( $new_instance, $old_instance ) {
@@ -184,8 +188,10 @@ echo '</p>';
 		return $new_instance;
 	}
 
-	/*-------------------------------------------*/
-	/*  functions
+	/*
+	-------------------------------------------*/
+	/*
+	  functions
 	/*-------------------------------------------*/
 	public static function widget_outer_style( $instance ) {
 
@@ -203,7 +209,7 @@ echo '</p>';
 			// 背景色が登録されている場合（画像は登録されていない）
 		} elseif ( ! empty( $instance['title_bg_color'] ) && empty( $image ) ) {
 			$widget_outer_style = 'background: ' . sanitize_hex_color( $instance['title_bg_color'] ) . ';';
-			//  画像も背景色もどちらも登録されている場合
+			// 画像も背景色もどちらも登録されている場合
 		} elseif ( ! empty( $image ) && ! empty( $instance['title_bg_color'] ) ) {
 			$widget_outer_style = 'background-image: url(\'' . esc_url( $image ) . '\');';
 			// その他（画像も背景色も登録されていない）
@@ -243,8 +249,8 @@ echo '</p>';
 		return $widget_font_style;
 	}
 
-	/*-------------------------------------------*/
-	/*  widget
+	/*
+	  widget
 	/*-------------------------------------------*/
 	public function widget( $args, $instance ) {
 		$instance = self::default_options( $instance );
