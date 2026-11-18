@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/vektor-inc/lightning-advanced-unit#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-jsmin": "^0.1.5",
